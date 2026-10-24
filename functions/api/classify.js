@@ -13,7 +13,7 @@ const LANGS = {
 };
 
 const prompt = language => `You help foreigners (tourists and residents) in South Korea sort household waste. The current site is set up for Icheon-si, Gyeonggi-do.
-Look at the photo. Find every separate item the user wants to throw away (up to 6). Group identical items into one entry (e.g. "2 plastic bottles"). Ignore the background, tables, hands and things clearly not being thrown away. Classify each item under Korean household rules:
+Look at the photo. The user took this photo because they want to throw these things away, so treat the main objects as waste even if they look new, clean, fresh or still usable (e.g. fresh vegetables = food waste, a shirt on a hanger = clothes for the used-clothing bin, a clean box = recycling). Find every separate item (up to 6). Group identical items into one entry (e.g. "2 plastic bottles"). Ignore only the background, tables, hands and fixed furniture of the room. Classify each item under Korean household rules:
 - "bag": general waste in the paid volume-rate bag (종량제 봉투). Includes bones, eggshells, shellfish shells, hard pits and nut shells, onion skins, tea bags, receipts, used tissue, and plastic/vinyl/styrofoam soiled with food.
 - "food": food waste (음식물): soft, digestible scraps only, drained of water, in the food-waste bag.
 - "rec": recyclables (paper, paper packs and drink cartons, plastic, clean vinyl, cans/metal, glass BOTTLES and jars, clean white styrofoam): emptied, rinsed, labels and tape removed, in a transparent bag or tied.
@@ -22,7 +22,7 @@ Facts to use only if relevant: disposal at designated points; residents should c
 For each item write "name", "steps" and "warn" in ${language} (always ${language}, even if the user wrote in another language), in plain short words, and "koName" and "koSteps" in Korean (the same content), so the user can show a Korean neighbor. If one item has parts that go to different places (e.g. a takeout cup: food scraps vs container), list the parts as separate items.
 Reply with only one JSON object, no other text:
 {"items":[{"cat":"bag|food|rec|spec","name":"item name","steps":["2-4 short steps"],"warn":"one common mistake to avoid, or empty string","koName":"item name in Korean","koSteps":["same steps in Korean"]}],"confident":true}
-If no identifiable waste item is visible, return one item with "cat":"bag", set "confident":false, and make its steps ask the user to retake the photo.`;
+Only if the photo shows no object at all (blank, dark, a person, a landscape) return one item with "cat":"bag", set "confident":false, and make its steps ask the user to retake the photo closer. If you can see an object but are unsure, still give your best category and set "confident":false.`;
 
 // 글 입력용: 사진 대신 사용자가 적은 설명(어느 언어든)을 읽게 함
 const TEXT_LEAD = "Look at the photo.";
@@ -68,41 +68,47 @@ export async function onRequestPost({ request, env }) {
     ];
   }
 
-  let res;
-  try {
-    res = await fetch("https://api.anthropic.com/v1/messages", {
-      method: "POST",
-      headers: {
-        "x-api-key": env.ANTHROPIC_API_KEY,
-        "anthropic-version": "2023-06-01",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify({
-        model: env.MODEL || "claude-haiku-5-5",
-        max_tokens: 3000,
-        messages: [{ role: "user", content }],
-      }),
-    });
-  } catch {
-    return json({ error: "upstream" }, 502);
-  }
+  // 답이 JSON으로 안 읽히면 한 번 더 물어봄 (가끔 설명 글이 섞이거나 잘리는 경우 대비)
+  let last = "upstream";
+  for (let attempt = 0; attempt < 2; attempt++) {
+    let res;
+    try {
+      res = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: {
+          "x-api-key": env.ANTHROPIC_API_KEY,
+          "anthropic-version": "2023-06-01",
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          model: env.MODEL || "claude-haiku-5-5",
+          max_tokens: 3000,
+          messages: [{ role: "user", content }],
+        }),
+      });
+    } catch {
+      return json({ error: "upstream" }, 502);
+    }
 
-  if (res.status === 429 || res.status === 529) return json({ error: "busy" }, 503);
-  if (!res.ok) {
-    console.log("anthropic error", res.status, (await res.text()).slice(0, 300));
-    return json({ error: "upstream" }, 502);
-  }
+    if (res.status === 429 || res.status === 529) return json({ error: "busy" }, 503);
+    if (!res.ok) {
+      console.log("anthropic error", res.status, (await res.text()).slice(0, 300));
+      return json({ error: "upstream" }, 502);
+    }
 
-  const data = await res.json();
-  const reply = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("");
-  const parsed = parseJson(reply);
-  const s = v => (typeof v === "string" ? v.slice(0, 200) : "");
-  const list = v => (Array.isArray(v) ? v.slice(0, 5).map(s).filter(Boolean) : []);
-  const items = (Array.isArray(parsed?.items) ? parsed.items : parsed?.cat ? [parsed] : [])
-    .filter(it => it && CATS.includes(it.cat)).slice(0, 6)
-    .map(it => ({ cat: it.cat, name: s(it.name), steps: list(it.steps), warn: s(it.warn), koName: s(it.koName), koSteps: list(it.koSteps) }));
-  if (!items.length) return json({ error: "unreadable" }, 502);
-  return json({ items, confident: parsed.confident !== false });
+    const data = await res.json();
+    const reply = (data.content || []).filter(b => b.type === "text").map(b => b.text).join("");
+    const parsed = parseJson(reply);
+    const s = v => (typeof v === "string" ? v.slice(0, 200) : "");
+    const list = v => (Array.isArray(v) ? v.slice(0, 5).map(s).filter(Boolean) : []);
+    const items = (Array.isArray(parsed?.items) ? parsed.items : parsed?.cat ? [parsed] : [])
+      .filter(it => it && CATS.includes(it.cat)).slice(0, 6)
+      .map(it => ({ cat: it.cat, name: s(it.name), steps: list(it.steps), warn: s(it.warn), koName: s(it.koName), koSteps: list(it.koSteps) }));
+    if (items.length) return json({ items, confident: parsed.confident !== false });
+    console.log("unreadable reply", data.stop_reason, reply.slice(0, 300));
+    last = "unreadable";
+  }
+  return json({ error: last }, 502);
 }
 
 function parseJson(text) {
