@@ -29,7 +29,7 @@ def shrink(path):
 def ask(url, image):
     req = urllib.request.Request(url.rstrip("/") + "/api/classify",
         data=json.dumps({"image": image, "mediaType": "image/jpeg", "lang": "en"}).encode(),
-        headers={"content-type": "application/json"}, method="POST")
+        headers={"content-type": "application/json", "user-agent": "Mozilla/5.0 (free-in-korea eval)"}, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=90) as r:
             return json.load(r), None
