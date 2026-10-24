@@ -219,5 +219,83 @@
   "bags": null,
   "bulky": "Menu sampah besar (대형폐기물) di situs kantor gu (구청)",
   "recyclingNotes": null
+ },
+ "seoul-gwangjin": {
+  "name": "Gwangjin-gu",
+  "sido": "Seoul",
+  "sigungu": "Gwangjin-gu",
+  "hours": "18:00–24:00",
+  "days": "Min·Sen·Sel·Rab·Kam·Jum (sama untuk sampah umum, sampah makanan, dan daur ulang; sama di semua kelurahan)",
+  "noPickupDay": "Jangan buang sampah pada hari Sabtu dan sehari sebelum hari libur nasional",
+  "place": "Rumah: di depan rumah sendiri / Apartemen: sesuai cara yang ditentukan kompleks",
+  "food": "Rumah: masukkan kantong khusus sampah makanan warna ungu ke wadah khusus, taruh di depan rumah (wadah gratis di kantor kelurahan (동주민센터))",
+  "bags": "Toko penjual kantong sampah berbayar (종량제 봉투). Kantong rumah tangga warna putih",
+  "bulky": "smartclean-gwangjin.kr atau kantor kelurahan (동주민센터) → tempel stiker bukti lapor (신고필증) lalu taruh di depan rumah",
+  "recyclingNotes": "Masukkan tiap jenis ke kantong plastik bening; ikat kardus dan styrofoam. Melanggar hari, jam, atau tempat: denda 100.000 won"
+ },
+ "seoul-guro": {
+  "name": "Guro-gu",
+  "sido": "Seoul",
+  "sigungu": "Guro-gu",
+  "hours": "20:00–24:00",
+  "days": "Tergantung kelurahan: Min·Sel·Kam atau Sen·Rab·Jum (tanyakan ke Bagian Administrasi Kebersihan (청소행정과) 02-860-2912)",
+  "noPickupDay": null,
+  "place": "Rumah dan toko kecil: di depan rumah (toko) sendiri / Apartemen: tempat pengumpulan kompleks",
+  "food": "Masukkan ke kantong sampah makanan berbayar warna kuning (음식물 종량제 봉투), buang beserta kantongnya",
+  "bags": "Toko yang ditunjuk kantor distrik. Sampah umum: putih, sampah makanan: kuning",
+  "bulky": "Daftar di situs kantor distrik, call center 02-2615-3203, kantor kelurahan (주민센터), aplikasi 'Ppaegi' (빼기)",
+  "recyclingNotes": "Plastik kresek/film dipisah ke kantong khusus (kalau tidak ada, kantong bening)"
+ },
+ "seoul-seongdong": {
+  "name": "Seongdong-gu",
+  "sido": "Seoul",
+  "sigungu": "Seongdong-gu",
+  "hours": "20:00–24:00",
+  "days": "Sampah umum dan makanan: tergantung kelurahan Sen·Rab·Jum atau Sel·Kam·Min / Daur ulang: Kamis hanya botol PET bening dan plastik kresek/film, sisanya Min·Sen·Sel·Rab·Jum",
+  "noPickupDay": "Sabtu bukan hari buang sampah. Melanggar: denda 100.000 won",
+  "place": "Rumah dan kantor: wajib di depan gedung / Apartemen: tempat yang ditentukan kompleks",
+  "food": "Rumah: masukkan ke kantong sampah makanan berbayar (음식물 종량제 봉투), lalu ke wadah khusus, taruh di depan pintu gerbang",
+  "bags": "Toko penjual kantong sampah berbayar (종량제 봉투). Pada dasarnya pakai kantong Seongdong-gu",
+  "bulky": "02-2248-1001, situs kantor distrik, aplikasi 'Yeogiro' (여기로)",
+  "recyclingNotes": "Botol, kaleng, dan plastik dikumpulkan di kantong bening; kertas diikat"
+ },
+ "seoul-dongdaemun": {
+  "name": "Dongdaemun-gu",
+  "sido": "Seoul",
+  "sigungu": "Dongdaemun-gu",
+  "hours": "18:00–21:00",
+  "days": "Sen·Rab·Jum: Yongsin-dong, Jeonnong 2-dong, Dapsimni 1-dong, Jangan 2-dong, Hoegi-dong, Hwigyeong 1·2-dong / Min·Sel·Kam: Jegi-dong, Jeonnong 1-dong, Dapsimni 2-dong, Jangan 1-dong, Cheongnyangni-dong, Imun 1·2-dong",
+  "noPickupDay": null,
+  "place": "Di depan rumah (sampah umum, makanan, dan daur ulang dipisah lalu ditaruh bersamaan)",
+  "food": "Kantong sampah makanan berbayar warna kuning (음식물 종량제 봉투)",
+  "bags": "Toko penjual kantong sampah berbayar (종량제 봉투). Sampah umum putih, sampah makanan kuning",
+  "bulky": "'Yeogiro' (여기로, yeogiro24.co.kr) atau kantor kelurahan (동주민센터) → tempel nomor pembuangan. Peralatan elektronik besar gratis: 1599-0903",
+  "recyclingNotes": "Kelurahan Sen·Rab·Jum: daur ulang Sen·Rab, plastik kresek dan botol PET bening Jum / Kelurahan Min·Sel·Kam: daur ulang Min·Sel, plastik kresek dan botol PET bening Kam"
+ },
+ "incheon-yeongjong": {
+  "name": "Yeongjong-gu",
+  "sido": "Incheon",
+  "sigungu": "Yeongjong-gu",
+  "hours": "20:00 – 02:00 dini hari berikutnya",
+  "days": "Sampah umum: sehari sebelum hari pengangkutan. Sampah makanan (rumah): Unseo 1·2-dong Min·Sel·Kam / Yeongjong-dong, Yeongjong 1·2-dong, Yongyu-dong Sen·Rab·Jum",
+  "noPickupDay": null,
+  "place": "Di depan rumah atau toko sendiri",
+  "food": "Rumah: di wadah khusus yang ditempeli stiker bukti bayar (납부필증), taruh di depan rumah / Apartemen: wadah pengumpulan atau RFID",
+  "bags": "Toko yang ditunjuk. Kantong lama Jung-gu juga boleh dipakai",
+  "bulky": "'Yeogiro' (여기로, yeogiro24.co.kr) atau stiker dari toko penjual kantong. Peralatan elektronik gratis: 1599-0903",
+  "recyclingNotes": "Sejak Juli 2026, wilayah Yeongjong di Jung-gu, Incheon menjadi Yeongjong-gu (Pulau Yeongjongdo, sekitar Bandara Incheon)"
+ },
+ "incheon-yeonsu": {
+  "name": "Yeonsu-gu",
+  "sido": "Incheon",
+  "sigungu": "Yeonsu-gu",
+  "hours": "Hari pembuangan 18:00 – 04:00 dini hari berikutnya",
+  "days": "Sampah umum: setiap hari kecuali Sabtu / Sampah makanan: Ongnyeon, Yeonsu Sel·Kam·Min; Seonhak, Cheonghak, Dongchun Sen·Rab·Jum; Songdo setiap hari kecuali Sabtu / Daur ulang: Ongnyeon, Yeonsu, Songdo 1·4·5 Sel·Kam·Min; Cheonghak, Dongchun, Seonhak, Songdo 2·3 Sen·Rab·Jum",
+  "noPickupDay": "Sabtu (semua jenis sampah)",
+  "place": "Rumah dan toko: di depan bangunan / Apartemen: tempat yang ditentukan / Wilayah Songdo dengan sistem pengumpulan otomatis: ke lubang pemasukan",
+  "food": "Apartemen: RFID / Rumah dan toko: wadah khusus + stiker bukti bayar (납부필증) / Wilayah pengumpulan otomatis Songdo: kantong sampah makanan berbayar (음식물 종량제 봉투)",
+  "bags": "Toko yang ditunjuk di tiap kelurahan",
+  "bulky": "Lapor online di situs kantor distrik, aplikasi 'Ppaegi' (빼기), 032-562-1008, stiker dari toko penjual kantong",
+  "recyclingNotes": "Daur ulang dimasukkan ke kantong plastik bening. Selimut, karet, dll. ke kantong kuning; kaca dan keramik ke karung (마대)"
  }
 }

@@ -219,5 +219,83 @@
   "bags": null,
   "bulky": "Mục rác cồng kềnh (대형폐기물) trên trang web của quận (구청)",
   "recyclingNotes": null
+ },
+ "seoul-gwangjin": {
+  "name": "Quận Gwangjin (Gwangjin-gu)",
+  "sido": "Seoul",
+  "sigungu": "Quận Gwangjin (Gwangjin-gu)",
+  "hours": "18:00–24:00",
+  "days": "CN·T2·T3·T4·T5·T6 (rác thường, rác thực phẩm, rác tái chế giống nhau; mọi phường đều như nhau)",
+  "noPickupDay": "Không bỏ rác vào thứ Bảy và ngày trước ngày lễ",
+  "place": "Nhà riêng: trước nhà mình / Chung cư: theo cách khu chung cư quy định",
+  "food": "Nhà riêng: cho túi rác thực phẩm màu tím vào thùng chuyên dụng, để trước nhà (thùng nhận miễn phí ở trung tâm hành chính phường (동주민센터))",
+  "bags": "Cửa hàng bán túi rác có phí (종량제 봉투). Túi dùng cho gia đình màu trắng",
+  "bulky": "smartclean-gwangjin.kr hoặc trung tâm hành chính phường (동주민센터) → dán tem khai báo (신고필증) rồi để trước nhà",
+  "recyclingNotes": "Mỗi loại cho vào túi nilon trong suốt riêng; thùng giấy và xốp thì buộc lại. Sai ngày, giờ hoặc chỗ bỏ: phạt 100.000 won"
+ },
+ "seoul-guro": {
+  "name": "Quận Guro (Guro-gu)",
+  "sido": "Seoul",
+  "sigungu": "Quận Guro (Guro-gu)",
+  "hours": "20:00–24:00",
+  "days": "Tùy phường: CN·T3·T5 hoặc T2·T4·T6 (hỏi Phòng Hành chính Vệ sinh (청소행정과) 02-860-2912)",
+  "noPickupDay": null,
+  "place": "Nhà riêng, cửa hàng nhỏ: trước nhà (cửa hàng) mình / Chung cư: điểm tập kết của khu",
+  "food": "Cho vào túi rác thực phẩm có phí màu vàng (음식물 종량제 봉투), bỏ nguyên túi",
+  "bags": "Nơi bán do quận chỉ định. Rác thường: túi trắng, rác thực phẩm: túi vàng",
+  "bulky": "Đăng ký trên trang web của quận, tổng đài 02-2615-3203, trung tâm hành chính (주민센터), ứng dụng 'Ppaegi' (빼기)",
+  "recyclingNotes": "Nilon bỏ riêng vào túi chuyên dụng (nếu không có thì túi trong suốt)"
+ },
+ "seoul-seongdong": {
+  "name": "Quận Seongdong (Seongdong-gu)",
+  "sido": "Seoul",
+  "sigungu": "Quận Seongdong (Seongdong-gu)",
+  "hours": "20:00–24:00",
+  "days": "Rác thường, rác thực phẩm: tùy phường T2·T4·T6 hoặc T3·T5·CN / Rác tái chế: thứ Năm chỉ chai PET trong suốt và nilon, các loại khác vào CN·T2·T3·T4·T6",
+  "noPickupDay": "Thứ Bảy không phải ngày bỏ rác. Vi phạm: phạt 100.000 won",
+  "place": "Nhà riêng, văn phòng: luôn để trước tòa nhà / Chung cư: chỗ khu chung cư chỉ định",
+  "food": "Nhà riêng: cho vào túi rác thực phẩm có phí (음식물 종량제 봉투), bỏ vào thùng chuyên dụng, để trước cổng",
+  "bags": "Cửa hàng bán túi rác có phí (종량제 봉투). Theo nguyên tắc dùng túi của quận Seongdong",
+  "bulky": "02-2248-1001, trang web của quận, ứng dụng 'Yeogiro' (여기로)",
+  "recyclingNotes": "Chai, lon, nhựa gom vào túi trong suốt; giấy thì buộc lại"
+ },
+ "seoul-dongdaemun": {
+  "name": "Quận Dongdaemun (Dongdaemun-gu)",
+  "sido": "Seoul",
+  "sigungu": "Quận Dongdaemun (Dongdaemun-gu)",
+  "hours": "18:00–21:00",
+  "days": "T2·T4·T6: Yongsin-dong, Jeonnong 2-dong, Dapsimni 1-dong, Jangan 2-dong, Hoegi-dong, Hwigyeong 1·2-dong / CN·T3·T5: Jegi-dong, Jeonnong 1-dong, Dapsimni 2-dong, Jangan 1-dong, Cheongnyangni-dong, Imun 1·2-dong",
+  "noPickupDay": null,
+  "place": "Trước nhà (rác thường, rác thực phẩm, rác tái chế phân loại rồi để cùng lúc)",
+  "food": "Túi rác thực phẩm có phí màu vàng (음식물 종량제 봉투)",
+  "bags": "Cửa hàng bán túi rác có phí (종량제 봉투). Rác thường màu trắng, rác thực phẩm màu vàng",
+  "bulky": "'Yeogiro' (여기로, yeogiro24.co.kr) hoặc trung tâm hành chính phường (동주민센터) → dán số thải bỏ. Đồ điện tử lớn miễn phí: 1599-0903",
+  "recyclingNotes": "Khu T2·T4·T6: rác tái chế T2·T4, nilon và chai PET trong suốt T6 / Khu CN·T3·T5: rác tái chế CN·T3, nilon và chai PET trong suốt T5"
+ },
+ "incheon-yeongjong": {
+  "name": "Quận Yeongjong (Yeongjong-gu)",
+  "sido": "Incheon",
+  "sigungu": "Quận Yeongjong (Yeongjong-gu)",
+  "hours": "20:00 – 02:00 sáng hôm sau",
+  "days": "Rác thường: bỏ vào hôm trước ngày thu gom. Rác thực phẩm (nhà riêng): Unseo 1·2-dong CN·T3·T5 / Yeongjong-dong, Yeongjong 1·2-dong, Yongyu-dong T2·T4·T6",
+  "noPickupDay": null,
+  "place": "Trước nhà hoặc cửa hàng của mình",
+  "food": "Nhà riêng: cho vào thùng chuyên dụng có dán tem đã nộp phí (납부필증), để trước nhà / Chung cư: thùng thu gom hoặc RFID",
+  "bags": "Nơi bán được chỉ định. Túi cũ của quận Jung cũng dùng được",
+  "bulky": "'Yeogiro' (여기로, yeogiro24.co.kr) hoặc tem mua ở nơi bán túi. Đồ điện tử miễn phí: 1599-0903",
+  "recyclingNotes": "Từ tháng 7/2026, khu Yeongjong của quận Jung, Incheon trở thành quận Yeongjong (đảo Yeongjongdo, quanh sân bay Incheon)"
+ },
+ "incheon-yeonsu": {
+  "name": "Quận Yeonsu (Yeonsu-gu)",
+  "sido": "Incheon",
+  "sigungu": "Quận Yeonsu (Yeonsu-gu)",
+  "hours": "Ngày bỏ rác 18:00 – 04:00 sáng hôm sau",
+  "days": "Rác thường: mỗi ngày trừ thứ Bảy / Rác thực phẩm: Ongnyeon, Yeonsu T3·T5·CN; Seonhak, Cheonghak, Dongchun T2·T4·T6; Songdo mỗi ngày trừ thứ Bảy / Rác tái chế: Ongnyeon, Yeonsu, Songdo 1·4·5 T3·T5·CN; Cheonghak, Dongchun, Seonhak, Songdo 2·3 T2·T4·T6",
+  "noPickupDay": "Thứ Bảy (mọi loại rác)",
+  "place": "Nhà riêng, cửa hàng: trước nhà / Chung cư: chỗ chỉ định / Khu Songdo có hệ thống thu gom tự động: bỏ vào cửa nạp rác",
+  "food": "Chung cư: RFID / Nhà riêng, cửa hàng: thùng chuyên dụng + tem đã nộp phí (납부필증) / Khu thu gom tự động Songdo: túi rác thực phẩm có phí (음식물 종량제 봉투)",
+  "bags": "Nơi bán chỉ định ở từng phường",
+  "bulky": "Khai báo trên trang web của quận, ứng dụng 'Ppaegi' (빼기), 032-562-1008, tem ở nơi bán túi",
+  "recyclingNotes": "Rác tái chế cho vào túi nilon trong suốt. Chăn, cao su… cho vào túi vàng; thủy tinh, đồ sứ cho vào bao tải (마대)"
  }
 }

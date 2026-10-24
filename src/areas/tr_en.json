@@ -219,5 +219,83 @@
   "bags": null,
   "bulky": "'Large waste' (대형폐기물) menu on the district office website",
   "recyclingNotes": null
+ },
+ "seoul-gwangjin": {
+  "name": "Gwangjin-gu",
+  "sido": "Seoul",
+  "sigungu": "Gwangjin-gu",
+  "hours": "18:00–24:00",
+  "days": "Sun·Mon·Tue·Wed·Thu·Fri (same for general waste, food waste and recycling; same in every neighborhood)",
+  "noPickupDay": "Do not put waste out on Saturday or the day before a public holiday",
+  "place": "Houses: in front of your own home / Apartments: the way your complex decides",
+  "food": "Houses: put the purple food-waste bag in a food-waste bin, in front of your home (the bin is free at the community center (동주민센터))",
+  "bags": "Shops that sell pay-as-you-throw bags (종량제 봉투). Household bags are white",
+  "bulky": "smartclean-gwangjin.kr or the community center (동주민센터) → attach the certificate sticker (신고필증) and put it in front of your home",
+  "recyclingNotes": "Put each type in a clear plastic bag; tie boxes and styrofoam together. Breaking the day, time or place rules: fine of 100,000 won"
+ },
+ "seoul-guro": {
+  "name": "Guro-gu",
+  "sido": "Seoul",
+  "sigungu": "Guro-gu",
+  "hours": "20:00–24:00",
+  "days": "Depends on the neighborhood: Sun·Tue·Thu or Mon·Wed·Fri (ask the Cleaning Administration Division (청소행정과): 02-860-2912)",
+  "noPickupDay": null,
+  "place": "Houses and small shops: in front of your own home (shop) / Apartments: the complex's collection point",
+  "food": "Put it in a yellow food-waste pay-as-you-throw bag (음식물 종량제 봉투) and put out the bag itself",
+  "bags": "Shops chosen by the district office (구청). General waste: white bag, food waste: yellow bag",
+  "bulky": "Apply on the district office website, call center 02-2615-3203, community center (주민센터), or the 'Ppaegi' (빼기) app",
+  "recyclingNotes": "Plastic film/vinyl goes separately in its own special bag (if you have none, a clear bag)"
+ },
+ "seoul-seongdong": {
+  "name": "Seongdong-gu",
+  "sido": "Seoul",
+  "sigungu": "Seongdong-gu",
+  "hours": "20:00–24:00",
+  "days": "General and food waste: Mon·Wed·Fri or Tue·Thu·Sun, depending on the neighborhood / Recycling: Thursday is only for clear PET bottles and plastic film; everything else on Sun·Mon·Tue·Wed·Fri",
+  "noPickupDay": "Saturday is not a disposal day. Breaking this rule: fine of 100,000 won",
+  "place": "Houses and offices: always in front of the building / Apartments: the place set by the complex",
+  "food": "Houses: put it in a food-waste pay-as-you-throw bag (음식물 종량제 봉투), then in a food-waste bin, in front of your gate",
+  "bags": "Shops that sell pay-as-you-throw bags (종량제 봉투). As a rule, use Seongdong-gu bags",
+  "bulky": "02-2248-1001, the district office website, or the 'Yeogiro' (여기로) app",
+  "recyclingNotes": "Collect bottles, cans and plastic in a clear bag; tie paper together"
+ },
+ "seoul-dongdaemun": {
+  "name": "Dongdaemun-gu",
+  "sido": "Seoul",
+  "sigungu": "Dongdaemun-gu",
+  "hours": "18:00–21:00",
+  "days": "Mon·Wed·Fri: Yongsin-dong, Jeonnong 2-dong, Dapsimni 1-dong, Jangan 2-dong, Hoegi-dong, Hwigyeong 1·2-dong / Sun·Tue·Thu: Jegi-dong, Jeonnong 1-dong, Dapsimni 2-dong, Jangan 1-dong, Cheongnyangni-dong, Imun 1·2-dong",
+  "noPickupDay": null,
+  "place": "In front of your home (general waste, food waste and recycling, separated, put out together)",
+  "food": "Yellow food-waste pay-as-you-throw bag (음식물 종량제 봉투)",
+  "bags": "Shops that sell pay-as-you-throw bags (종량제 봉투). General waste: white, food waste: yellow",
+  "bulky": "'Yeogiro' (여기로, yeogiro24.co.kr) or the community center (동주민센터) → attach the disposal number. Large appliances free: 1599-0903",
+  "recyclingNotes": "Mon·Wed·Fri neighborhoods: recycling Mon·Wed, plastic film and clear PET bottles Fri / Sun·Tue·Thu neighborhoods: recycling Sun·Tue, plastic film and clear PET bottles Thu"
+ },
+ "incheon-yeongjong": {
+  "name": "Yeongjong-gu",
+  "sido": "Incheon",
+  "sigungu": "Yeongjong-gu",
+  "hours": "20:00 – 02:00 the next morning",
+  "days": "General waste: the day before pickup day. Food waste (houses): Unseo 1·2-dong Sun·Tue·Thu / Yeongjong-dong, Yeongjong 1·2-dong, Yongyu-dong Mon·Wed·Fri",
+  "noPickupDay": null,
+  "place": "In front of your own home or shop",
+  "food": "Houses: in a food-waste bin with a payment sticker (납부필증) attached, in front of your home / Apartments: collection bins or RFID",
+  "bags": "Designated shops. Old Jung-gu bags can also be used",
+  "bulky": "'Yeogiro' (여기로, yeogiro24.co.kr) or a sticker from a bag shop. Appliances free: 1599-0903",
+  "recyclingNotes": "Since July 2026, the Yeongjong area of Jung-gu, Incheon is Yeongjong-gu (Yeongjongdo island, around Incheon Airport)"
+ },
+ "incheon-yeonsu": {
+  "name": "Yeonsu-gu",
+  "sido": "Incheon",
+  "sigungu": "Yeonsu-gu",
+  "hours": "On disposal days 18:00 – 04:00 the next morning",
+  "days": "General waste: every day except Saturday / Food waste: Ongnyeon, Yeonsu Tue·Thu·Sun; Seonhak, Cheonghak, Dongchun Mon·Wed·Fri; Songdo every day except Saturday / Recycling: Ongnyeon, Yeonsu, Songdo 1·4·5 Tue·Thu·Sun; Cheonghak, Dongchun, Seonhak, Songdo 2·3 Mon·Wed·Fri",
+  "noPickupDay": "Saturday (all kinds of waste)",
+  "place": "Houses and shops: in front of your building / Apartments: designated place / Songdo areas with an automatic waste collection system: into the inlet",
+  "food": "Apartments: RFID / Houses and shops: food-waste bin + payment sticker (납부필증) / Songdo automatic collection areas: food-waste pay-as-you-throw bag (음식물 종량제 봉투)",
+  "bags": "Designated shops in each neighborhood (dong)",
+  "bulky": "Report online on the district office website, the 'Ppaegi' (빼기) app, 032-562-1008, or a sticker from a bag shop",
+  "recyclingNotes": "Recycling goes in clear plastic bags. Bedding, rubber, etc. in the yellow bag; glass and ceramics in a sack (마대)"
  }
 }
