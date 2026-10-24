@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Free in Korea</title>
+<meta name="description" content="Free help for foreigners in Korea, in 10 languages: trash sorting by photo and emergency calls in Korean. 외국인을 위한 무료 도우미.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=IBM+Plex+Sans+KR:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f6f5f2; --surface:#ffffff; --ink:#1d2024; --muted:#5f6368; --line:#dcdbd6;
+  --accent:#0f6b55; --accent-ink:#ffffff; --sticker:#f2c230;
+  --c-bag:#b88a12; --c-food:#8a5a2b; --c-rec:#1f7a4d; --c-spec:#b23a3a;
+  --f-display:"Do Hyeon","PingFang SC","Hiragino Sans","Microsoft YaHei",sans-serif;
+  --f-body:"IBM Plex Sans KR","PingFang SC","PingFang TC","Microsoft YaHei","Hiragino Sans","Apple SD Gothic Neo",system-ui,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#121315; --surface:#1b1d20; --ink:#e8e9eb; --muted:#a3a7ad; --line:#2e3135;
+  --accent:#4cc39f; --accent-ink:#0b1814; --sticker:#e5b923;
+  --c-bag:#e0b443; --c-food:#d19a63; --c-rec:#5fc792; --c-spec:#ec7b7b; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#121315; --surface:#1b1d20; --ink:#e8e9eb; --muted:#a3a7ad; --line:#2e3135;
+  --accent:#4cc39f; --accent-ink:#0b1814; --sticker:#e5b923;
+  --c-bag:#e0b443; --c-food:#d19a63; --c-rec:#5fc792; --c-spec:#ec7b7b; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55;padding-bottom:env(safe-area-inset-bottom,0px)}
+img{max-width:100%}
+[hidden]{display:none!important}
+.wrap{max-width:560px;margin:0 auto;padding-block:16px 40px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:18px}
+.tag{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.shoot{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+.drop{display:flex;align-items:center;gap:14px}
+.preview{width:84px;height:84px;border-radius:12px;background:var(--bg);border:1px dashed var(--line);flex:none;object-fit:cover;display:grid;place-items:center;color:var(--muted);font-size:12px;text-align:center}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:12px;background:var(--accent);color:var(--accent-ink);font:600 16px var(--f-body);padding:13px 16px;cursor:pointer;min-height:48px}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid var(--line)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn:focus-visible,.chip:focus-visible{outline:3px solid var(--sticker);outline-offset:2px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.row .btn{flex:1 1 140px}
+.status{font-size:13px;color:var(--muted);min-height:1.2em}
+.verdict{scroll-margin-top:150px;background:var(--surface);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.v-head{display:flex;gap:12px;align-items:center;padding:16px;border-bottom:1px solid var(--line)}
+.v-badge{flex:none;width:52px;height:52px;border-radius:12px;display:grid;place-items:center;font-family:var(--f-display);font-size:22px;color:#fff}
+.v-item{font-weight:600;font-size:17px;margin:0}
+.v-cat{font-family:var(--f-display);font-size:24px;line-height:1.15;margin:2px 0 0}
+.v-body{padding:16px;display:flex;flex-direction:column;gap:12px}
+.v-body ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.warn{background:color-mix(in srgb,var(--c-spec) 12%,transparent);border-left:3px solid var(--c-spec);padding:10px 12px;border-radius:6px;font-size:14px}
+.ko-card{border:1px dashed var(--line);border-radius:10px;padding:10px 12px;font-size:14px}
+.ko-card b{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;color:var(--muted);display:block;font-weight:500}
+.example{font-family:var(--f-mono);font-size:11px;background:var(--sticker);color:#2a2100;padding:2px 8px;border-radius:999px;margin-left:auto;flex:none}
+section h2{font-family:var(--f-display);font-weight:400;font-size:21px;margin:0 0 4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 12px;font:14px var(--f-body);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.dot{width:8px;height:8px;border-radius:50%;flex:none}
+.rules{display:grid;gap:10px}
+.rule{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:start}
+.rule .k{font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-top:2px}
+.rule .v{min-width:0}
+.note{font-size:13px;color:var(--muted)}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:4px}
+.tab{border:0;background:transparent;color:var(--muted);font:600 15px var(--f-body);padding:10px;border-radius:10px;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.tab:focus-visible,.field input:focus-visible,.field select:focus-visible{outline:3px solid var(--sticker);outline-offset:2px}
+.pane{display:flex;flex-direction:column;gap:18px}
+.nums{display:grid;gap:10px;margin-top:8px}
+.num{display:grid;grid-template-columns:auto 1fr auto;gap:4px 14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.num .n{font-family:var(--f-display);font-size:30px;line-height:1;color:var(--c-spec);font-variant-numeric:tabular-nums}
+.num .name{font-weight:600}
+.num .desc{grid-column:1/-1;font-size:13px;color:var(--muted)}
+.num a{grid-row:1;grid-column:3;text-decoration:none;min-height:40px;padding:8px 14px;font-size:14px}
+.builder{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:16px}
+.field{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted)}
+.field select,.field input{font:16px var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:10px 12px;min-height:44px;width:100%}
+.say{background:var(--bg);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.say .ko{font-size:22px;font-weight:600;line-height:1.35}
+.say .rom{font-family:var(--f-mono);font-size:13px;color:var(--muted)}
+.say .mean{font-size:14px}
+a.btn{text-decoration:none}
+/* 언어별 전통 배경: 아래 띠(가옥 실루엣) + 바탕 무늬, 색은 테마 토큰으로 */
+.motif{position:fixed;inset:0;pointer-events:none;z-index:0}
+.motif::before{content:"";position:absolute;inset:0;background:var(--accent);opacity:.07;-webkit-mask:var(--pat) repeat 0 0/48px 48px;mask:var(--pat) repeat 0 0/48px 48px}
+.sky{position:absolute;left:0;right:0;bottom:0;height:calc(150px + env(safe-area-inset-bottom,0px));background:var(--scene) no-repeat center top/auto 150px,linear-gradient(var(--ground),var(--ground)) left 130px/100% 100% no-repeat;opacity:.95}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .sky{opacity:.6}}
+:root[data-theme="dark"] .sky{opacity:.6}
+.bar{z-index:10}
+main.wrap{position:relative;z-index:1;padding-bottom:170px}
+__MOTIF_CSS__
+.results{display:flex;flex-direction:column;gap:12px;scroll-margin-top:150px}
+.found{margin:0;font-weight:600}
+.or{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:13px}
+.or::before,.or::after{content:"";flex:1;border-top:1px solid var(--line)}
+.textrow{display:flex;gap:8px}
+.textrow input{flex:1;min-width:0;font:16px var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:48px}
+.textrow input:focus-visible{outline:3px solid var(--sticker);outline-offset:2px}
+.textrow .btn{flex:none}
+.bar{display:block;position:sticky;top:0;z-index:10;background:var(--surface);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+.bar-in,.subs-in{max-width:560px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.bar-in{padding-block:10px 8px;display:flex;flex-direction:column;gap:8px}
+.bar-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.brand{font-family:var(--f-display);font-weight:400;font-size:20px;line-height:1.1;min-width:0}
+#lang{font:600 13px var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:6px 10px;min-height:34px;max-width:46vw}
+.main{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:var(--bg);border-radius:12px;padding:3px}
+.m{border:0;background:transparent;color:var(--muted);font:600 15px var(--f-body);padding:9px;border-radius:9px;cursor:pointer}
+.m[aria-selected="true"]{background:var(--accent);color:var(--accent-ink)}
+.subs{border-top:1px solid var(--line);overflow-x:auto;scrollbar-width:none}
+.subs::-webkit-scrollbar{display:none}
+.subs-in{display:flex;gap:18px}
+.s{border:0;background:transparent;color:var(--muted);font:600 14px var(--f-body);padding:11px 0;border-bottom:2px solid transparent;cursor:pointer;white-space:nowrap}
+.s[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.view{display:flex;flex-direction:column;gap:14px}
+.drop-txt{display:flex;flex-direction:column;gap:4px;min-width:0}
+.back{align-self:flex-start;border:0;background:transparent;color:var(--accent);font:600 15px var(--f-body);padding:6px 0;cursor:pointer}
+.m:focus-visible,.s:focus-visible,.back:focus-visible,#lang:focus-visible{outline:3px solid var(--sticker);outline-offset:2px}
+
+[data-cat="bag"]{--cc:var(--c-bag)} [data-cat="food"]{--cc:var(--c-food)} [data-cat="rec"]{--cc:var(--c-rec)} [data-cat="spec"]{--cc:var(--c-spec)}
+.v-badge,.dot{background:var(--cc,var(--muted))}
+@media (prefers-reduced-motion:no-preference){.verdict{transition:box-shadow .3s}.verdict.flash{box-shadow:0 0 0 3px var(--sticker)}}
+</style>
+</head>
+<body>
+<div class="motif" aria-hidden="true"><div class="sky"></div></div>
+<header class="bar">
+  <div class="bar-in">
+    <div class="bar-top">
+      <strong class="brand" data-t="appName"></strong>
+      <select id="lang" aria-label="Language"></select>
+    </div>
+    <nav class="main" role="tablist">
+      <button class="m" id="m-trash" type="button" role="tab" data-main="trash" data-t="tabTrash"></button>
+      <button class="m" id="m-help" type="button" role="tab" data-main="help" data-t="tabHelp"></button>
+    </nav>
+  </div>
+  <nav class="subs"><div class="subs-in" id="subs"></div></nav>
+</header>
+
+<main class="wrap">
+  <!-- 쓰레기 > 사진 -->
+  <section class="view" data-view="trash/photo">
+    <div class="shoot">
+      <div class="drop">
+        <div class="preview" id="preview"></div>
+        <div class="drop-txt">
+          <strong data-t="shootTitle"></strong>
+          <span class="note" data-t="shootHint"></span>
+        </div>
+      </div>
+      <input id="photo" type="file" accept="image/*" capture="environment" hidden>
+      <div class="row">
+        <button class="btn" id="pick" type="button" data-t="pickBtn"></button>
+        <button class="btn ghost" id="ask" type="button" disabled data-t="askBtn"></button>
+      </div>
+      <div class="or"><span data-t="textLabel"></span></div>
+      <div class="textrow">
+        <input id="textIn" type="text" maxlength="300" autocomplete="off">
+        <button class="btn" id="askText" type="button" data-t="askBtn"></button>
+      </div>
+      <div class="status" id="status" aria-live="polite"></div>
+    </div>
+    <div class="results" id="aiVerdict" aria-live="polite" hidden></div>
+  </section>
+
+  <!-- 쓰레기 > 물건 목록 -->
+  <section class="view" data-view="trash/list" hidden>
+    <div id="listPick">
+      <p class="note" data-t="quickHint"></p>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div id="listDetail" hidden>
+      <button class="back" id="back" type="button"><span aria-hidden="true">←</span> <span data-t="back"></span></button>
+      <article class="verdict" id="itemVerdict"></article>
+    </div>
+  </section>
+
+  <!-- 쓰레기 > 규칙 -->
+  <section class="view" data-view="trash/rules" hidden>
+    <div class="rules" id="rules"></div>
+    <p class="note" data-t="disclaimer"></p>
+  </section>
+
+  <!-- 긴급 > 전화 -->
+  <section class="view" data-view="help/call" hidden>
+    <p class="note" data-t="helpSub"></p>
+    <div class="nums" id="nums"></div>
+    <p class="note" data-t="checkedNote"></p>
+  </section>
+
+  <!-- 긴급 > 한국어로 말하기 -->
+  <section class="view" data-view="help/report" hidden>
+    <div class="builder">
+      <label class="field"><span data-t="situationLabel"></span><select id="sit"></select></label>
+      <label class="field"><span data-t="placeLabel"></span><input id="place" type="text" autocomplete="off"></label>
+      <div class="say" id="say" lang="ko"></div>
+      <div class="row">
+        <button class="btn" id="speak" type="button" data-t="playBtn"></button>
+        <a class="btn ghost" id="callSit" href="tel:119"></a>
+      </div>
+      <div class="status" id="voiceStatus" aria-live="polite"></div>
+    </div>
+  </section>
+</main>
+
+<script>
+__SCRIPT__
+</script>
+</body>
+</html>

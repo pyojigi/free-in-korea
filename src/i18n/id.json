@@ -1,0 +1,238 @@
+{
+ "ui": {
+  "tagline": "Icheon, Korea · Penerjemah pemilahan sampah",
+  "title": "Barang ini dibuang ke mana?",
+  "subtitle": "Ambil satu foto, kami beri tahu cara membuangnya sesuai aturan Icheon.",
+  "noPhoto": "Belum ada foto",
+  "shootTitle": "Foto barangnya",
+  "shootHint": "Boleh memotret beberapa barang sekaligus. Foto hanya dipakai untuk memeriksa dan tidak disimpan.",
+  "pickBtn": "Ambil foto",
+  "askBtn": "Cek",
+  "thinking": "Sedang dicek, tunggu beberapa detik…",
+  "quickTitle": "Barang umum",
+  "quickHint": "Tanpa foto. Ketuk salah satu untuk melihat.",
+  "rulesTitle": "Aturan Icheon",
+  "example": "Contoh",
+  "steps": "Cara membuangnya",
+  "showKo": "Tunjukkan ini ke tetangga Korea atau pengelola gedung",
+  "disclaimer": "Berdasarkan data publik. Apartemen dan toko bisa punya aturan sendiri, jadi utamakan petunjuk kantor pengelola gedung atau kantor kelurahan setempat. Melanggar aturan bisa kena denda.",
+  "err": "Kami tidak bisa mengenalinya. Coba lagi dengan foto yang lebih jelas.",
+  "busy": "Banyak orang sedang memakai layanan ini. Coba lagi sebentar lagi.",
+  "tooBig": "Fotonya terlalu besar. Silakan pakai foto lain.",
+  "unsure": "Kurang jelas. Silakan foto ulang",
+  "langLabel": "Bahasa",
+  "tabTrash": "Sampah",
+  "tabHelp": "Darurat",
+  "helpTitle": "Saat darurat",
+  "helpSub": "Ketuk nomor untuk langsung menelepon. Jika mereka tidak mengerti Anda, putar kalimat bahasa Korea di bawah.",
+  "callBtn": "Telepon",
+  "buildTitle": "Lapor dalam bahasa Korea",
+  "buildHint": "Pilih apa yang terjadi dan di mana Anda berada. Kami akan membuat kalimat bahasa Korea yang bisa Anda putar di telepon.",
+  "situationLabel": "Apa yang terjadi?",
+  "placeLabel": "Di mana Anda? (nama papan, gedung, atau stasiun)",
+  "placePh": "mis. Stasiun Icheon pintu keluar 2",
+  "playBtn": "Bacakan dalam bahasa Korea",
+  "callThis": "Untuk ini, telepon",
+  "meaning": "Arti",
+  "noVoice": "Perangkat ini tidak bisa membacakan. Tunjukkan layar ke orang lain.",
+  "checkedNote": "Nomor dan jam layanan sudah dicek dari sumber resmi (Oktober 2026). Bisa berubah.",
+  "appName": "Free in Korea",
+  "subPhoto": "Foto",
+  "subList": "Daftar",
+  "subRules": "Aturan",
+  "subCall": "Telepon",
+  "subReport": "Bicara bahasa Korea",
+  "back": "Kembali",
+  "found": "Ditemukan {n} barang",
+  "textLabel": "Atau ketik saja",
+  "textPh": "Contoh: tulang ayam, kotak pizza"
+ },
+ "cat": {
+  "bag": "Kantong sampah berbayar (종량제 봉투) – sampah umum",
+  "food": "Sampah makanan",
+  "rec": "Daur ulang",
+  "spec": "Dibuang terpisah"
+ },
+ "rules": [
+  {
+   "k": "Hari",
+   "v": "Senin sampai Sabtu (menurut data publik)"
+  },
+  {
+   "k": "Tempat",
+   "v": "Titik pembuangan yang sudah ditentukan di lingkungan Anda"
+  },
+  {
+   "k": "Jam",
+   "v": "Info di tiap sumber berbeda. Pastikan tanya ke kantor pengelola gedung"
+  },
+  {
+   "k": "Umum",
+   "v": "Masukkan ke kantong sampah berbayar resmi (종량제 봉투), dijual di minimarket dan supermarket"
+  },
+  {
+   "k": "Makanan",
+   "v": "Tiriskan airnya, hanya sisa makanan, masukkan ke kantong khusus sampah makanan"
+  },
+  {
+   "k": "Daur ulang",
+   "v": "Masukkan ke kantong plastik bening atau ikat dengan tali"
+  },
+  {
+   "k": "Saat bepergian",
+   "v": "Tempat sampah di jalan jarang di Korea. Bawa sampah kembali ke penginapan atau pakai tempat sampah umum, misalnya di stasiun kereta bawah tanah"
+  }
+ ],
+ "items": [
+  {
+   "name": "Botol minuman plastik",
+   "steps": [
+    "Kosongkan dan bilas",
+    "Lepas labelnya, gepengkan, lalu pasang tutupnya lagi",
+    "Masukkan ke kantong bening bersama plastik lain"
+   ]
+  },
+  {
+   "name": "Tulang ayam atau babi",
+   "steps": [
+    "Tulang bukan sampah makanan",
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Tulang di sampah makanan bisa merusak mesin pengolah."
+  },
+  {
+   "name": "Kulit telur",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Kulit telur bukan sampah makanan."
+  },
+  {
+   "name": "Kulit pisang atau apel",
+   "steps": [
+    "Tiriskan airnya",
+    "Masukkan ke kantong sampah makanan"
+   ],
+   "warn": "Kulit keras dan biji (kenari, biji persik, durian) masuk kantong sampah berbayar."
+  },
+  {
+   "name": "Cangkang kerang atau kepiting",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ]
+  },
+  {
+   "name": "Kardus",
+   "steps": [
+    "Lepas selotip dan label pengiriman",
+    "Lipat rata lalu ikat"
+   ]
+  },
+  {
+   "name": "Kotak susu",
+   "steps": [
+    "Bilas, keringkan, lalu buka sampai rata",
+    "Pisahkan dari kertas biasa"
+   ]
+  },
+  {
+   "name": "Kantong plastik bersih",
+   "steps": [
+    "Kosongkan isinya",
+    "Kumpulkan dan buang bersama daur ulang plastik tipis (vinil)"
+   ],
+   "warn": "Kantong plastik yang kena makanan atau minyak masuk kantong sampah berbayar."
+  },
+  {
+   "name": "Kaleng minuman",
+   "steps": [
+    "Kosongkan dan bilas",
+    "Gepengkan kalau bisa",
+    "Buang bersama kaleng lain"
+   ]
+  },
+  {
+   "name": "Botol soju atau bir",
+   "steps": [
+    "Kosongkan dan jangan sampai pecah",
+    "Bisa dikembalikan ke supermarket untuk uang jaminan botol"
+   ]
+  },
+  {
+   "name": "Pecahan kaca atau keramik",
+   "steps": [
+    "Bungkus dengan koran supaya tidak melukai orang",
+    "Masukkan ke karung khusus sampah tidak mudah terbakar"
+   ],
+   "warn": "Kalau dimasukkan ke kantong sampah biasa, petugas kebersihan bisa terluka."
+  },
+  {
+   "name": "Baterai",
+   "steps": [
+    "Masukkan ke kotak baterai bekas di kantor kelurahan atau kompleks apartemen"
+   ]
+  },
+  {
+   "name": "Styrofoam bersih",
+   "steps": [
+    "Lepas selotip dan stiker",
+    "Potongan besar dibuang terpisah"
+   ],
+   "warn": "Styrofoam berwarna atau yang kena makanan masuk kantong sampah berbayar."
+  },
+  {
+   "name": "Struk belanja",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Struk terbuat dari kertas termal, jadi tidak bisa didaur ulang sebagai kertas."
+  },
+  {
+   "name": "Tisu bekas",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ]
+  },
+  {
+   "name": "Sofa, kasur, perabot",
+   "steps": [
+    "Laporkan sebagai sampah besar di kantor kelurahan atau secara online",
+    "Bayar biayanya dan tempel stikernya",
+    "Keluarkan pada hari yang sudah ditentukan"
+   ],
+   "warn": "Membuang tanpa melapor bisa kena denda."
+  }
+ ],
+ "help": {
+  "numbers": [
+   {
+    "name": "Polisi",
+    "desc": "Kejahatan, pencurian, ancaman, orang hilang. Penerjemah bahasa Inggris dan Mandarin ikut dalam panggilan 24/7."
+   },
+   {
+    "name": "Pemadam kebakaran & ambulans",
+    "desc": "Kebakaran, cedera atau sakit, penyelamatan. Jika sulit berbicara, Anda juga bisa melapor lewat video atau pesan teks."
+   },
+   {
+    "name": "Layanan Bantuan Wisata Korea",
+    "desc": "24/7 dalam bahasa Korea, Inggris, Jepang, Mandarin. Bahasa Rusia, Vietnam, Thai, Melayu 08:00–19:00. Bisa menyambungkan Anda ke 119 dan 1345. Dari nomor luar negeri: +82-2-1330"
+   },
+   {
+    "name": "Pusat Layanan Imigrasi",
+    "desc": "Bantuan visa dan kehidupan sehari-hari dalam 20 bahasa. Hari kerja 09:00–22:00; setelah 18:00 hanya bahasa Korea, Inggris, Mandarin."
+   }
+  ],
+  "intro": "Saya orang asing. Tolong carikan penerjemah.",
+  "place": "Saya di dekat {p}.",
+  "situations": [
+   "Ada kebakaran",
+   "Ada orang terluka",
+   "Ada orang sakit parah",
+   "Kecelakaan lalu lintas dengan korban luka",
+   "Ada orang yang mengancam saya",
+   "Barang saya dicuri",
+   "Anak saya hilang",
+   "Saya tersesat"
+  ]
+ }
+}

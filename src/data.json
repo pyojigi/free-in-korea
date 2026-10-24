@@ -1,0 +1,926 @@
+{
+ "langs": [
+  {
+   "code": "ko",
+   "label": "한국어"
+  },
+  {
+   "code": "en",
+   "label": "English"
+  },
+  {
+   "code": "zh",
+   "label": "简体中文"
+  },
+  {
+   "code": "tw",
+   "label": "繁體中文"
+  },
+  {
+   "code": "ja",
+   "label": "日本語"
+  },
+  {
+   "code": "vi",
+   "label": "Tiếng Việt"
+  },
+  {
+   "code": "th",
+   "label": "ภาษาไทย"
+  },
+  {
+   "code": "id",
+   "label": "Bahasa Indonesia"
+  },
+  {
+   "code": "ru",
+   "label": "Русский"
+  },
+  {
+   "code": "mn",
+   "label": "Монгол"
+  }
+ ],
+ "ui": {
+  "ko": {
+   "tagline": "이천시 · 분리배출 통역",
+   "title": "이거 어떻게 버려요?",
+   "subtitle": "사진 한 장이면 이천시 기준으로 어디에 버릴지 알려줘요.",
+   "noPhoto": "사진 없음",
+   "shootTitle": "버릴 물건을 찍으세요",
+   "shootHint": "여러 개를 함께 찍어도 각각 알려줘요. 사진은 판단에만 쓰고 저장하지 않아요.",
+   "pickBtn": "사진 찍기",
+   "askBtn": "판단하기",
+   "thinking": "확인 중이에요. 몇 초 걸려요…",
+   "quickTitle": "자주 묻는 물건",
+   "quickHint": "사진 없이 눌러서 바로 확인하세요.",
+   "rulesTitle": "이천시 배출 규칙",
+   "example": "예시",
+   "steps": "버리는 방법",
+   "showKo": "한국 이웃·관리인에게 보여주기",
+   "disclaimer": "공공데이터 기준으로 정리했어요. 아파트·상가는 자체 규칙이 있을 수 있으니 관리사무소나 동 행정복지센터 안내를 우선하세요. 규정을 어기면 과태료가 나올 수 있어요.",
+   "err": "판단하지 못했어요. 더 선명한 사진으로 다시 해보세요.",
+   "busy": "지금 사용하는 사람이 많아요. 잠시 뒤에 다시 해보세요.",
+   "tooBig": "사진이 너무 커요. 다른 사진을 써주세요.",
+   "unsure": "잘 안 보여요. 다시 찍어주세요",
+   "langLabel": "언어",
+   "tabTrash": "쓰레기",
+   "tabHelp": "긴급 도움",
+   "helpTitle": "위급할 때",
+   "helpSub": "번호를 누르면 바로 전화가 걸려요. 말이 안 통하면 아래 한국어 문장을 틀어주세요.",
+   "callBtn": "전화",
+   "buildTitle": "한국어로 신고하기",
+   "buildHint": "상황을 고르고 위치를 적으면, 전화로 들려줄 한국어 문장을 만들어 줘요.",
+   "situationLabel": "무슨 일인가요?",
+   "placeLabel": "어디인가요? (간판, 건물 이름, 역 이름)",
+   "placePh": "예: 이천역 2번 출구",
+   "playBtn": "한국어로 읽어주기",
+   "callThis": "이 상황은 여기로 전화",
+   "meaning": "뜻",
+   "noVoice": "이 기기는 음성 읽기를 지원하지 않아요. 화면을 상대에게 보여주세요.",
+   "checkedNote": "번호와 운영 시간은 공식 자료로 확인했어요(2026년 10월 기준). 바뀔 수 있어요.",
+   "appName": "Free in Korea",
+   "subPhoto": "사진",
+   "subList": "물건 목록",
+   "subRules": "규칙",
+   "subCall": "전화",
+   "subReport": "한국어로 말하기",
+   "back": "뒤로",
+   "found": "물건 {n}개를 찾았어요",
+   "textLabel": "또는 글로 적어보세요",
+   "textPh": "예: 치킨 뼈, 피자 박스"
+  },
+  "en": {
+   "tagline": "Icheon, Korea · Trash sorting translator",
+   "title": "How do I throw this away?",
+   "subtitle": "Take one photo and we'll tell you where it goes under Icheon's rules.",
+   "noPhoto": "No photo yet",
+   "shootTitle": "Take a photo of the item",
+   "shootHint": "You can photograph several items at once. Your photo is only used to check them and is never saved.",
+   "pickBtn": "Take photo",
+   "askBtn": "Check it",
+   "thinking": "Checking, this takes a few seconds…",
+   "quickTitle": "Common items",
+   "quickHint": "No photo needed. Tap one to see.",
+   "rulesTitle": "Icheon's rules",
+   "example": "Example",
+   "steps": "How to throw it away",
+   "showKo": "Show this to a Korean neighbor or building manager",
+   "disclaimer": "Based on public data. Apartments and shops may have their own rules, so follow your building office or local community center first. Breaking the rules can lead to a fine.",
+   "err": "We couldn't tell. Try again with a clearer photo.",
+   "busy": "Lots of people are using this right now. Please try again in a moment.",
+   "tooBig": "The photo is too large. Please use another one.",
+   "unsure": "Hard to see. Please take another photo",
+   "langLabel": "Language",
+   "tabTrash": "Trash",
+   "tabHelp": "Emergency",
+   "helpTitle": "In an emergency",
+   "helpSub": "Tap a number to call right away. If they can't understand you, play the Korean sentence below.",
+   "callBtn": "Call",
+   "buildTitle": "Report in Korean",
+   "buildHint": "Pick what happened and where you are. We'll make a Korean sentence you can play on the phone.",
+   "situationLabel": "What happened?",
+   "placeLabel": "Where are you? (sign, building or station name)",
+   "placePh": "e.g. Icheon Station exit 2",
+   "playBtn": "Read it aloud in Korean",
+   "callThis": "For this, call",
+   "meaning": "Meaning",
+   "noVoice": "This device can't read aloud. Show the screen to the other person.",
+   "checkedNote": "Numbers and hours checked against official sources (October 2026). They may change.",
+   "appName": "Free in Korea",
+   "subPhoto": "Photo",
+   "subList": "Items",
+   "subRules": "Rules",
+   "subCall": "Call",
+   "subReport": "Say it in Korean",
+   "back": "Back",
+   "found": "Found {n} items",
+   "textLabel": "Or type it",
+   "textPh": "e.g. chicken bones, pizza box"
+  },
+  "zh": {
+   "tagline": "利川市 · 垃圾分类翻译",
+   "title": "这个垃圾怎么扔？",
+   "subtitle": "拍一张照片，按利川市的规定告诉你扔到哪里。",
+   "noPhoto": "还没有照片",
+   "shootTitle": "拍下你要扔的东西",
+   "shootHint": "可以一次拍好几样东西。照片只用来判断，不会保存。",
+   "pickBtn": "拍照",
+   "askBtn": "帮我判断",
+   "thinking": "正在识别，大约需要几秒…",
+   "quickTitle": "常见物品",
+   "quickHint": "不用拍照，点一下就能看。",
+   "rulesTitle": "利川市的规定",
+   "example": "示例",
+   "steps": "怎么扔",
+   "showKo": "给韩国邻居或管理员看",
+   "disclaimer": "规定依据公共数据整理。公寓、商铺可能有自己的规则，请以管理处或洞行政福利中心的说明为准。违反规定可能被罚款。",
+   "err": "识别失败，请换一张更清楚的照片再试。",
+   "busy": "现在使用的人太多，请稍后再试。",
+   "tooBig": "照片太大，请换一张。",
+   "unsure": "看不清楚，请再拍一张",
+   "langLabel": "语言",
+   "tabTrash": "垃圾",
+   "tabHelp": "紧急求助",
+   "helpTitle": "紧急情况",
+   "helpSub": "点号码就能直接打电话。如果对方听不懂，请播放下面的韩语句子。",
+   "callBtn": "拨打",
+   "buildTitle": "用韩语报警",
+   "buildHint": "选择发生了什么、写下你在哪里，就会生成可以在电话里播放的韩语句子。",
+   "situationLabel": "发生了什么？",
+   "placeLabel": "你在哪里？（招牌、建筑或车站名）",
+   "placePh": "例如：利川站2号出口",
+   "playBtn": "用韩语读出来",
+   "callThis": "这种情况请拨打",
+   "meaning": "意思",
+   "noVoice": "这台设备不支持朗读。请把屏幕给对方看。",
+   "checkedNote": "号码和时间已按官方资料核对（2026年10月）。可能会有变化。",
+   "appName": "Free in Korea",
+   "subPhoto": "拍照",
+   "subList": "物品",
+   "subRules": "规定",
+   "subCall": "打电话",
+   "subReport": "用韩语说",
+   "back": "返回",
+   "found": "找到{n}样东西",
+   "textLabel": "或者用文字输入",
+   "textPh": "例如：鸡骨头、披萨盒"
+  }
+ },
+ "cat": {
+  "bag": {
+   "s": "▣",
+   "n": {
+    "ko": "종량제 봉투 (일반쓰레기)",
+    "en": "Pay-as-you-throw bag (general trash)",
+    "zh": "计量垃圾袋（一般垃圾）"
+   }
+  },
+  "food": {
+   "s": "◒",
+   "n": {
+    "ko": "음식물 쓰레기",
+    "en": "Food waste",
+    "zh": "厨余垃圾"
+   }
+  },
+  "rec": {
+   "s": "♻",
+   "n": {
+    "ko": "재활용품",
+    "en": "Recycling",
+    "zh": "可回收物"
+   }
+  },
+  "spec": {
+   "s": "!",
+   "n": {
+    "ko": "따로 배출",
+    "en": "Special disposal",
+    "zh": "特殊处理"
+   }
+  }
+ },
+ "rules": [
+  {
+   "k": {
+    "ko": "요일",
+    "en": "Days",
+    "zh": "日期"
+   },
+   "v": {
+    "ko": "월~토 (공공데이터 기준)",
+    "en": "Monday to Saturday (public data)",
+    "zh": "周一至周六（公共数据）"
+   }
+  },
+  {
+   "k": {
+    "ko": "장소",
+    "en": "Where",
+    "zh": "地点"
+   },
+   "v": {
+    "ko": "지정된 거점배출장소",
+    "en": "Your neighborhood's designated drop-off point",
+    "zh": "指定的集中投放点"
+   }
+  },
+  {
+   "k": {
+    "ko": "시간",
+    "en": "Time",
+    "zh": "时间"
+   },
+   "v": {
+    "ko": "자료마다 표기가 달라요. 관리사무소에 꼭 확인",
+    "en": "Sources disagree. Check with your building office",
+    "zh": "资料中写法不一致，请向管理处确认"
+   }
+  },
+  {
+   "k": {
+    "ko": "일반",
+    "en": "General",
+    "zh": "一般"
+   },
+   "v": {
+    "ko": "종량제 봉투에 담기 (편의점·마트 판매)",
+    "en": "Use the official pay-as-you-throw bag (sold at convenience stores and marts)",
+    "zh": "装进计量垃圾袋（便利店、超市有卖）"
+   }
+  },
+  {
+   "k": {
+    "ko": "음식물",
+    "en": "Food",
+    "zh": "厨余"
+   },
+   "v": {
+    "ko": "물기 빼고 음식물만, 전용 봉투에",
+    "en": "Drain the water, food only, in the food-waste bag",
+    "zh": "沥干水分，只放食物，用专用袋"
+   }
+  },
+  {
+   "k": {
+    "ko": "재활용",
+    "en": "Recycling",
+    "zh": "回收"
+   },
+   "v": {
+    "ko": "투명 비닐에 담거나 끈으로 묶기",
+    "en": "Put in a clear plastic bag or tie it up",
+    "zh": "装进透明塑料袋或捆好"
+   }
+  },
+  {
+   "k": {
+    "ko": "여행 중",
+    "en": "Traveling",
+    "zh": "旅行中"
+   },
+   "v": {
+    "ko": "길에는 쓰레기통이 적어요. 숙소에 가져가 버리거나 지하철역 등의 공공 쓰레기통을 이용하세요",
+    "en": "Street trash cans are rare in Korea. Take trash back to your hotel or use public bins, for example at subway stations",
+    "zh": "韩国街上垃圾桶很少。请带回住处扔，或使用地铁站等处的公共垃圾桶"
+   }
+  }
+ ],
+ "items": [
+  {
+   "cat": "rec",
+   "t": {
+    "ko": {
+     "name": "페트병",
+     "steps": [
+      "내용물 비우고 헹구기",
+      "라벨 떼고 찌그러뜨린 뒤 뚜껑 닫기",
+      "투명 비닐에 담아 플라스틱으로 배출"
+     ]
+    },
+    "en": {
+     "name": "Plastic drink bottle",
+     "steps": [
+      "Empty it and rinse",
+      "Remove the label, crush it, put the cap back on",
+      "Put it in a clear bag with other plastics"
+     ]
+    },
+    "zh": {
+     "name": "塑料饮料瓶",
+     "steps": [
+      "倒空，用水冲一下",
+      "撕掉标签，压扁，盖上盖子",
+      "放进透明塑料袋，和其他塑料一起扔"
+     ]
+    }
+   }
+  },
+  {
+   "cat": "bag",
+   "t": {
+    "ko": {
+     "name": "치킨·돼지 뼈",
+     "steps": [
+      "뼈는 음식물 쓰레기가 아니에요",
+      "종량제 봉투에 넣기"
+     ],
+     "warn": "뼈를 음식물로 버리면 처리 기계가 고장 나요."
+    },
+    "en": {
+     "name": "Chicken or pork bones",
+     "steps": [
+      "Bones are not food waste",
+      "Put them in the pay-as-you-throw bag"
+     ],
+     "warn": "Bones in food waste break the processing machines."
+    },
+    "zh": {
+     "name": "鸡骨头、猪骨头",
+     "steps": [
+      "骨头不是厨余垃圾",
+      "放进计量垃圾袋"
+     ],
+     "warn": "骨头放进厨余垃圾会弄坏处理机器。"
+    }
+   }
+  },
+  {
+   "cat": "bag",
+   "t": {
+    "ko": {
+     "name": "계란 껍데기",
+     "steps": [
+      "종량제 봉투에 넣기"
+     ],
+     "warn": "계란 껍데기는 음식물이 아니에요."
+    },
+    "en": {
+     "name": "Eggshells",
+     "steps": [
+      "Put them in the pay-as-you-throw bag"
+     ],
+     "warn": "Eggshells are not food waste."
+    },
+    "zh": {
+     "name": "鸡蛋壳",
+     "steps": [
+      "放进计量垃圾袋"
+     ],
+     "warn": "蛋壳不能当厨余垃圾。"
+    }
+   }
+  },
+  {
+   "cat": "food",
+   "t": {
+    "ko": {
+     "name": "바나나·사과 껍질",
+     "steps": [
+      "물기 빼기",
+      "음식물 전용 봉투에 넣기"
+     ],
+     "warn": "딱딱한 껍질·씨(호두, 복숭아씨, 두리안)는 종량제 봉투로."
+    },
+    "en": {
+     "name": "Banana or apple peel",
+     "steps": [
+      "Drain the water",
+      "Put it in the food-waste bag"
+     ],
+     "warn": "Hard shells and pits (walnut, peach pit, durian) go in the pay-as-you-throw bag."
+    },
+    "zh": {
+     "name": "香蕉皮、苹果皮",
+     "steps": [
+      "去掉水分",
+      "放进厨余专用袋"
+     ],
+     "warn": "硬的壳和核（核桃壳、桃核、榴莲壳）要放计量垃圾袋。"
+    }
+   }
+  },
+  {
+   "cat": "bag",
+   "t": {
+    "ko": {
+     "name": "조개·게 껍데기",
+     "steps": [
+      "종량제 봉투에 넣기"
+     ]
+    },
+    "en": {
+     "name": "Clam or crab shells",
+     "steps": [
+      "Put them in the pay-as-you-throw bag"
+     ]
+    },
+    "zh": {
+     "name": "贝壳、螃蟹壳",
+     "steps": [
+      "放进计量垃圾袋"
+     ]
+    }
+   }
+  },
+  {
+   "cat": "rec",
+   "t": {
+    "ko": {
+     "name": "택배 박스",
+     "steps": [
+      "테이프·송장 떼기",
+      "납작하게 펴서 묶기"
+     ]
+    },
+    "en": {
+     "name": "Cardboard box",
+     "steps": [
+      "Remove tape and shipping labels",
+      "Flatten and tie it up"
+     ]
+    },
+    "zh": {
+     "name": "快递纸箱",
+     "steps": [
+      "撕掉胶带和快递单",
+      "压平，捆好"
+     ]
+    }
+   }
+  },
+  {
+   "cat": "rec",
+   "t": {
+    "ko": {
+     "name": "우유팩",
+     "steps": [
+      "헹궈서 말리고 펼치기",
+      "일반 종이와 따로 배출"
+     ]
+    },
+    "en": {
+     "name": "Milk carton",
+     "steps": [
+      "Rinse, dry and open it flat",
+      "Keep it separate from regular paper"
+     ]
+    },
+    "zh": {
+     "name": "牛奶盒",
+     "steps": [
+      "冲洗，晾干，展开",
+      "和普通纸分开放"
+     ]
+    }
+   }
+  },
+  {
+   "cat": "rec",
+   "t": {
+    "ko": {
+     "name": "깨끗한 비닐봉지",
+     "steps": [
+      "내용물 털기",
+      "모아서 비닐류로 배출"
+     ],
+     "warn": "음식·기름 묻은 비닐은 종량제 봉투로."
+    },
+    "en": {
+     "name": "Clean plastic bag",
+     "steps": [
+      "Shake it empty",
+      "Collect them and put out with plastic film recycling"
+     ],
+     "warn": "Plastic bags with food or oil on them go in the pay-as-you-throw bag."
+    },
+    "zh": {
+     "name": "干净的塑料袋",
+     "steps": [
+      "倒掉里面的东西",
+      "几个装在一起，放到塑料袋回收"
+     ],
+     "warn": "沾了油或食物的塑料袋放计量垃圾袋。"
+    }
+   }
+  },
+  {
+   "cat": "rec",
+   "t": {
+    "ko": {
+     "name": "캔",
+     "steps": [
+      "비우고 헹구기",
+      "가능하면 찌그러뜨리기",
+      "캔류로 배출"
+     ]
+    },
+    "en": {
+     "name": "Drink can",
+     "steps": [
+      "Empty and rinse",
+      "Crush it if you can",
+      "Put out with cans"
+     ]
+    },
+    "zh": {
+     "name": "易拉罐",
+     "steps": [
+      "倒空，冲一下",
+      "尽量压扁",
+      "放到罐类回收"
+     ]
+    }
+   }
+  },
+  {
+   "cat": "rec",
+   "t": {
+    "ko": {
+     "name": "소주병·맥주병",
+     "steps": [
+      "비우고 깨지지 않게",
+      "마트에서 빈 병 보증금 환불 가능"
+     ]
+    },
+    "en": {
+     "name": "Soju or beer bottle",
+     "steps": [
+      "Empty it and keep it unbroken",
+      "You can return it at a mart for a bottle deposit refund"
+     ]
+    },
+    "zh": {
+     "name": "烧酒瓶、啤酒瓶",
+     "steps": [
+      "倒空，不要打碎",
+      "可以拿到超市退瓶押金"
+     ]
+    }
+   }
+  },
+  {
+   "cat": "spec",
+   "t": {
+    "ko": {
+     "name": "깨진 유리·도자기",
+     "steps": [
+      "신문지로 싸서 다치지 않게",
+      "불연성 전용 마대에 담기"
+     ],
+     "warn": "종량제 봉투에 넣으면 미화원이 다칠 수 있어요."
+    },
+    "en": {
+     "name": "Broken glass or ceramics",
+     "steps": [
+      "Wrap it in newspaper so no one gets cut",
+      "Put it in the special sack for non-burnable waste"
+     ],
+     "warn": "In a regular trash bag it can injure sanitation workers."
+    },
+    "zh": {
+     "name": "碎玻璃、陶瓷碗",
+     "steps": [
+      "用报纸包好，防止伤人",
+      "放进专用麻袋（不可燃垃圾）"
+     ],
+     "warn": "不要放进计量垃圾袋，会伤到清洁工。"
+    }
+   }
+  },
+  {
+   "cat": "spec",
+   "t": {
+    "ko": {
+     "name": "건전지",
+     "steps": [
+      "주민센터·아파트 폐건전지 수거함에 넣기"
+     ]
+    },
+    "en": {
+     "name": "Batteries",
+     "steps": [
+      "Drop them in a used-battery box at a community center or apartment complex"
+     ]
+    },
+    "zh": {
+     "name": "电池",
+     "steps": [
+      "放进社区中心或公寓的废电池回收箱"
+     ]
+    }
+   }
+  },
+  {
+   "cat": "rec",
+   "t": {
+    "ko": {
+     "name": "깨끗한 스티로폼",
+     "steps": [
+      "테이프·스티커 떼기",
+      "큰 덩어리는 따로 배출"
+     ],
+     "warn": "색깔 있거나 음식 묻은 건 종량제 봉투로."
+    },
+    "en": {
+     "name": "Clean styrofoam",
+     "steps": [
+      "Remove tape and stickers",
+      "Put large pieces out separately"
+     ],
+     "warn": "Colored or food-stained styrofoam goes in the pay-as-you-throw bag."
+    },
+    "zh": {
+     "name": "干净的泡沫箱",
+     "steps": [
+      "撕掉胶带和标签",
+      "大块的单独放"
+     ],
+     "warn": "有颜色或沾了食物的泡沫放计量垃圾袋。"
+    }
+   }
+  },
+  {
+   "cat": "bag",
+   "t": {
+    "ko": {
+     "name": "영수증",
+     "steps": [
+      "종량제 봉투에 넣기"
+     ],
+     "warn": "영수증은 감열지라 종이로 재활용이 안 돼요."
+    },
+    "en": {
+     "name": "Receipt",
+     "steps": [
+      "Put it in the pay-as-you-throw bag"
+     ],
+     "warn": "Receipts are thermal paper and can't be recycled as paper."
+    },
+    "zh": {
+     "name": "收据",
+     "steps": [
+      "放进计量垃圾袋"
+     ],
+     "warn": "收据是热敏纸，不能当纸回收。"
+    }
+   }
+  },
+  {
+   "cat": "bag",
+   "t": {
+    "ko": {
+     "name": "휴지",
+     "steps": [
+      "종량제 봉투에 넣기"
+     ]
+    },
+    "en": {
+     "name": "Used tissue",
+     "steps": [
+      "Put it in the pay-as-you-throw bag"
+     ]
+    },
+    "zh": {
+     "name": "用过的纸巾",
+     "steps": [
+      "放进计量垃圾袋"
+     ]
+    }
+   }
+  },
+  {
+   "cat": "spec",
+   "t": {
+    "ko": {
+     "name": "소파·매트리스·가구",
+     "steps": [
+      "동 행정복지센터나 인터넷으로 대형폐기물 신고",
+      "수수료 내고 신고필증 붙이기",
+      "정해진 날 배출"
+     ],
+     "warn": "신고 없이 내놓으면 과태료 대상이에요."
+    },
+    "en": {
+     "name": "Sofa, mattress, furniture",
+     "steps": [
+      "Report it as bulky waste at your community center or online",
+      "Pay the fee and attach the sticker",
+      "Put it out on the agreed day"
+     ],
+     "warn": "Putting it out without reporting can lead to a fine."
+    },
+    "zh": {
+     "name": "沙发、床垫、柜子",
+     "steps": [
+      "先到洞行政福利中心或网上申报大型垃圾",
+      "交费后贴上申报贴纸",
+      "按约定的日期放出"
+     ],
+     "warn": "没有申报直接扔会被罚款。"
+    }
+   }
+  }
+ ],
+ "help": {
+  "numbers": [
+   {
+    "num": "112",
+    "t": {
+     "ko": {
+      "name": "경찰",
+      "desc": "범죄, 도난, 위협, 실종. 영어·중국어 통역이 24시간 연결돼요."
+     },
+     "en": {
+      "name": "Police",
+      "desc": "Crime, theft, threats, missing people. English and Chinese interpreters join the call 24/7."
+     },
+     "zh": {
+      "name": "警察",
+      "desc": "犯罪、被盗、受到威胁、有人失踪。24小时提供英语、汉语翻译。"
+     }
+    }
+   },
+   {
+    "num": "119",
+    "t": {
+     "ko": {
+      "name": "소방·구급",
+      "desc": "화재, 다치거나 아플 때, 구조. 말이 어려우면 영상·문자로도 신고할 수 있어요."
+     },
+     "en": {
+      "name": "Fire & ambulance",
+      "desc": "Fire, injury or illness, rescue. If talking is hard, you can also report by video or text."
+     },
+     "zh": {
+      "name": "消防·急救",
+      "desc": "火灾、受伤或生病、救援。说话困难时也可以用视频或短信报警。"
+     }
+    }
+   },
+   {
+    "num": "1330",
+    "t": {
+     "ko": {
+      "name": "관광통역안내",
+      "desc": "24시간 한·영·일·중. 러·베·태·말레이어는 08~19시. 119와 1345에 연결해 줄 수 있어요. 해외 번호: +82-2-1330"
+     },
+     "en": {
+      "name": "Korea Travel Helpline",
+      "desc": "24/7 in Korean, English, Japanese, Chinese. Russian, Vietnamese, Thai, Malay 08:00–19:00. Can connect you to 119 and 1345. From a foreign phone: +82-2-1330"
+     },
+     "zh": {
+      "name": "旅游翻译咨询",
+      "desc": "24小时提供韩、英、日、中文。俄、越、泰、马来语为08:00–19:00。可以帮你转接119和1345。外国号码请拨 +82-2-1330"
+     }
+    }
+   },
+   {
+    "num": "1345",
+    "t": {
+     "ko": {
+      "name": "외국인종합안내센터",
+      "desc": "체류·생활 상담, 20개 언어. 평일 09~22시, 18시 이후는 한·영·중만."
+     },
+     "en": {
+      "name": "Immigration Contact Center",
+      "desc": "Visa and daily-life help in 20 languages. Weekdays 09:00–22:00; after 18:00 only Korean, English, Chinese."
+     },
+     "zh": {
+      "name": "外国人综合咨询中心",
+      "desc": "居留和生活咨询，20种语言。工作日09:00–22:00，18点以后只有韩、英、中文。"
+     }
+    }
+   }
+  ],
+  "intro": {
+   "ko": "저는 외국인이에요. 통역해 주세요.",
+   "rom": "Jeoneun oegugin-ieyo. Tongyeokhae juseyo.",
+   "t": {
+    "ko": "저는 외국인이에요. 통역해 주세요.",
+    "en": "I'm a foreigner. Please get an interpreter.",
+    "zh": "我是外国人，请帮我找翻译。"
+   }
+  },
+  "place": {
+   "ko": "여기는 {p} 근처예요.",
+   "rom": "Yeogineun {p} geuncheo-yeyo.",
+   "t": {
+    "ko": "여기는 {p} 근처예요.",
+    "en": "I'm near {p}.",
+    "zh": "我在{p}附近。"
+   }
+  },
+  "situations": [
+   {
+    "id": "fire",
+    "num": "119",
+    "ko": "불이 났어요. 빨리 와 주세요.",
+    "rom": "Buri nasseoyo. Ppalli wa juseyo.",
+    "t": {
+     "ko": "불이 났어요",
+     "en": "There's a fire",
+     "zh": "着火了"
+    }
+   },
+   {
+    "id": "hurt",
+    "num": "119",
+    "ko": "사람이 다쳤어요. 구급차가 필요해요.",
+    "rom": "Sarami dachyeosseoyo. Gugeupchaga piryohaeyo.",
+    "t": {
+     "ko": "사람이 다쳤어요",
+     "en": "Someone is injured",
+     "zh": "有人受伤了"
+    }
+   },
+   {
+    "id": "sick",
+    "num": "119",
+    "ko": "사람이 많이 아파요. 구급차가 필요해요.",
+    "rom": "Sarami mani apayo. Gugeupchaga piryohaeyo.",
+    "t": {
+     "ko": "사람이 많이 아파요",
+     "en": "Someone is very sick",
+     "zh": "有人病得很重"
+    }
+   },
+   {
+    "id": "car",
+    "num": "119",
+    "ko": "교통사고가 났어요. 다친 사람이 있어요.",
+    "rom": "Gyotong sagoga nasseoyo. Dachin sarami isseoyo.",
+    "t": {
+     "ko": "교통사고 (다친 사람 있음)",
+     "en": "Traffic accident with injuries",
+     "zh": "交通事故（有人受伤）"
+    }
+   },
+   {
+    "id": "threat",
+    "num": "112",
+    "ko": "누가 저를 위협해요. 도와주세요.",
+    "rom": "Nuga jeoreul wihyeophaeyo. Dowajuseyo.",
+    "t": {
+     "ko": "누가 위협해요",
+     "en": "Someone is threatening me",
+     "zh": "有人威胁我"
+    }
+   },
+   {
+    "id": "theft",
+    "num": "112",
+    "ko": "물건을 도둑맞았어요.",
+    "rom": "Mulgeoneul doduk-majasseoyo.",
+    "t": {
+     "ko": "도둑맞았어요",
+     "en": "I was robbed",
+     "zh": "东西被偷了"
+    }
+   },
+   {
+    "id": "lostchild",
+    "num": "112",
+    "ko": "아이를 잃어버렸어요. 도와주세요.",
+    "rom": "Aireul ireobeoryeosseoyo. Dowajuseyo.",
+    "t": {
+     "ko": "아이를 잃어버렸어요",
+     "en": "I lost my child",
+     "zh": "孩子走丢了"
+    }
+   },
+   {
+    "id": "lost",
+    "num": "1330",
+    "ko": "길을 잃었어요. 도와주세요.",
+    "rom": "Gireul ireosseoyo. Dowajuseyo.",
+    "t": {
+     "ko": "길을 잃었어요",
+     "en": "I'm lost",
+     "zh": "我迷路了"
+    }
+   }
+  ]
+ }
+}

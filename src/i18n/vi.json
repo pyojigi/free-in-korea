@@ -1,0 +1,238 @@
+{
+ "ui": {
+  "tagline": "Icheon, Hàn Quốc · Hướng dẫn phân loại rác",
+  "title": "Cái này vứt thế nào?",
+  "subtitle": "Chỉ cần chụp một tấm ảnh, chúng tôi sẽ cho bạn biết vứt ở đâu theo quy định của Icheon.",
+  "noPhoto": "Chưa có ảnh",
+  "shootTitle": "Chụp đồ bạn muốn vứt",
+  "shootHint": "Có thể chụp nhiều món cùng lúc. Ảnh chỉ dùng để kiểm tra và không được lưu.",
+  "pickBtn": "Chụp ảnh",
+  "askBtn": "Kiểm tra",
+  "thinking": "Đang kiểm tra, mất vài giây…",
+  "quickTitle": "Đồ hay gặp",
+  "quickHint": "Không cần ảnh. Chạm vào để xem ngay.",
+  "rulesTitle": "Quy định của Icheon",
+  "example": "Ví dụ",
+  "steps": "Cách vứt",
+  "showKo": "Đưa cho hàng xóm người Hàn hoặc quản lý tòa nhà xem",
+  "disclaimer": "Thông tin dựa trên dữ liệu công cộng. Chung cư và cửa hàng có thể có quy định riêng, nên hãy làm theo hướng dẫn của ban quản lý hoặc trung tâm hành chính phường trước. Vi phạm quy định có thể bị phạt tiền.",
+  "err": "Không nhận ra được. Hãy thử lại với ảnh rõ hơn.",
+  "busy": "Đang có nhiều người dùng. Vui lòng thử lại sau một lát.",
+  "tooBig": "Ảnh quá lớn. Vui lòng dùng ảnh khác.",
+  "unsure": "Khó nhìn rõ. Vui lòng chụp lại",
+  "langLabel": "Ngôn ngữ",
+  "tabTrash": "Rác",
+  "tabHelp": "Khẩn cấp",
+  "helpTitle": "Khi khẩn cấp",
+  "helpSub": "Bấm vào số để gọi ngay. Nếu họ không hiểu bạn, hãy phát câu tiếng Hàn bên dưới.",
+  "callBtn": "Gọi",
+  "buildTitle": "Báo bằng tiếng Hàn",
+  "buildHint": "Chọn chuyện gì đã xảy ra và bạn đang ở đâu. Chúng tôi sẽ tạo câu tiếng Hàn để bạn phát qua điện thoại.",
+  "situationLabel": "Chuyện gì đã xảy ra?",
+  "placeLabel": "Bạn đang ở đâu? (biển hiệu, tên tòa nhà hoặc tên ga)",
+  "placePh": "VD: Ga Icheon lối ra số 2",
+  "playBtn": "Đọc to bằng tiếng Hàn",
+  "callThis": "Trường hợp này, hãy gọi",
+  "meaning": "Nghĩa",
+  "noVoice": "Thiết bị này không đọc to được. Hãy cho người kia xem màn hình.",
+  "checkedNote": "Số điện thoại và giờ hoạt động đã được kiểm tra theo nguồn chính thức (tháng 10/2026). Có thể thay đổi.",
+  "appName": "Free in Korea",
+  "subPhoto": "Chụp ảnh",
+  "subList": "Danh sách",
+  "subRules": "Quy định",
+  "subCall": "Gọi",
+  "subReport": "Nói bằng tiếng Hàn",
+  "back": "Quay lại",
+  "found": "Tìm thấy {n} món",
+  "textLabel": "Hoặc nhập bằng chữ",
+  "textPh": "Ví dụ: xương gà, hộp pizza"
+ },
+ "cat": {
+  "bag": "Túi rác trả phí theo lượng (종량제 봉투) – rác thường",
+  "food": "Rác thực phẩm",
+  "rec": "Đồ tái chế",
+  "spec": "Vứt riêng"
+ },
+ "rules": [
+  {
+   "k": "Ngày",
+   "v": "Thứ Hai đến thứ Bảy (theo dữ liệu công cộng)"
+  },
+  {
+   "k": "Nơi vứt",
+   "v": "Điểm tập kết rác quy định ở khu bạn ở"
+  },
+  {
+   "k": "Giờ",
+   "v": "Các nguồn ghi khác nhau. Hãy hỏi ban quản lý tòa nhà"
+  },
+  {
+   "k": "Rác thường",
+   "v": "Bỏ vào túi rác trả phí theo lượng (종량제 봉투), bán ở cửa hàng tiện lợi và siêu thị"
+  },
+  {
+   "k": "Thực phẩm",
+   "v": "Để ráo nước, chỉ bỏ đồ ăn vào túi rác thực phẩm"
+  },
+  {
+   "k": "Tái chế",
+   "v": "Bỏ vào túi nilon trong suốt hoặc buộc bằng dây"
+  },
+  {
+   "k": "Khi đi du lịch",
+   "v": "Ở Hàn Quốc ít thùng rác ngoài đường. Hãy mang rác về chỗ ở hoặc dùng thùng rác công cộng, ví dụ ở ga tàu điện ngầm"
+  }
+ ],
+ "items": [
+  {
+   "name": "Chai nhựa đựng nước",
+   "steps": [
+    "Đổ hết và tráng sạch",
+    "Bóc nhãn, bóp dẹp, đậy nắp lại",
+    "Bỏ vào túi trong suốt cùng đồ nhựa"
+   ]
+  },
+  {
+   "name": "Xương gà, xương heo",
+   "steps": [
+    "Xương không phải rác thực phẩm",
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Bỏ xương vào rác thực phẩm sẽ làm hỏng máy xử lý."
+  },
+  {
+   "name": "Vỏ trứng",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Vỏ trứng không phải rác thực phẩm."
+  },
+  {
+   "name": "Vỏ chuối, vỏ táo",
+   "steps": [
+    "Để ráo nước",
+    "Bỏ vào túi rác thực phẩm"
+   ],
+   "warn": "Vỏ cứng và hạt (óc chó, hạt đào, sầu riêng) bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Vỏ sò, vỏ cua",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ]
+  },
+  {
+   "name": "Thùng các tông",
+   "steps": [
+    "Bóc băng keo và phiếu giao hàng",
+    "Ép dẹp và buộc lại"
+   ]
+  },
+  {
+   "name": "Hộp sữa giấy",
+   "steps": [
+    "Tráng, phơi khô và mở phẳng ra",
+    "Để riêng với giấy thường"
+   ]
+  },
+  {
+   "name": "Túi nilon sạch",
+   "steps": [
+    "Giũ sạch bên trong",
+    "Gom lại và bỏ chung với đồ nilon tái chế"
+   ],
+   "warn": "Túi nilon dính đồ ăn hoặc dầu mỡ thì bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Lon nước",
+   "steps": [
+    "Đổ hết và tráng sạch",
+    "Bóp dẹp nếu được",
+    "Bỏ chung với đồ lon"
+   ]
+  },
+  {
+   "name": "Chai soju, chai bia",
+   "steps": [
+    "Đổ hết, giữ chai không bị vỡ",
+    "Có thể mang ra siêu thị để lấy lại tiền cọc chai"
+   ]
+  },
+  {
+   "name": "Kính vỡ, đồ sứ vỡ",
+   "steps": [
+    "Gói bằng giấy báo để không ai bị đứt tay",
+    "Bỏ vào bao chuyên dụng cho rác không cháy được"
+   ],
+   "warn": "Bỏ vào túi rác trả phí theo lượng có thể làm công nhân vệ sinh bị thương."
+  },
+  {
+   "name": "Pin",
+   "steps": [
+    "Bỏ vào thùng thu pin cũ ở trung tâm phường hoặc chung cư"
+   ]
+  },
+  {
+   "name": "Xốp sạch",
+   "steps": [
+    "Bóc băng keo và nhãn dán",
+    "Miếng lớn thì để riêng"
+   ],
+   "warn": "Xốp có màu hoặc dính đồ ăn thì bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Hóa đơn",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Hóa đơn là giấy in nhiệt nên không tái chế như giấy được."
+  },
+  {
+   "name": "Giấy ăn đã dùng",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ]
+  },
+  {
+   "name": "Sofa, nệm, đồ nội thất",
+   "steps": [
+    "Khai báo rác cồng kềnh ở trung tâm hành chính phường hoặc trên mạng",
+    "Trả phí và dán nhãn đã khai báo",
+    "Mang ra vào đúng ngày đã hẹn"
+   ],
+   "warn": "Mang ra mà không khai báo có thể bị phạt tiền."
+  }
+ ],
+ "help": {
+  "numbers": [
+   {
+    "name": "Cảnh sát",
+    "desc": "Tội phạm, trộm cắp, bị đe dọa, người mất tích. Có phiên dịch tiếng Anh và tiếng Trung tham gia cuộc gọi 24 giờ."
+   },
+   {
+    "name": "Cứu hỏa & cấp cứu",
+    "desc": "Hỏa hoạn, bị thương hoặc bị bệnh, cứu hộ. Nếu khó nói chuyện, bạn cũng có thể báo bằng video hoặc tin nhắn."
+   },
+   {
+    "name": "Đường dây hỗ trợ du lịch Hàn Quốc",
+    "desc": "24 giờ bằng tiếng Hàn, Anh, Nhật, Trung. Tiếng Nga, Việt, Thái, Mã Lai từ 08:00–19:00. Có thể nối máy giúp bạn tới 119 và 1345. Gọi từ điện thoại nước ngoài: +82-2-1330"
+   },
+   {
+    "name": "Trung tâm hỗ trợ người nước ngoài",
+    "desc": "Tư vấn visa và đời sống bằng 20 ngôn ngữ. Ngày thường 09:00–22:00; sau 18:00 chỉ có tiếng Hàn, Anh, Trung."
+   }
+  ],
+  "intro": "Tôi là người nước ngoài. Xin hãy gọi phiên dịch giúp tôi.",
+  "place": "Tôi đang ở gần {p}.",
+  "situations": [
+   "Có cháy",
+   "Có người bị thương",
+   "Có người bị bệnh nặng",
+   "Tai nạn giao thông (có người bị thương)",
+   "Có người đe dọa tôi",
+   "Tôi bị trộm đồ",
+   "Tôi bị lạc mất con",
+   "Tôi bị lạc đường"
+  ]
+ }
+}
