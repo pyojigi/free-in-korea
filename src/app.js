@@ -50,14 +50,15 @@ function render(){
   if (openedItem) renderVerdict($("itemVerdict"), openedItem, "item");
   if (aiItems) renderAi();
   renderHelp();
+  renderArea();
 }
 
 // ---- 화면 이동: 대분류(main) > 소분류(sub) ----
-const NAV = {trash:["photo","list","rules"], help:["call","report"]};
-const SUBKEY = {photo:"subPhoto", list:"subList", rules:"subRules", call:"subCall", report:"subReport"};
+const NAV = {trash:["photo","area","list","rules"], help:["call","report"]};
+const SUBKEY = {photo:"subPhoto", area:"subArea", list:"subList", rules:"subRules", call:"subCall", report:"subReport"};
 let main = location.hash === "#help" ? "help" : "trash";
 const lastSub = {trash:"photo", help:"call"};
-let openedItem = null, aiItems = null;
+let openedItem = null, aiItems = null, lastByText = false;
 
 function renderSubs(){
   for (const m of Object.keys(NAV)) $("m-" + m).setAttribute("aria-selected", String(m === main));
@@ -124,21 +125,31 @@ function renderSay(){
 }
 $("sit").onchange = renderSay;
 $("place").oninput = renderSay;
-$("speak").onclick = () => {
+// 휴대폰은 목소리 목록이 늦게 올라와서 잠깐 기다렸다가 한국어 목소리를 찾음
+function koVoice(synth){
+  const find = () => synth.getVoices().find(v => v.lang && v.lang.toLowerCase().replace("_", "-").startsWith("ko"));
+  if (find() || synth.getVoices().length) return Promise.resolve(find());
+  return new Promise(res => {
+    const done = () => { synth.removeEventListener("voiceschanged", done); res(find()); };
+    synth.addEventListener("voiceschanged", done); setTimeout(done, 1500);
+  });
+}
+$("speak").onclick = async () => {
   const synth = window.speechSynthesis;
+  $("voiceStatus").textContent = "";
   if (!synth || typeof SpeechSynthesisUtterance === "undefined") { $("voiceStatus").textContent = t("noVoice"); return; }
   synth.cancel();
+  const v = await koVoice(synth);
+  if (!v) { $("voiceStatus").textContent = t("noVoice"); return; }
   const u = new SpeechSynthesisUtterance(sentence().ko);
-  u.lang = "ko-KR"; u.rate = 0.85;
-  const v = synth.getVoices().find(v => v.lang && v.lang.toLowerCase().startsWith("ko"));
-  if (v) u.voice = v;
-  else if (synth.getVoices().length) $("voiceStatus").textContent = t("noVoice");
+  u.lang = "ko-KR"; u.rate = 0.85; u.voice = v;
   synth.speak(u);
 };
 
 // 사진 결과: 물건이 여러 개면 카드를 여러 장
 function renderAi(){
   const box = $("aiVerdict"); box.innerHTML = ""; box.hidden = false;
+  if (!aiItems.length) { const n = document.createElement("p"); n.className = "notice"; n.textContent = t(lastByText ? "noItem" : "unsure"); box.append(n); return; }
   if (aiItems.length > 1) { const h = document.createElement("p"); h.className = "found"; h.textContent = t("found").replace("{n}", aiItems.length); box.append(h); }
   aiItems.forEach(it => { const card = document.createElement("article"); card.className = "verdict"; renderVerdict(card, it, "ai"); box.append(card); });
 }
@@ -214,7 +225,7 @@ async function classify(image, l, text){
     const list = v => Array.isArray(v) ? v.map(String).slice(0, 5) : [];
     const items = (Array.isArray(r && r.items) ? r.items : []).filter(it => it && ["bag","food","rec","spec"].includes(it.cat)).slice(0, 6)
       .map(it => ({cat:it.cat, name:String(it.name || ""), steps:list(it.steps), warn:String(it.warn || ""), koName:String(it.koName || ""), koSteps:list(it.koSteps)}));
-    if (!items.length) throw "err";
+    if (!items.length && !(r && Array.isArray(r.items))) throw "err";
     return {items, confident: r.confident !== false};
   }
   const res = await fetch("/api/classify", {method:"POST", headers:{"content-type":"application/json"},
@@ -231,7 +242,7 @@ async function run(byText){
   const typed = $("textIn").value.trim();
   if (busy || (byText ? !typed : !photo)) return;
   busy = true; for (const id of ["ask","pick","askText"]) $(id).disabled = true; $("status").textContent = t("thinking");
-  const askedLang = lang;
+  const askedLang = lang; lastByText = byText;
   try {
     const image = byText ? null : await shrink(photo);
     const r = await classify(image, askedLang, byText ? typed : "");
@@ -242,10 +253,56 @@ async function run(byText){
       return item;
     });
     $("status").textContent = ""; renderAi();
-    $("aiVerdict").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+    // 위에 붙은 메뉴 높이만큼 띄워서 결과 제목이 가려지지 않게
+    const top = $("aiVerdict").getBoundingClientRect().top + window.scrollY - (document.querySelector("header").offsetHeight + 8);
+    window.scrollTo({top, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
   } catch (e) {
     $("status").textContent = e === "busy" ? t("busy") : e === "too_big" ? t("tooBig") : t("err");
   } finally { busy = false; $("pick").disabled = false; $("askText").disabled = false; $("ask").disabled = !photo; }
+}
+
+// ---- 내 지역: 시·군·구별 배출 요일·시간 (공식 홈페이지에서 확인한 곳만) ----
+const AREAS = D.areas || [];
+const AREA_FIELDS = [["hours","hoursL"],["days","daysL"],["place","placeL"],["food","foodL"],["bags","bagsL"],["bulky","bulkyL"],["notes","notesL"]];
+const areaSel = $("areaSel");
+let areaId = ""; try { areaId = localStorage.getItem("area") || ""; } catch (e) {}
+areaSel.onchange = () => { areaId = areaSel.value; try { localStorage.setItem("area", areaId); } catch (e) {} renderArea(); };
+function renderArea(){
+  areaSel.innerHTML = "";
+  const first = document.createElement("option"); first.value = ""; first.textContent = t("areaPick"); areaSel.append(first);
+  const groups = {};
+  AREAS.forEach(a => { const g = a.sido[lang] || a.sido.en; (groups[g] = groups[g] || []).push(a); });
+  Object.entries(groups).forEach(([g, list]) => {
+    const og = document.createElement("optgroup"); og.label = g;
+    list.forEach(a => { const o = document.createElement("option"); o.value = a.id; o.textContent = a.name[lang] || a.name.en; og.append(o); });
+    areaSel.append(og);
+  });
+  const other = document.createElement("option"); other.value = "other"; other.textContent = t("areaOther"); areaSel.append(other);
+  areaSel.value = areaId;
+  const box = $("areaCard"); box.innerHTML = "";
+  if (!areaId) return;
+  const card = document.createElement("div"); card.className = "area";
+  if (areaId === "other") {
+    const p = document.createElement("p"); p.textContent = t("areaOtherText"); card.append(p); box.append(card); return;
+  }
+  const a = AREAS.find(x => x.id === areaId); if (!a) return;
+  AREA_FIELDS.forEach(([f, label]) => {
+    const val = a.f[f]; if (!val || !val.ko) return;
+    const r = document.createElement("div"); r.className = "r";
+    const k = document.createElement("div"); k.className = "k"; k.textContent = t(label);
+    const v = document.createElement("div"); v.className = "v"; v.textContent = val[lang] || val.en || val.ko;
+    if (lang !== "ko") { const ko = document.createElement("span"); ko.className = "ko"; ko.lang = "ko"; ko.textContent = val.ko; v.append(ko); }
+    r.append(k, v); card.append(r);
+  });
+  if (a.url) {
+    const r = document.createElement("div"); r.className = "r";
+    const k = document.createElement("div"); k.className = "k"; k.textContent = t("officialL");
+    const v = document.createElement("div"); v.className = "v";
+    const l = document.createElement("a"); l.href = a.url; l.target = "_blank"; l.rel = "noopener"; l.textContent = new URL(a.url).hostname; v.append(l);
+    r.append(k, v); card.append(r);
+  }
+  const foot = document.createElement("div"); foot.className = "foot"; foot.textContent = t("checkedL").replace("{d}", a.checked); card.append(foot);
+  box.append(card);
 }
 
 render();

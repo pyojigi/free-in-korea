@@ -2,7 +2,7 @@
  "ui": {
   "tagline": "Icheon, Korea · Penerjemah pemilahan sampah",
   "title": "Barang ini dibuang ke mana?",
-  "subtitle": "Ambil satu foto, kami beri tahu cara membuangnya sesuai aturan Icheon.",
+  "subtitle": "Foto atau ketik nama barangnya — kami beri tahu cara membuangnya di Korea.",
   "noPhoto": "Belum ada foto",
   "shootTitle": "Foto barangnya",
   "shootHint": "Boleh memotret beberapa barang sekaligus. Foto hanya dipakai untuk memeriksa dan tidak disimpan.",
@@ -11,7 +11,7 @@
   "thinking": "Sedang dicek, tunggu beberapa detik…",
   "quickTitle": "Barang umum",
   "quickHint": "Tanpa foto. Ketuk salah satu untuk melihat.",
-  "rulesTitle": "Aturan Icheon",
+  "rulesTitle": "Aturan dasar (sebagian besar Korea)",
   "example": "Contoh",
   "steps": "Cara membuangnya",
   "showKo": "Tunjukkan ini ke tetangga Korea atau pengelola gedung",
@@ -30,7 +30,7 @@
   "buildHint": "Pilih apa yang terjadi dan di mana Anda berada. Kami akan membuat kalimat bahasa Korea yang bisa Anda putar di telepon.",
   "situationLabel": "Apa yang terjadi?",
   "placeLabel": "Di mana Anda? (nama papan, gedung, atau stasiun)",
-  "placePh": "mis. Stasiun Icheon pintu keluar 2",
+  "placePh": "cth. Stasiun Seoul pintu 2 (sesuai papan Korea)",
   "playBtn": "Bacakan dalam bahasa Korea",
   "callThis": "Untuk ini, telepon",
   "meaning": "Arti",
@@ -45,7 +45,24 @@
   "back": "Kembali",
   "found": "Ditemukan {n} barang",
   "textLabel": "Atau ketik saja",
-  "textPh": "Contoh: tulang ayam, kotak pizza"
+  "textPh": "Contoh: tulang ayam, kotak pizza",
+  "noItem": "Tidak ada barang yang ditemukan. Ketik nama barangnya (cth. kotak pizza). Hari dan jam ada di 'Daerah saya'.",
+  "subArea": "Daerah saya",
+  "areaTitle": "Hari & jam buang sampah di daerah saya",
+  "areaHint": "Pilih kota atau distrik Anda.",
+  "areaPick": "Pilih daerah",
+  "areaOther": "Daerah saya tidak ada",
+  "areaOtherText": "Di kebanyakan daerah, sampah dibuang setelah matahari terbenam sampai tengah malam, di depan gedung atau tempat yang ditentukan. Harinya berbeda tiap lingkungan, jadi tanyakan ke pengelola gedung atau tetangga. Bisa juga telepon 1330.",
+  "hoursL": "Jam",
+  "daysL": "Hari",
+  "placeL": "Tempat",
+  "foodL": "Sampah makanan",
+  "bagsL": "Beli kantong di mana",
+  "bulkyL": "Barang besar",
+  "notesL": "Aturan lokal",
+  "officialL": "Halaman resmi",
+  "checkedL": "Dicek di situs resmi pada {d}. Aturan bisa berubah, utamakan info pengelola gedung.",
+  "koOrig": "Teks asli Korea"
  },
  "cat": {
   "bag": "Kantong sampah berbayar (종량제 봉투) – sampah umum",
@@ -56,19 +73,23 @@
  "rules": [
   {
    "k": "Hari",
-   "v": "Senin sampai Sabtu (menurut data publik)"
+   "v": "Beda tiap lingkungan. Cek 'Daerah saya'"
   },
   {
    "k": "Tempat",
-   "v": "Titik pembuangan yang sudah ditentukan di lingkungan Anda"
+   "v": "Depan gedung atau tempat yang ditentukan (tanya pengelola)"
   },
   {
    "k": "Jam",
-   "v": "Info di tiap sumber berbeda. Pastikan tanya ke kantor pengelola gedung"
+   "v": "Biasanya setelah matahari terbenam sampai tengah malam. Beda tiap daerah"
   },
   {
    "k": "Umum",
    "v": "Masukkan ke kantong sampah berbayar resmi (종량제 봉투), dijual di minimarket dan supermarket"
+  },
+  {
+   "k": "Kantong",
+   "v": "Pakai kantong yang dibeli di kota/distrik tempat tinggal. Kantong daerah lain bisa tidak diangkut"
   },
   {
    "k": "Makanan",
@@ -228,6 +249,7 @@
    "Ada kebakaran",
    "Ada orang terluka",
    "Ada orang sakit parah",
+   "Saya sakit (cari RS/apotek)",
    "Kecelakaan lalu lintas dengan korban luka",
    "Ada orang yang mengancam saya",
    "Barang saya dicuri",

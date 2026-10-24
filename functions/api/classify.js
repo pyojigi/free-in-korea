@@ -6,6 +6,8 @@
 const MAX_B64 = 1_500_000; // 약 1.1MB 사진까지
 const TYPES = ["image/jpeg", "image/png", "image/webp"];
 const CATS = ["bag", "food", "rec", "spec"];
+// 답이 그 언어로 왔는지 보는 글자 범위 (라틴 문자 언어는 검사 안 함)
+const SCRIPT = { ko: /[\uAC00-\uD7A3]/, zh: /[\u4E00-\u9FFF]/, tw: /[\u4E00-\u9FFF]/, ja: /[\u3040-\u30FF\u4E00-\u9FFF]/, th: /[\u0E00-\u0E7F]/, ru: /[\u0400-\u04FF]/, mn: /[\u0400-\u04FF]/ };
 
 const LANGS = {
   ko: "Korean", en: "English", zh: "Simplified Chinese", tw: "Traditional Chinese (Taiwan)", ja: "Japanese",
@@ -22,7 +24,7 @@ Facts to use only if relevant: disposal at designated points; residents should c
 For each item write "name", "steps" and "warn" in ${language} (always ${language}, even if the user wrote in another language), in plain short words, and "koName" and "koSteps" in Korean (the same content), so the user can show a Korean neighbor. If one item has parts that go to different places (e.g. a takeout cup: food scraps vs container), list the parts as separate items.
 Reply with only one JSON object, no other text:
 {"items":[{"cat":"bag|food|rec|spec","name":"item name","steps":["2-4 short steps"],"warn":"one common mistake to avoid, or empty string","koName":"item name in Korean","koSteps":["same steps in Korean"]}],"confident":true}
-Only if the photo shows no object at all (blank, dark, a person, a landscape) return one item with "cat":"bag", set "confident":false, and make its steps ask the user to retake the photo closer. If you can see an object but are unsure, still give your best category and set "confident":false.`;
+Only if there is no object to throw away at all (a blank or dark photo, a person, a landscape, or text that is a question rather than an item) return {"items":[],"confident":false}. If you can see an object but are unsure, still give your best category and set "confident":false.`;
 
 // 글 입력용: 사진 대신 사용자가 적은 설명(어느 언어든)을 읽게 함
 const TEXT_LEAD = "Look at the photo.";
@@ -83,6 +85,7 @@ export async function onRequestPost({ request, env }) {
         body: JSON.stringify({
           model: env.MODEL || "claude-haiku-5-5",
           max_tokens: 3000,
+          system: `Write every "name", "steps" and "warn" value in ${language} only.`,
           messages: [{ role: "user", content }],
         }),
       });
@@ -104,8 +107,12 @@ export async function onRequestPost({ request, env }) {
     const items = (Array.isArray(parsed?.items) ? parsed.items : parsed?.cat ? [parsed] : [])
       .filter(it => it && CATS.includes(it.cat)).slice(0, 6)
       .map(it => ({ cat: it.cat, name: s(it.name), steps: list(it.steps), warn: s(it.warn), koName: s(it.koName), koSteps: list(it.koSteps) }));
-    if (items.length) return json({ items, confident: parsed.confident !== false });
-    console.log("unreadable reply", data.stop_reason, reply.slice(0, 300));
+    if (!items.length && Array.isArray(parsed?.items) && parsed.items.length === 0) return json({ items: [], confident: false });
+    // 고른 언어의 글자가 아닌 답(예: 태국어인데 영어)이 오면 한 번 더 물어봄
+    const script = SCRIPT[body?.lang];
+    const langOk = !script || items.every(it => script.test(it.name + it.steps.join("")));
+    if (items.length && (langOk || attempt === 1)) return json({ items, confident: parsed.confident !== false });
+    console.log(items.length ? "wrong language" : "unreadable reply", data.stop_reason, reply.slice(0, 300));
     last = "unreadable";
   }
   return json({ error: last }, 502);

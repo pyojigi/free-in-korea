@@ -2,7 +2,7 @@
  "ui": {
   "tagline": "Icheon, Hàn Quốc · Hướng dẫn phân loại rác",
   "title": "Cái này vứt thế nào?",
-  "subtitle": "Chỉ cần chụp một tấm ảnh, chúng tôi sẽ cho bạn biết vứt ở đâu theo quy định của Icheon.",
+  "subtitle": "Chụp ảnh hoặc gõ tên đồ vật — chúng tôi chỉ cách bỏ ở Hàn Quốc.",
   "noPhoto": "Chưa có ảnh",
   "shootTitle": "Chụp đồ bạn muốn vứt",
   "shootHint": "Có thể chụp nhiều món cùng lúc. Ảnh chỉ dùng để kiểm tra và không được lưu.",
@@ -11,7 +11,7 @@
   "thinking": "Đang kiểm tra, mất vài giây…",
   "quickTitle": "Đồ hay gặp",
   "quickHint": "Không cần ảnh. Chạm vào để xem ngay.",
-  "rulesTitle": "Quy định của Icheon",
+  "rulesTitle": "Quy định cơ bản (hầu hết các nơi)",
   "example": "Ví dụ",
   "steps": "Cách vứt",
   "showKo": "Đưa cho hàng xóm người Hàn hoặc quản lý tòa nhà xem",
@@ -30,7 +30,7 @@
   "buildHint": "Chọn chuyện gì đã xảy ra và bạn đang ở đâu. Chúng tôi sẽ tạo câu tiếng Hàn để bạn phát qua điện thoại.",
   "situationLabel": "Chuyện gì đã xảy ra?",
   "placeLabel": "Bạn đang ở đâu? (biển hiệu, tên tòa nhà hoặc tên ga)",
-  "placePh": "VD: Ga Icheon lối ra số 2",
+  "placePh": "VD: Ga Seoul lối ra 2 (theo biển tiếng Hàn)",
   "playBtn": "Đọc to bằng tiếng Hàn",
   "callThis": "Trường hợp này, hãy gọi",
   "meaning": "Nghĩa",
@@ -45,7 +45,24 @@
   "back": "Quay lại",
   "found": "Tìm thấy {n} món",
   "textLabel": "Hoặc nhập bằng chữ",
-  "textPh": "Ví dụ: xương gà, hộp pizza"
+  "textPh": "Ví dụ: xương gà, hộp pizza",
+  "noItem": "Không tìm thấy đồ cần bỏ. Hãy gõ tên đồ vật (VD: hộp pizza). Ngày giờ bỏ rác xem ở 'Khu vực của tôi'.",
+  "subArea": "Khu vực của tôi",
+  "areaTitle": "Ngày và giờ bỏ rác ở khu tôi",
+  "areaHint": "Chọn thành phố hoặc quận của bạn.",
+  "areaPick": "Chọn khu vực",
+  "areaOther": "Không có khu của tôi",
+  "areaOtherText": "Ở hầu hết các nơi, bỏ rác sau khi trời tối đến trước nửa đêm, trước nhà hoặc ở chỗ quy định. Ngày bỏ rác khác nhau theo khu, nên hỏi ban quản lý tòa nhà hoặc hàng xóm là chính xác nhất. Có thể gọi 1330 để hỏi.",
+  "hoursL": "Giờ",
+  "daysL": "Ngày",
+  "placeL": "Bỏ ở đâu",
+  "foodL": "Rác thức ăn",
+  "bagsL": "Mua túi ở đâu",
+  "bulkyL": "Đồ lớn",
+  "notesL": "Quy định riêng",
+  "officialL": "Trang chính thức",
+  "checkedL": "Đã kiểm tra trên trang chính thức ngày {d}. Quy định có thể thay đổi, hãy ưu tiên hướng dẫn của ban quản lý.",
+  "koOrig": "Bản gốc tiếng Hàn"
  },
  "cat": {
   "bag": "Túi rác trả phí theo lượng (종량제 봉투) – rác thường",
@@ -56,19 +73,23 @@
  "rules": [
   {
    "k": "Ngày",
-   "v": "Thứ Hai đến thứ Bảy (theo dữ liệu công cộng)"
+   "v": "Khác nhau theo khu. Xem 'Khu vực của tôi'"
   },
   {
-   "k": "Nơi vứt",
-   "v": "Điểm tập kết rác quy định ở khu bạn ở"
+   "k": "Chỗ bỏ",
+   "v": "Trước tòa nhà hoặc chỗ quy định của khu (hỏi ban quản lý)"
   },
   {
    "k": "Giờ",
-   "v": "Các nguồn ghi khác nhau. Hãy hỏi ban quản lý tòa nhà"
+   "v": "Thường sau khi trời tối đến nửa đêm. Mỗi nơi khác nhau"
   },
   {
    "k": "Rác thường",
    "v": "Bỏ vào túi rác trả phí theo lượng (종량제 봉투), bán ở cửa hàng tiện lợi và siêu thị"
+  },
+  {
+   "k": "Túi",
+   "v": "Dùng túi mua ở thành phố/quận bạn đang sống. Túi nơi khác có thể không được thu gom"
   },
   {
    "k": "Thực phẩm",
@@ -228,6 +249,7 @@
    "Có cháy",
    "Có người bị thương",
    "Có người bị bệnh nặng",
+   "Tôi bị ốm (tìm bệnh viện/nhà thuốc)",
    "Tai nạn giao thông (có người bị thương)",
    "Có người đe dọa tôi",
    "Tôi bị trộm đồ",
