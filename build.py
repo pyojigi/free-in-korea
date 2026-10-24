@@ -46,6 +46,26 @@ for n in d["help"]["numbers"]:
 for x in (d["help"]["intro"], d["help"]["place"], *d["help"]["situations"]):
     x["t"]["tw"] = conv(x["t"]["zh"])
 
+# 2-1) 내 지역 데이터: src/areas/ko.json(공식 홈페이지에서 확인한 원문) + 언어별 번역 tr_<code>.json
+d["areas"] = []
+adir = root / "src/areas"
+if (adir / "ko.json").exists():
+    tr = {f.stem[3:]: json.loads(f.read_text(encoding="utf-8")) for f in adir.glob("tr_*.json")}
+    if "zh" in tr:
+        tr["tw"] = {i: {k: (cc.convert(v) if isinstance(v, str) else v) for k, v in x.items()} for i, x in tr["zh"].items()}
+    def days_of(x):
+        parts = [x.get("days"), x.get("noPickupDay")]
+        return " · ".join(p for p in parts if p) or None
+    for a in json.loads((adir / "ko.json").read_text(encoding="utf-8")):
+        ko = dict(a, name=a["sigungu"])
+        langs = {"ko": ko, **{c: t[a["id"]] for c, t in tr.items() if a["id"] in t}}
+        f = {}
+        for key, src in [("hours","hours"),("place","place"),("food","food"),("bags","bags"),("bulky","bulky"),("notes","recyclingNotes")]:
+            if a.get(src): f[key] = {c: x.get(src) for c, x in langs.items() if x.get(src)}
+        if days_of(a): f["days"] = {c: days_of(x) for c, x in langs.items() if days_of(x)}
+        d["areas"].append({"id": a["id"], "sido": {c: x["sido"] for c, x in langs.items()}, "name": {c: x.get("name") or x["sigungu"] for c, x in langs.items()},
+                           "f": f, "url": a.get("officialUrl"), "checked": a["checked"]})
+
 # 3) 빠진 번역이 없는지 검사
 codes = [l["code"] for l in d["langs"]]
 problems = []
