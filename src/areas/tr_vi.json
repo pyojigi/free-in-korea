@@ -44,12 +44,12 @@
   "sigungu": "Mapo-gu",
   "hours": "Tháng 11~3: 18:00~24:00 / Tháng 4~10: 19:00~24:00",
   "days": "Rác thường, rác thức ăn: CN·Thứ 2·Thứ 3·Thứ 4·Thứ 5 / Rác tái chế: chai PET trong suốt và ni lông vào Thứ 4, loại khác vào CN·Thứ 2·Thứ 3·Thứ 5",
-  "noPickupDay": null,
+  "noPickupDay": "Thứ Sáu và Thứ Bảy không được bỏ rác",
   "place": "Trước nhà, cửa hàng (tòa nhà) của bạn",
   "food": "Nhà riêng: cho vào túi rác thức ăn màu vàng (음식물 전용봉투), bỏ vào thùng rác thức ăn, để trước nhà (nên để ra trước 22 giờ)",
   "bags": "Cửa hàng có biển '쓰레기봉투판매소' (nơi bán túi rác)",
   "bulky": "smartclean.mapo.go.kr hoặc trung tâm phường (동주민센터) → dán tem (스티커) rồi để ra. Đồ điện tử lớn miễn phí: 1599-0903",
-  "recyclingNotes": "Bỏ sai ngày, sai giờ bị phạt (과태료) 100.000 won"
+  "recyclingNotes": "Ven đường lớn chỉ 22:00–24:00. Vi phạm ngày/giờ bị phạt (과태료) 100.000 won"
  },
  "seoul-gangnam": {
   "name": "Gangnam-gu",
@@ -121,12 +121,12 @@
   "sido": "Gyeonggi-do",
   "sigungu": "Ansan-si",
   "hours": "8 giờ tối hôm trước ~ 6 giờ sáng hôm sau",
-  "days": "Rác thường, rác thức ăn: mỗi ngày (Sangnok-gu không thu gom Chủ nhật) / Rác tái chế: Thứ 3·Thứ 6 / Chung cư: ngày do khu chung cư quy định",
-  "noPickupDay": "Sangnok-gu: xin đừng để rác ra vào Thứ 7",
+  "days": "Quận Sangnok: thu gom mỗi ngày trừ Chủ nhật (Thứ Bảy đừng bỏ rác) / Rác tái chế: bỏ từ tối Thứ Hai đến sáng Thứ Ba, tối Thứ Năm đến sáng Thứ Sáu",
+  "noPickupDay": null,
   "place": "Trước nhà, cửa hàng của bạn",
   "food": "Chắt hết nước, cho vào túi rác thức ăn màu cam (음식물 전용봉투)",
-  "bags": "Siêu thị nhỏ, cửa hàng tiện lợi gần nhà (hỏi: Công ty Đô thị Ansan (안산도시공사) 031-494-6200)",
-  "bulky": "Đăng ký qua internet, dán giấy xác nhận khai báo (신고필증) rồi để ra. Thu gom Thứ 2·Thứ 5",
+  "bags": null,
+  "bulky": "Đăng ký trên mạng, dán tem lệ phí (납부필증) rồi bỏ ra. Thu gom Thứ Hai, Thứ Năm",
   "recyclingNotes": "Rác tái chế cho vào túi ni lông trong suốt hoặc nửa trong suốt. Đồ bẩn thì bỏ vào túi rác có trả phí (종량제 봉투)"
  },
  "gg-hwaseong": {
@@ -204,7 +204,7 @@
   "place": "Trước cổng nhà, cửa hàng",
   "food": "Chắt hết nước, bỏ vào thùng rác thức ăn riêng có dán tem đã trả phí (납부필증) (chip)",
   "bags": null,
-  "bulky": "Khai báo ở trung tâm phường (동 주민센터) hoặc '여기로' (yeogiro24.co.kr) → dán giấy xác nhận khai báo (신고필증) rồi để ra. Đồ điện tử lớn miễn phí: 1599-0903",
+  "bulky": null,
   "recyclingNotes": "Rác tái chế rửa sạch, cho vào túi ni lông trong suốt"
  },
  "gwangju-gwangsan": {

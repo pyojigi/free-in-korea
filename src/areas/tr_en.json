@@ -44,12 +44,12 @@
   "sigungu": "Mapo-gu",
   "hours": "Nov–Mar: 18:00–24:00 / Apr–Oct: 19:00–24:00",
   "days": "General and food waste: Sun·Mon·Tue·Wed·Thu / Recycling: clear PET bottles (투명페트병) and plastic film (비닐) on Wednesday, everything else Sun·Mon·Tue·Thu",
-  "noPickupDay": null,
+  "noPickupDay": "No disposal on Friday and Saturday",
   "place": "In front of your own home or shop (building)",
   "food": "Houses: yellow food-waste bag (음식물 전용봉투), in the food-waste bin in front of your home (before 22:00 if possible)",
   "bags": "Shops with a 'garbage bag sales' sign (쓰레기봉투판매소)",
   "bulky": "smartclean.mapo.go.kr or the community center (동주민센터) → attach the sticker and put it out. Large appliances free: 1599-0903",
-  "recyclingNotes": "Breaking the day/time rules: fine (과태료) of 100,000 won"
+  "recyclingNotes": "On main roads, only 22:00–24:00. Breaking the day/time rules: fine (과태료) of 100,000 won"
  },
  "seoul-gangnam": {
   "name": "Gangnam-gu",
@@ -121,12 +121,12 @@
   "sido": "Gyeonggi-do",
   "sigungu": "Ansan-si",
   "hours": "20:00 the day before – 06:00 the next day",
-  "days": "General and food waste: every day (Sangnok-gu: no pickup on Sunday) / Recycling: Tue·Fri / Apartments: days set by the complex",
-  "noPickupDay": "Sangnok-gu: please do not put it out on Saturday",
+  "days": "Sangnok-gu: picked up every day except Sunday (don't put out on Saturday) / Recycling: put out Monday evening–Tuesday morning and Thursday evening–Friday morning",
+  "noPickupDay": null,
   "place": "In front of your own home or shop",
   "food": "Orange food-waste bag (음식물 전용봉투), with the water drained",
-  "bags": "Nearby supermarket or convenience store (questions: Ansan Urban Corporation 안산도시공사, 031-494-6200)",
-  "bulky": "Apply online, attach the certificate sticker (신고필증) and put it out. Pickup on Mon·Thu",
+  "bags": null,
+  "bulky": "Apply online, attach the fee sticker (납부필증) and put it out. Pickup Mon·Thu",
   "recyclingNotes": "Recycling in clear or semi-clear plastic bags. Dirty items go in a pay-as-you-throw bag (종량제 봉투)"
  },
  "gg-hwaseong": {
@@ -204,7 +204,7 @@
   "place": "In front of the gate of your home or shop",
   "food": "In a special food-waste bin with a payment sticker (납부필증, chip 칩), with the water drained",
   "bags": null,
-  "bulky": "Report at the community center (동 주민센터) or via 'Yeogiro' (여기로, yeogiro24.co.kr) → attach the certificate sticker (신고필증) and put it out. Large appliances free: 1599-0903",
+  "bulky": null,
   "recyclingNotes": "Wash recycling and put it in clear plastic bags"
  },
  "gwangju-gwangsan": {

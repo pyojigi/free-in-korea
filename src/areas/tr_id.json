@@ -44,12 +44,12 @@
   "sigungu": "Mapo-gu",
   "hours": "Bulan 11~3: 18:00~24:00 / Bulan 4~10: 19:00~24:00",
   "days": "Sampah umum, sampah makanan: Minggu·Senin·Selasa·Rabu·Kamis / Daur ulang: botol PET bening dan plastik (비닐) hari Rabu, sisanya Minggu·Senin·Selasa·Kamis",
-  "noPickupDay": null,
+  "noPickupDay": "Jumat dan Sabtu dilarang buang sampah",
   "place": "Di depan rumah, toko (gedung) Anda",
   "food": "Rumah: masukkan ke kantong sampah makanan kuning (음식물 전용봉투), lalu ke tong sampah makanan, taruh di depan rumah (sebisanya sebelum jam 22)",
   "bags": "Toko yang ada papan '쓰레기봉투판매소' (tempat jual kantong sampah)",
   "bulky": "smartclean.mapo.go.kr atau kantor kelurahan (동주민센터) → tempel stiker (스티커), lalu keluarkan. Elektronik besar gratis: 1599-0903",
-  "recyclingNotes": "Salah hari atau jam kena denda (과태료) 100.000 won"
+  "recyclingNotes": "Di pinggir jalan besar hanya 22:00–24:00. Melanggar hari/jam didenda (과태료) 100.000 won"
  },
  "seoul-gangnam": {
   "name": "Gangnam-gu",
@@ -121,12 +121,12 @@
   "sido": "Gyeonggi-do",
   "sigungu": "Ansan-si",
   "hours": "Jam 8 malam sehari sebelumnya ~ jam 6 pagi hari berikutnya",
-  "days": "Sampah umum, sampah makanan: setiap hari (Sangnok-gu tidak ada angkutan hari Minggu) / Daur ulang: Selasa·Jumat / Apartemen: hari yang ditentukan kompleks",
-  "noPickupDay": "Sangnok-gu: mohon jangan keluarkan sampah hari Sabtu",
+  "days": "Sangnok-gu: diangkut setiap hari kecuali Minggu (jangan buang hari Sabtu) / Daur ulang: buang Senin malam–Selasa pagi dan Kamis malam–Jumat pagi",
+  "noPickupDay": null,
   "place": "Di depan rumah, toko Anda",
   "food": "Tiriskan airnya, masukkan ke kantong sampah makanan oranye (음식물 전용봉투)",
-  "bags": "Toko kelontong, minimarket terdekat (tanya: Ansan Urban Corporation (안산도시공사) 031-494-6200)",
-  "bulky": "Daftar lewat internet, tempel bukti lapor (신고필증), lalu keluarkan. Diangkut Senin·Kamis",
+  "bags": null,
+  "bulky": "Daftar online, tempel stiker bukti bayar (납부필증) lalu keluarkan. Diangkut Senin·Kamis",
   "recyclingNotes": "Sampah daur ulang ke kantong plastik bening atau setengah bening. Barang kotor masukkan ke kantong sampah berbayar (종량제 봉투)"
  },
  "gg-hwaseong": {
@@ -204,7 +204,7 @@
   "place": "Di depan pintu rumah atau toko",
   "food": "Tiriskan airnya, masukkan ke wadah sampah makanan khusus yang ditempel stiker tanda bayar (납부필증) (chip)",
   "bags": null,
-  "bulky": "Lapor di kantor kelurahan (동 주민센터) atau '여기로' (yeogiro24.co.kr) → tempel bukti lapor (신고필증), lalu keluarkan. Elektronik besar gratis: 1599-0903",
+  "bulky": null,
   "recyclingNotes": "Sampah daur ulang dicuci, masukkan ke kantong plastik bening"
  },
  "gwangju-gwangsan": {
