@@ -305,4 +305,14 @@ function renderArea(){
   box.append(card);
 }
 
+// 방문 기록: 어디서 왔는지(?src=qr 같은 표시나 이전 사이트 주소)와 언어만 숫자로 셈. 탭을 열 때 1번만.
+(function(){
+  try {
+    if (sessionStorage.getItem("hit")) return; sessionStorage.setItem("hit", "1");
+  } catch (e) {}
+  let src = new URLSearchParams(location.search).get("src") || "";
+  if (!src && document.referrer) { try { const h = new URL(document.referrer).hostname.replace(/^www\./, ""); if (h !== location.hostname) src = h; } catch (e) {} }
+  if (location.protocol.startsWith("http")) fetch("/api/hit", {method:"POST", headers:{"content-type":"application/json"}, body: JSON.stringify({src: src || "direct", lang}), keepalive:true}).catch(() => {});
+})();
+
 render();

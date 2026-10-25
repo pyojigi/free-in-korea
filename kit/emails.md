@@ -13,7 +13,7 @@
 
 외국인 주민과 관광객이 분리배출 방법을 몰라 생기는 불편을 줄이려고, 무료 안내 사이트를 직접 만들었습니다.
 
-- 주소: https://free-in-korea.foreigners.workers.dev
+- 주소: https://free-in-korea.foreigners.workers.dev/?src=mail
 - 쓰레기 사진을 찍거나 글로 적으면 종량제·음식물·재활용·따로 배출 중 어디인지와 버리는 방법을 10개 언어로 알려줍니다.
 - 같은 내용을 한국어로도 보여줘서, 관리사무소나 이웃에게 그대로 보여줄 수 있습니다.
 - 112·119·1330 등 긴급번호와 신고할 때 말할 한국어 문장도 들어 있습니다.
@@ -34,7 +34,7 @@ QR 포스터도 무료로 드릴 수 있습니다. 감사합니다.
 
 안녕하세요. 외국인 분들이 한국 생활에서 제일 자주 헷갈려 하는 분리배출을 돕는 무료 사이트를 만들어 소개드립니다.
 
-https://free-in-korea.foreigners.workers.dev
+https://free-in-korea.foreigners.workers.dev/?src=mail
 - 10개 언어(영어, 중국어 간체·번체, 일본어, 베트남어, 태국어, 인도네시아어, 러시아어, 몽골어, 한국어)
 - 사진 한 장으로 분리배출 방법 안내, 한국어 설명 함께 표시
 - 긴급번호와 신고용 한국어 문장 안내
@@ -52,12 +52,12 @@ https://free-in-korea.foreigners.workers.dev
 안녕하세요 사장님! 외국인 손님들이 분리배출을 몰라서 곤란하신 적 없으셨나요?
 손님이 쓰레기 사진만 찍으면 자기 나라 말로 버리는 법을 알려주는 무료 사이트를 만들었어요.
 방에 붙여두실 수 있는 QR 카드(10개 언어)를 무료로 드려요. 파일 보내드릴까요? 출력해서 붙이기만 하면 됩니다.
-https://free-in-korea.foreigners.workers.dev
+https://free-in-korea.foreigners.workers.dev/?src=mail
 
 ---
 
 ## 4. 영어 버전 (외국인 커뮤니티 운영자, 외국인 대상 기관)
 
 Hello! I built a free website that helps foreigners in Korea sort their trash: take a photo and it explains the Korean rules in 10 languages, with the Korean text to show a landlord. It also has emergency numbers and the Korean sentences to say.
-https://free-in-korea.foreigners.workers.dev
+https://free-in-korea.foreigners.workers.dev/?src=mail
 If it's useful to your members, I'd be grateful if you shared it. A free printable QR poster is attached. Any feedback is welcome.

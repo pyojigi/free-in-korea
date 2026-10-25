@@ -5,5 +5,6 @@
   "workers_dev": true,
   "keep_vars": true,
   "preview_urls": false,
+  "d1_databases": [{ "binding": "DB", "database_name": "free-in-korea-db", "database_id": "8c4678be-6430-4ad5-b58e-37df4e077e98" }],
   "assets": { "directory": "./public", "binding": "ASSETS" }
 }

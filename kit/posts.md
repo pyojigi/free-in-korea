@@ -22,7 +22,7 @@
 
 还有紧急电话：112报警、119急救、1330旅游热线（有中文），以及报警时要说的韩语句子，可以直接播放发音。
 
-🔗 free-in-korea.foreigners.workers.dev
+🔗 https://free-in-korea.foreigners.workers.dev/?src=xhs
 欢迎试用，有问题留言告诉我～
 
 **태그:** #韩国旅游 #韩国留学 #韩国生活 #垃圾分类 #首尔旅游 #韩国攻略
@@ -43,7 +43,7 @@ So I built a small free site: take a photo (or type what it is), and it tells yo
 - Emergency tab: 112 / 119 / 1330 with the Korean sentence to say, read aloud
 - Free, no sign-up, no ads
 
-https://free-in-korea.foreigners.workers.dev
+https://free-in-korea.foreigners.workers.dev/?src=reddit
 
 It's AI-based, so it can be wrong — if it gets something wrong, please tell me what you photographed and I'll fix it. Feedback very welcome.
 
@@ -55,7 +55,7 @@ Hi everyone! I made a free website to help with Korean trash sorting 🗑️
 📸 Photo your trash → get the steps in your language (+ Korean to show your landlord)
 🌏 10 languages · no app · no sign-up
 🚨 Also: emergency numbers and what to say in Korean
-👉 free-in-korea.foreigners.workers.dev
+👉 https://free-in-korea.foreigners.workers.dev/?src=fb-en
 Would love your feedback!
 
 ---
@@ -66,7 +66,7 @@ Chào mọi người! Mình làm một trang web miễn phí giúp phân loại 
 📸 Chụp ảnh rác → biết ngay bỏ vào đâu, có hướng dẫn bằng tiếng Việt và tiếng Hàn để đưa cho chủ nhà xem.
 🚨 Có cả số khẩn cấp 112, 119, 1330 và câu tiếng Hàn để nói khi gọi.
 Miễn phí, không cần tải app, không cần đăng ký.
-👉 free-in-korea.foreigners.workers.dev
+👉 https://free-in-korea.foreigners.workers.dev/?src=fb-vi
 
 ---
 
@@ -76,7 +76,7 @@ Miễn phí, không cần tải app, không cần đăng ký.
 📸 Хогныхоо зургийг аваад → монгол хэлээр яаж хаяхыг харна, мөн солонгос хэлээр бичсэнийг байрны менежерт үзүүлж болно.
 🚨 Яаралтай дугаар 112, 119, 1330 болон солонгосоор юу хэлэхийг харуулна.
 Үнэгүй, апп татах шаардлагагүй.
-👉 free-in-korea.foreigners.workers.dev
+👉 https://free-in-korea.foreigners.workers.dev/?src=fb-mn
 
 ---
 
@@ -86,7 +86,7 @@ Miễn phí, không cần tải app, không cần đăng ký.
 📸 ถ่ายรูปขยะ → บอกวิธีทิ้งเป็นภาษาไทย พร้อมภาษาเกาหลีให้เจ้าของห้องดู
 🚨 มีเบอร์ฉุกเฉิน 112, 119, 1330 และประโยคภาษาเกาหลีที่ต้องพูด
 ฟรี ไม่ต้องโหลดแอป ไม่ต้องสมัคร
-👉 free-in-korea.foreigners.workers.dev
+👉 https://free-in-korea.foreigners.workers.dev/?src=fb-th
 
 ---
 
@@ -96,7 +96,7 @@ Halo semua! Saya buat website gratis untuk bantu pilah sampah di Korea 🗑️
 📸 Foto sampahnya → langsung tahu cara buangnya dalam Bahasa Indonesia, plus versi Korea untuk ditunjukkan ke pemilik rumah.
 🚨 Ada juga nomor darurat 112, 119, 1330 dan kalimat Korea yang harus diucapkan.
 Gratis, tanpa aplikasi, tanpa daftar.
-👉 free-in-korea.foreigners.workers.dev
+👉 https://free-in-korea.foreigners.workers.dev/?src=fb-id
 
 ---
 
@@ -106,12 +106,12 @@ Gratis, tanpa aplikasi, tanpa daftar.
 📸 Сфотографируйте мусор → инструкция на русском + на корейском, чтобы показать управляющему.
 🚨 Есть экстренные номера 112, 119, 1330 и фраза на корейском, что сказать.
 Бесплатно, без приложения и регистрации.
-👉 free-in-korea.foreigners.workers.dev
+👉 https://free-in-korea.foreigners.workers.dev/?src=fb-ru
 
 ---
 
 ## 9. 일본어 (X / 韓国在住・旅行コミュニティ)
 
 韓国のゴミ分別、難しくないですか？📸写真を撮るだけで分別方法を日本語で教えてくれる無料サイトを作りました。韓国語の説明も出るので大家さんにそのまま見せられます。緊急番号（112・119・1330）と韓国語の言い方も。アプリ不要・登録不要。
-👉 free-in-korea.foreigners.workers.dev
+👉 https://free-in-korea.foreigners.workers.dev/?src=x-ja
 #韓国生活 #韓国旅行 #韓国留学
