@@ -32,13 +32,8 @@ function render(){
   sel.value = lang;
   document.querySelectorAll("[data-t]").forEach(el => { el.textContent = t(el.dataset.t); });
   const pv = $("preview"); if (pv.tagName !== "IMG") pv.textContent = t("noPhoto");
-  const chips = $("chips"); chips.innerHTML = "";
-  D.items.forEach(it => {
-    const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.cat = it.cat;
-    const d = document.createElement("span"); d.className = "dot"; b.append(d, textOf(it, lang).name);
-    b.onclick = () => openItem(it);
-    chips.append(b);
-  });
+  $("itemSearch").placeholder = t("searchPh");
+  renderChips();
   const rules = $("rules"); rules.innerHTML = "";
   D.rules.forEach(r => {
     const d = document.createElement("div"); d.className = "rule";
@@ -79,6 +74,23 @@ function go(m, sub){
   renderSubs(); window.scrollTo(0, 0);
 }
 for (const m of Object.keys(NAV)) $("m-" + m).onclick = () => go(m);
+
+// 물건 목록: 고른 언어와 한국어 이름 둘 다로 찾기
+function renderChips(){
+  const q = $("itemSearch").value.trim().toLowerCase();
+  const chips = $("chips"); chips.innerHTML = "";
+  let shown = 0;
+  D.items.forEach(it => {
+    const name = textOf(it, lang).name || "", ko = (it.t.ko && it.t.ko.name) || "";
+    if (q && !(name.toLowerCase().includes(q) || ko.includes(q))) return;
+    const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.cat = it.cat;
+    const d = document.createElement("span"); d.className = "dot"; b.append(d, name);
+    b.onclick = () => openItem(it);
+    chips.append(b); shown++;
+  });
+  const nm = $("noMatch"); nm.hidden = shown > 0; nm.textContent = t("noMatch");
+}
+$("itemSearch").oninput = renderChips;
 
 function openItem(it){
   openedItem = it; renderVerdict($("itemVerdict"), it, "item");

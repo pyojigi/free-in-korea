@@ -77,7 +77,9 @@
   "mGen": "Cho tôi {N} túi rác thường {L} lít.",
   "mFood": "Cho tôi {N} túi rác thức ăn {L} lít.",
   "mSack": "Cho tôi {N} bao rác không cháy.",
-  "mCheck": "Túi này có đúng của khu này không?"
+  "mCheck": "Túi này có đúng của khu này không?",
+  "searchPh": "Tìm đồ vật (VD: ô dù)",
+  "noMatch": "Không có trong danh sách. Hãy gõ tên ở mục Chụp ảnh để hỏi."
  },
  "cat": {
   "bag": "Túi rác trả phí theo lượng (종량제 봉투) – rác thường",

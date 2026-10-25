@@ -76,6 +76,7 @@ section h2{font-family:var(--f-display);font-weight:400;font-size:21px;margin:0 
 .note{font-size:13px;color:var(--muted)}
 .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .say.small .ko{font-size:18px}
+.search{width:100%;box-sizing:border-box;font:16px var(--f-body);padding:10px 12px;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);margin:4px 0 10px}
 .hero h1{font-family:var(--f-display);font-weight:400;font-size:26px;line-height:1.2;margin:4px 0 2px}
 .hero p{margin:0 0 12px;color:var(--muted);font-size:15px}
 .notice{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--sticker);border-radius:12px;padding:14px 16px;font-size:15px}
@@ -196,7 +197,9 @@ __MOTIF_CSS__
   <section class="view" data-view="trash/list" hidden>
     <div id="listPick">
       <p class="note" data-t="quickHint"></p>
+      <input id="itemSearch" class="search" type="search" autocomplete="off">
       <div class="chips" id="chips"></div>
+      <p class="note" id="noMatch" hidden></p>
     </div>
     <div id="listDetail" hidden>
       <button class="back" id="back" type="button"><span aria-hidden="true">←</span> <span data-t="back"></span></button>

@@ -77,7 +77,9 @@
   "mGen": "Minta {N} kantong sampah umum {L} liter.",
   "mFood": "Minta {N} kantong sampah makanan {L} liter.",
   "mSack": "Minta {N} karung sampah tidak terbakar.",
-  "mCheck": "Apakah kantong ini untuk daerah sini?"
+  "mCheck": "Apakah kantong ini untuk daerah sini?",
+  "searchPh": "Cari barang (cth. payung)",
+  "noMatch": "Tidak ada di daftar. Ketik namanya di tab Foto untuk bertanya."
  },
  "cat": {
   "bag": "Kantong sampah berbayar (종량제 봉투) – sampah umum",

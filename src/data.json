@@ -120,7 +120,9 @@
    "mGen": "일반 종량제 봉투 {L}리터 {N}장 주세요.",
    "mFood": "음식물 쓰레기 봉투 {L}리터 {N}장 주세요.",
    "mSack": "불연성 마대 {N}장 주세요.",
-   "mCheck": "이 동네 봉투 맞아요?"
+   "mCheck": "이 동네 봉투 맞아요?",
+   "searchPh": "물건 이름 검색 (예: 우산)",
+   "noMatch": "목록에 없어요. '사진' 탭에서 이름을 적어 물어보세요."
   },
   "en": {
    "tagline": "Icheon, Korea · Trash sorting translator",
@@ -200,7 +202,9 @@
    "mGen": "{N} general trash bag(s), {L} liters, please.",
    "mFood": "{N} food-waste bag(s), {L} liters, please.",
    "mSack": "{N} sack(s) for non-burnable waste, please.",
-   "mCheck": "Is this bag for this neighborhood?"
+   "mCheck": "Is this bag for this neighborhood?",
+   "searchPh": "Search items (e.g. umbrella)",
+   "noMatch": "Not in the list. Type it on the Photo tab to ask."
   },
   "zh": {
    "tagline": "利川市 · 垃圾分类翻译",
@@ -280,7 +284,9 @@
    "mGen": "请给我{N}个{L}升的一般垃圾袋。",
    "mFood": "请给我{N}个{L}升的厨余垃圾袋。",
    "mSack": "请给我{N}个不可燃垃圾麻袋。",
-   "mCheck": "这是这个地区的袋子吗？"
+   "mCheck": "这是这个地区的袋子吗？",
+   "searchPh": "搜索物品（例如：雨伞）",
+   "noMatch": "列表里没有。请在“拍照”页输入名称来问。"
   }
  },
  "cat": {
