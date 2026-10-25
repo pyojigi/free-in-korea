@@ -332,7 +332,7 @@ const textOf = (it, l) => it.t[l] || it.t.en || {};
 
 const sel = $("lang");
 D.langs.forEach(l => { const o = document.createElement("option"); o.value = l.code; o.textContent = l.label; sel.append(o); });
-sel.onchange = () => { lang = sel.value; try { localStorage.setItem("lang", lang); } catch (e) {} render(); };
+sel.onchange = () => { lang = sel.value; try { localStorage.setItem("lang", lang); } catch (e) {} render(); reaskInNewLang(); };
 
 function render(){
   document.documentElement.lang = HTML_LANG[lang] || lang;
@@ -562,14 +562,16 @@ async function classify(image, l, text){
 $("ask").onclick = () => run(false);
 $("askText").onclick = () => run(true);
 $("textIn").onkeydown = e => { if (e.key === "Enter") { e.preventDefault(); run(true); } };
-async function run(byText){
-  const typed = $("textIn").value.trim();
-  if (busy || (byText ? !typed : !photo)) return;
+let lastAsk = null, aiLang = null;
+async function run(byText, again){
+  const typed = again ? lastAsk.typed : $("textIn").value.trim();
+  if (busy || (!again && (byText ? !typed : !photo))) return;
   busy = true; for (const id of ["ask","pick","askText"]) $(id).disabled = true; $("status").textContent = t("thinking");
   const askedLang = lang; lastByText = byText;
   try {
-    const image = byText ? null : await shrink(photo);
+    const image = byText ? null : again ? lastAsk.image : await shrink(photo);
     const r = await classify(image, askedLang, byText ? typed : "");
+    lastAsk = {byText, typed, image}; aiLang = askedLang;
     aiItems = r.items.map(x => {
       const item = {cat:x.cat, confident:r.confident, t:{ko:{name:x.koName, steps:x.koSteps}}};
       item.t[askedLang] = {name:x.name, steps:x.steps, warn:x.warn};
@@ -577,13 +579,18 @@ async function run(byText){
       return item;
     });
     $("status").textContent = ""; renderAi();
-    // 위에 붙은 메뉴 높이만큼 띄워서 결과 제목이 가려지지 않게
-    const top = $("aiVerdict").getBoundingClientRect().top + window.scrollY - (document.querySelector("header").offsetHeight + 8);
-    window.scrollTo({top, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+    if (lang !== askedLang) { run(byText, true); return; }  // 기다리는 사이 언어를 또 바꿨으면 다시
+    if (!again) {
+      // 위에 붙은 메뉴 높이만큼 띄워서 결과 제목이 가려지지 않게
+      const top = $("aiVerdict").getBoundingClientRect().top + window.scrollY - (document.querySelector("header").offsetHeight + 8);
+      window.scrollTo({top, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth"});
+    }
   } catch (e) {
     $("status").textContent = e === "busy" ? t("busy") : e === "too_big" ? t("tooBig") : t("err");
   } finally { busy = false; $("pick").disabled = false; $("askText").disabled = false; $("ask").disabled = !photo; }
 }
+// 결과가 나온 뒤 언어를 바꾸면, 같은 사진·글로 그 언어 답을 다시 받아옴 (한국어 답이 그대로 남지 않게)
+function reaskInNewLang(){ if (aiItems && aiItems.length && lastAsk && aiLang !== lang && !busy) run(lastAsk.byText, true); }
 
 // ---- 내 지역: 시·군·구별 배출 요일·시간 (공식 홈페이지에서 확인한 곳만) ----
 const AREAS = D.areas || [];
