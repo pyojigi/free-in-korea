@@ -239,6 +239,618 @@
     "Keluarkan pada hari yang sudah ditentukan"
    ],
    "warn": "Membuang tanpa melapor bisa kena denda."
+  },
+  {
+   "name": "Wadah plastik makanan antar",
+   "steps": [
+    "Buang sisa makanannya",
+    "Bilas dengan air, lalu lepas label dan plastiknya",
+    "Masukkan ke tempat daur ulang plastik"
+   ],
+   "warn": "Kalau noda makanan tidak bisa hilang, tidak bisa didaur ulang. Masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Wadah nasi instan",
+   "steps": [
+    "Lepas plastik penutupnya",
+    "Buang sisa nasi lalu bilas",
+    "Masukkan ke tempat daur ulang plastik"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Wadah yogurt",
+   "steps": [
+    "Kosongkan lalu bilas",
+    "Masukkan ke tempat daur ulang plastik"
+   ],
+   "warn": "Tutup yang dilepas (foil atau plastik) masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Cup mi instan kertas",
+   "steps": [
+    "Buang kuah dan minya",
+    "Bilas dengan air",
+    "Buang sebagai sampah kertas"
+   ],
+   "warn": "Kalau masih ada sisa makanan, tidak bisa didaur ulang."
+  },
+  {
+   "name": "Cup mi dan wadah styrofoam",
+   "steps": [
+    "Buang makanannya lalu bilas",
+    "Lepas label dan selotip",
+    "Masukkan ke tempat daur ulang styrofoam"
+   ],
+   "warn": "Kalau noda makanan tidak bisa hilang, masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Gelas plastik kafe",
+   "steps": [
+    "Buang minumannya lalu bilas",
+    "Lepas sedotan dan tutupnya",
+    "Masukkan ke tempat daur ulang plastik"
+   ],
+   "warn": "Jangan masukkan ke tempat khusus botol PET bening. Di beberapa daerah, gelas dengan uang jaminan bisa dikembalikan ke toko untuk dapat uang kembali."
+  },
+  {
+   "name": "Gelas kertas",
+   "steps": [
+    "Kosongkan lalu bilas",
+    "Tekan sampai gepeng",
+    "Ikat lalu buang sebagai sampah kertas"
+   ],
+   "warn": "Aturan tiap daerah berbeda. Seoul meminta gelas kertas berlapis di dua sisi dibuang ke kantong sampah berbayar."
+  },
+  {
+   "name": "Sedotan",
+   "steps": [
+    "Cuci sampai bersih",
+    "Sedotan plastik buang sebagai plastik, sedotan logam sebagai besi bekas"
+   ],
+   "warn": "Sedotan yang menempel di kotak susu dilepas dan dibuang terpisah."
+  },
+  {
+   "name": "Bungkus camilan dan mi instan",
+   "steps": [
+    "Kibaskan sisa isinya",
+    "Masukkan ke tempat plastik tipis (vinil)"
+   ],
+   "warn": "Kalau minyak atau bumbu tidak bisa dicuci, masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Sarung tangan plastik dan kantong zip",
+   "steps": [
+    "Kosongkan dan bersihkan kotorannya",
+    "Masukkan ke tempat plastik tipis (vinil)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Plastik wrap",
+   "steps": [
+    "Wrap yang bersih buang sebagai plastik tipis (vinil)",
+    "Wrap yang kena makanan masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Wrap dari makanan antar dan supermarket terbuat dari PVC, jadi tidak bisa didaur ulang."
+  },
+  {
+   "name": "Plastik gelembung (bubble wrap)",
+   "steps": [
+    "Lepas selotip dan label pengiriman",
+    "Masukkan ke tempat plastik tipis (vinil)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Ice pack berisi air",
+   "steps": [
+    "Gunting kemasannya dan buang airnya ke saluran air",
+    "Plastik kemasannya buang sebagai plastik tipis (vinil)"
+   ],
+   "warn": "Ice pack gel dibuang dengan cara lain."
+  },
+  {
+   "name": "Ice pack gel",
+   "steps": [
+    "Jangan dibuka, buang utuh",
+    "Kalau ada kotak ice pack, masukkan ke sana. Kalau tidak ada, masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Berbeda dengan ice pack air, buang utuh tanpa dibuka."
+  },
+  {
+   "name": "Sikat gigi",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Walaupun terlihat seperti plastik, tidak bisa didaur ulang."
+  },
+  {
+   "name": "Payung",
+   "steps": [
+    "Lepas kain atau plastiknya, lalu buang rangkanya sebagai besi bekas",
+    "Kalau sulit dipisah, masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Aturan tiap daerah berbeda. Seoul meminta payung besar dibuang sebagai sampah besar (대형폐기물)."
+  },
+  {
+   "name": "Pakaian bekas",
+   "steps": [
+    "Cuci bersih dan keringkan",
+    "Masukkan ke kotak pakaian bekas (의류수거함)"
+   ],
+   "warn": "Pakaian yang robek atau kotor masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Sepatu (sneakers, sepatu kulit)",
+   "steps": [
+    "Ikat sepasang sepatu dengan tali",
+    "Kalau kondisinya bagus, masukkan ke kotak pakaian bekas (의류수거함)"
+   ],
+   "warn": "Sandal, sepatu karet, dan sepatu yang sudah usang masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Tas",
+   "steps": [
+    "Kalau kondisinya bagus, masukkan ke kotak pakaian bekas (의류수거함)",
+    "Kalau sudah usang masukkan ke kantong sampah berbayar, kalau besar buang sebagai sampah besar (대형폐기물)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Koper",
+   "steps": [
+    "Laporkan sebagai sampah besar (대형폐기물)",
+    "Tempel stikernya lalu keluarkan"
+   ],
+   "warn": "Jangan masukkan ke kotak pakaian bekas."
+  },
+  {
+   "name": "Selimut kapas",
+   "steps": [
+    "Laporkan sebagai sampah besar (대형폐기물)",
+    "Tempel stikernya lalu keluarkan"
+   ],
+   "warn": "Jangan masukkan ke kotak pakaian bekas. Beberapa daerah membolehkan selimut kecil dimasukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Bantal dan bantal sofa",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar",
+    "Kalau tidak muat di kantong, buang sebagai sampah besar (대형폐기물)"
+   ],
+   "warn": "Jangan masukkan ke kotak pakaian bekas."
+  },
+  {
+   "name": "Boneka",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar",
+    "Kalau terlalu besar, buang sebagai sampah besar (대형폐기물)"
+   ],
+   "warn": "Jangan masukkan ke kotak pakaian bekas."
+  },
+  {
+   "name": "Mainan",
+   "steps": [
+    "Kalau bahannya campuran, masukkan ke kantong sampah berbayar",
+    "Mainan yang pakai baterai masukkan ke kotak elektronik kecil"
+   ],
+   "warn": "Barang besar seperti kereta bayi dan baby walker adalah sampah besar (대형폐기물)."
+  },
+  {
+   "name": "Lampu neon",
+   "steps": [
+    "Buang utuh, jangan sampai pecah",
+    "Masukkan ke kotak lampu neon (di kantor kelurahan atau apartemen)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Lampu neon pecah",
+   "steps": [
+    "Bungkus dengan koran beberapa lapis",
+    "Masukkan ke karung khusus sampah tidak mudah terbakar (불연성 마대)"
+   ],
+   "warn": "Aturan tiap daerah berbeda. Seoul membolehkan sedikit pecahan dibungkus lalu dimasukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Lampu LED",
+   "steps": [
+    "LED bentuk bohlam dan batang masukkan ke kotak lampu neon",
+    "Lampu LED pipih masukkan ke karung khusus sampah tidak mudah terbakar (불연성 마대) atau buang sebagai sampah besar (대형폐기물)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Power bank",
+   "steps": [
+    "Masukkan ke kotak elektronik kecil atau kotak baterai bekas (폐건전지 수거함)"
+   ],
+   "warn": "Bisa menyebabkan kebakaran, jadi jangan dicampur dengan daur ulang seperti plastik atau kaleng."
+  },
+  {
+   "name": "Ponsel",
+   "steps": [
+    "Masukkan ke kotak elektronik kecil"
+   ],
+   "warn": "Kalau terkumpul 5 atau lebih, bisa pakai layanan jemput gratis (1599-0903)."
+  },
+  {
+   "name": "Charger dan earphone",
+   "steps": [
+    "Masukkan ke kotak elektronik kecil"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Hair dryer, catokan, dan elektronik kecil lain",
+   "steps": [
+    "Masukkan ke kotak elektronik kecil",
+    "Kalau tidak ada kotaknya, tanyakan ke kantor kelurahan"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Rokok elektrik",
+   "steps": [
+    "Masukkan ke kotak elektronik kecil"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Wajan dan panci",
+   "steps": [
+    "Masukkan ke tempat besi bekas"
+   ],
+   "warn": "Kalau banyak bahan lain yang menempel, masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Cermin besar",
+   "steps": [
+    "Laporkan sebagai sampah besar (대형폐기물)",
+    "Tempel stikernya lalu keluarkan"
+   ],
+   "warn": "Jangan masukkan ke tempat botol kaca."
+  },
+  {
+   "name": "Gelas kaca dan gelas wine",
+   "steps": [
+    "Bungkus supaya tidak pecah",
+    "Masukkan ke karung khusus sampah tidak mudah terbakar (불연성 마대)"
+   ],
+   "warn": "Jangan masukkan ke tempat botol kaca. Kalau hanya 1–2 buah, bungkus dengan baik lalu boleh dimasukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Kaleng semprot",
+   "steps": [
+    "Di tempat berventilasi baik, tekan nozelnya sampai gasnya habis",
+    "Masukkan ke tempat kaleng logam"
+   ],
+   "warn": "Kalau gas masih tersisa, bisa menyebabkan kebakaran."
+  },
+  {
+   "name": "Tabung gas butana",
+   "steps": [
+    "Di tempat berventilasi baik, tekan nozelnya sampai gasnya habis",
+    "Masukkan ke tempat kaleng logam"
+   ],
+   "warn": "Beberapa daerah meminta tabungnya dilubangi. Cek aturan di daerahmu."
+  },
+  {
+   "name": "Sisa cat",
+   "steps": [
+    "Tutup rapat kalengnya",
+    "Masukkan ke kotak sampah berbahaya"
+   ],
+   "warn": "Kalau tidak ada kotaknya, tutup rapat lalu buang sesuai aturan daerah (biasanya ke kantong sampah berbayar)."
+  },
+  {
+   "name": "Sisa obat tablet",
+   "steps": [
+    "Lepas kotak luarnya dan buang terpisah",
+    "Kumpulkan tabletnya saja ke dalam kantong",
+    "Masukkan ke kotak obat bekas di apotek, puskesmas, atau kantor kelurahan"
+   ],
+   "warn": "Di beberapa daerah juga bisa dimasukkan ke kotak pos."
+  },
+  {
+   "name": "Obat cair dan salep",
+   "steps": [
+    "Tutup rapat beserta wadahnya",
+    "Masukkan ke kotak obat bekas di apotek, puskesmas, atau kantor kelurahan"
+   ],
+   "warn": "Obat cair jangan dimasukkan ke kotak pos."
+  },
+  {
+   "name": "Kantong teh dan daun teh hijau",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Bukan sampah makanan."
+  },
+  {
+   "name": "Kulit kacang",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Kulit kenari, kacang tanah, dan kastanya bukan sampah makanan."
+  },
+  {
+   "name": "Biji buah yang keras",
+   "steps": [
+    "Biji persik, alpukat, dan kesemek masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Bukan sampah makanan."
+  },
+  {
+   "name": "Kulit bawang bombai dan bawang putih",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Bukan sampah makanan."
+  },
+  {
+   "name": "Kulit dan bonggol jagung",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Bukan sampah makanan."
+  },
+  {
+   "name": "Tulang dan duri ikan",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Ada tempat yang menerimanya sebagai sampah makanan kalau jumlahnya sangat sedikit."
+  },
+  {
+   "name": "Kimchi dan makanan berkuah",
+   "steps": [
+    "Saring kuahnya dan peras airnya",
+    "Ambil plastik dan tusuk gigi",
+    "Buang sebagai sampah makanan"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Makanan kedaluwarsa",
+   "steps": [
+    "Lepas kemasannya (plastik atau wadah)",
+    "Buang sebagai sampah makanan",
+    "Pisahkan kemasan sesuai bahannya"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Minyak goreng bekas",
+   "steps": [
+    "Kumpulkan tanpa tercampur sisa makanan",
+    "Masukkan ke tempat minyak goreng bekas"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Sarung tangan karet",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Popok",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Pembalut",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Tisu basah",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar",
+    "Plastik kemasannya buang sebagai plastik tipis (vinil), tutup plastiknya sebagai plastik"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Masker sekali pakai",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Botol losion dan sampo",
+   "steps": [
+    "Kosongkan lalu bilas",
+    "Lepas pompa dan label plastiknya",
+    "Botolnya masukkan ke tempat daur ulang plastik"
+   ],
+   "warn": "Pompa tidak bisa didaur ulang. Masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Botol parfum",
+   "steps": [
+    "Lepas tutupnya",
+    "Sisa parfum diserap dengan tisu lalu masukkan ke kantong sampah berbayar",
+    "Botolnya masukkan ke tempat botol kaca"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Label pengiriman paket",
+   "steps": [
+    "Lepas dari kardus",
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Walaupun terlihat seperti kertas, tidak bisa didaur ulang."
+  },
+  {
+   "name": "Selotip kardus",
+   "steps": [
+    "Lepas dari kardus",
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Kalau tidak bisa dilepas, potong bagian selotipnya dengan pisau."
+  },
+  {
+   "name": "Brosur",
+   "steps": [
+    "Brosur tanpa lapisan buang sebagai sampah kertas",
+    "Brosur berlapis yang mengilap masukkan ke kantong sampah berbayar"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Buku dan buku tulis",
+   "steps": [
+    "Lepas spiral dan sampul plastiknya",
+    "Ikat lalu buang sebagai sampah kertas"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Koran",
+   "steps": [
+    "Rapikan dan tumpuk, jangan sampai basah",
+    "Ikat dengan tali lalu buang sebagai sampah kertas"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Wadah telur",
+   "steps": [
+    "Wadah telur kertas buang sebagai sampah kertas",
+    "Wadah telur plastik buang sebagai plastik"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Kotak pizza dan ayam goreng",
+   "steps": [
+    "Buang sisa makanannya",
+    "Kotak yang bersih buang sebagai sampah kertas",
+    "Bagian yang kena minyak masukkan ke kantong sampah berbayar"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Tas belanja kertas",
+   "steps": [
+    "Lepas tali pegangannya",
+    "Buang sebagai sampah kertas"
+   ],
+   "warn": "Tas belanja berlapis plastik masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Kotak kertas pendingin",
+   "steps": [
+    "Lepas lapisan foil di dalamnya",
+    "Buang sebagai sampah kertas"
+   ],
+   "warn": "Kalau foilnya tidak bisa dilepas, masukkan ke kantong sampah berbayar."
+  },
+  {
+   "name": "Aluminium foil",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Jangan dibuang sebagai kaleng atau besi bekas."
+  },
+  {
+   "name": "Kertas roti (baking paper)",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Bukan sampah kertas."
+  },
+  {
+   "name": "Sumpit kayu",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Jangan dimasukkan ke sampah makanan."
+  },
+  {
+   "name": "Pulpen",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Korek api gas sekali pakai",
+   "steps": [
+    "Habiskan gasnya dulu",
+    "Bungkus dengan kertas supaya tidak kena sinar matahari, lalu masukkan ke kantong sampah berbayar"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Pisau cukur sekali pakai",
+   "steps": [
+    "Bungkus pisaunya dengan kertas atau selotip",
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Penghangat tangan sekali pakai (hot pack)",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Walaupun berisi serbuk besi, bukan besi bekas."
+  },
+  {
+   "name": "Bungkus rokok",
+   "steps": [
+    "Masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Kalau plastik dan foilnya dilepas, plastiknya bisa dibuang sebagai plastik tipis (vinil) dan kertasnya sebagai sampah kertas."
+  },
+  {
+   "name": "Karung beras",
+   "steps": [
+    "Karung beras dari rumah masukkan ke kantong sampah berbayar"
+   ],
+   "warn": "Beberapa daerah menerima karung beras kertas sebagai sampah kertas."
+  },
+  {
+   "name": "Tanah pot",
+   "steps": [
+    "Masukkan ke karung khusus sampah tidak mudah terbakar (불연성 마대) lalu keluarkan"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Botol wine",
+   "steps": [
+    "Kosongkan lalu bilas",
+    "Masukkan ke tempat botol kaca"
+   ],
+   "warn": "Warna botol tidak masalah."
+  },
+  {
+   "name": "Gantungan baju dari laundry",
+   "steps": [
+    "Masukkan ke tempat besi bekas"
+   ],
+   "warn": "Ada laundry yang mau menerimanya kembali."
+  },
+  {
+   "name": "Penyerap lembap",
+   "steps": [
+    "Buang air di dalamnya ke saluran air",
+    "Tutup foilnya masukkan ke kantong sampah berbayar",
+    "Wadahnya masukkan ke tempat daur ulang plastik"
+   ],
+   "warn": ""
   }
  ],
  "help": {

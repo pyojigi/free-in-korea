@@ -239,6 +239,618 @@
     "Mang ra vào đúng ngày đã hẹn"
    ],
    "warn": "Mang ra mà không khai báo có thể bị phạt tiền."
+  },
+  {
+   "name": "Hộp nhựa đồ ăn giao tận nơi",
+   "steps": [
+    "Đổ hết đồ ăn thừa",
+    "Tráng bằng nước, bóc nhãn và nilon",
+    "Bỏ vào thùng thu gom nhựa"
+   ],
+   "warn": "Vết bẩn đồ ăn không sạch thì không tái chế được. Khi đó bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Hộp cơm ăn liền",
+   "steps": [
+    "Bóc lớp nilon trên nắp",
+    "Bỏ hết hạt cơm và tráng sạch",
+    "Bỏ vào thùng thu gom nhựa"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Hộp sữa chua",
+   "steps": [
+    "Đổ hết và tráng sạch",
+    "Bỏ vào thùng thu gom nhựa"
+   ],
+   "warn": "Nắp đã bóc (giấy bạc, màng) bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Ly mì giấy",
+   "steps": [
+    "Đổ hết nước và mì",
+    "Tráng bằng nước",
+    "Bỏ chung với đồ giấy"
+   ],
+   "warn": "Còn dính đồ ăn thì không tái chế được."
+  },
+  {
+   "name": "Ly mì, hộp đựng đồ ăn bằng xốp",
+   "steps": [
+    "Đổ hết đồ ăn và tráng sạch",
+    "Bóc nhãn và băng keo",
+    "Bỏ vào thùng thu gom xốp"
+   ],
+   "warn": "Đồ ăn dính không sạch được thì bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Ly nhựa quán cà phê",
+   "steps": [
+    "Đổ hết đồ uống và tráng sạch",
+    "Rút ống hút, tháo nắp",
+    "Bỏ vào thùng thu gom nhựa"
+   ],
+   "warn": "Không bỏ vào thùng riêng cho chai nhựa trong suốt. Nếu là ly có tiền cọc ở một số khu vực, trả lại cửa hàng sẽ được hoàn tiền."
+  },
+  {
+   "name": "Ly giấy",
+   "steps": [
+    "Đổ hết và tráng sạch",
+    "Ấn dẹp xuống",
+    "Buộc lại và bỏ chung với đồ giấy"
+   ],
+   "warn": "Mỗi khu vực mỗi khác. Seoul hướng dẫn bỏ ly giấy tráng phủ hai mặt vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Ống hút",
+   "steps": [
+    "Rửa sạch",
+    "Ống hút nhựa bỏ chung với đồ nhựa, ống hút kim loại bỏ chung với sắt vụn (고철)"
+   ],
+   "warn": "Ống hút gắn trên hộp sữa thì tháo ra và bỏ riêng."
+  },
+  {
+   "name": "Túi bánh snack, túi mì gói",
+   "steps": [
+    "Giũ sạch bên trong",
+    "Bỏ vào thùng thu gom nilon"
+   ],
+   "warn": "Dầu mỡ hoặc gia vị không rửa sạch được thì bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Găng tay nilon, túi zip",
+   "steps": [
+    "Lấy hết đồ bên trong, bỏ chất bẩn",
+    "Bỏ vào thùng thu gom nilon"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Màng bọc thực phẩm",
+   "steps": [
+    "Màng bọc sạch bỏ chung với đồ nilon",
+    "Màng bọc dính đồ ăn bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Màng bọc đồ ăn giao tận nơi và hàng siêu thị là PVC nên không tái chế được."
+  },
+  {
+   "name": "Màng xốp hơi (bóng khí)",
+   "steps": [
+    "Bóc băng keo và phiếu giao hàng",
+    "Bỏ vào thùng thu gom nilon"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Túi đá giữ lạnh chứa nước",
+   "steps": [
+    "Cắt túi, đổ nước vào cống",
+    "Vỏ nilon bỏ chung với đồ nilon"
+   ],
+   "warn": "Túi đá dạng gel thì cách bỏ khác."
+  },
+  {
+   "name": "Túi đá giữ lạnh dạng gel",
+   "steps": [
+    "Không cắt, để nguyên cả túi",
+    "Có thùng thu gom túi đá giữ lạnh thì bỏ vào đó, không có thì bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Khác với túi đá chứa nước, không cắt mà bỏ nguyên túi."
+  },
+  {
+   "name": "Bàn chải đánh răng",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Trông giống nhựa nhưng không tái chế được."
+  },
+  {
+   "name": "Ô (dù)",
+   "steps": [
+    "Tháo nilon, vải ra; khung bỏ chung với sắt vụn (고철)",
+    "Khó tách ra thì bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Mỗi khu vực mỗi khác. Seoul hướng dẫn ô lớn là rác cồng kềnh (대형폐기물)."
+  },
+  {
+   "name": "Quần áo cũ",
+   "steps": [
+    "Giặt sạch, phơi khô",
+    "Bỏ vào thùng thu gom quần áo (의류수거함)"
+   ],
+   "warn": "Quần áo rách hoặc bẩn thì bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Giày (giày thể thao, giày da)",
+   "steps": [
+    "Buộc hai chiếc lại bằng dây",
+    "Còn tốt thì bỏ vào thùng thu gom quần áo (의류수거함)"
+   ],
+   "warn": "Dép lê, giày cao su, giày cũ nát thì bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Túi xách, ba lô",
+   "steps": [
+    "Còn tốt thì bỏ vào thùng thu gom quần áo (의류수거함)",
+    "Cũ nát thì bỏ vào túi rác trả phí theo lượng, to thì bỏ như rác cồng kềnh (대형폐기물)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Vali du lịch",
+   "steps": [
+    "Khai báo là rác cồng kềnh (대형폐기물)",
+    "Dán tem rồi mang ra"
+   ],
+   "warn": "Không bỏ vào thùng thu gom quần áo."
+  },
+  {
+   "name": "Chăn bông",
+   "steps": [
+    "Khai báo là rác cồng kềnh (대형폐기물)",
+    "Dán tem rồi mang ra"
+   ],
+   "warn": "Không bỏ vào thùng thu gom quần áo. Có khu vực cho bỏ chăn nhỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Gối, gối tựa",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng",
+    "Không vừa túi thì bỏ như rác cồng kềnh (대형폐기물)"
+   ],
+   "warn": "Không bỏ vào thùng thu gom quần áo."
+  },
+  {
+   "name": "Thú nhồi bông",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng",
+    "Quá to thì bỏ như rác cồng kềnh (대형폐기물)"
+   ],
+   "warn": "Không bỏ vào thùng thu gom quần áo."
+  },
+  {
+   "name": "Đồ chơi",
+   "steps": [
+    "Nhiều chất liệu lẫn nhau thì bỏ vào túi rác trả phí theo lượng",
+    "Đồ chơi có pin thì bỏ vào thùng thu gom đồ điện tử nhỏ (소형 전자제품 수거함)"
+   ],
+   "warn": "Đồ lớn như xe đẩy em bé, xe tập đi là rác cồng kềnh (대형폐기물)."
+  },
+  {
+   "name": "Bóng đèn huỳnh quang",
+   "steps": [
+    "Để nguyên, không làm vỡ",
+    "Bỏ vào thùng thu gom bóng đèn huỳnh quang (형광등 수거함) (trung tâm phường, chung cư)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Bóng đèn huỳnh quang bị vỡ",
+   "steps": [
+    "Gói nhiều lớp bằng giấy báo",
+    "Bỏ vào bao chuyên dụng cho rác không cháy được (불연성 마대)"
+   ],
+   "warn": "Mỗi khu vực mỗi khác. Seoul hướng dẫn nếu ít thì gói lại và bỏ vào túi rác trả phí theo lượng cũng được."
+  },
+  {
+   "name": "Bóng đèn LED",
+   "steps": [
+    "Đèn LED dạng bóng tròn, dạng thanh thì bỏ vào thùng thu gom bóng đèn huỳnh quang (형광등 수거함)",
+    "Đèn LED dạng phẳng thì bỏ vào bao chuyên dụng cho rác không cháy được (불연성 마대) hoặc bỏ như rác cồng kềnh (대형폐기물)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Sạc dự phòng",
+   "steps": [
+    "Bỏ vào thùng thu gom đồ điện tử nhỏ (소형 전자제품 수거함) hoặc thùng thu gom pin cũ (폐건전지 수거함)"
+   ],
+   "warn": "Có thể gây cháy, nên không trộn với đồ tái chế như nhựa, lon."
+  },
+  {
+   "name": "Điện thoại di động",
+   "steps": [
+    "Bỏ vào thùng thu gom đồ điện tử nhỏ (소형 전자제품 수거함)"
+   ],
+   "warn": "Gom từ 5 cái trở lên thì có thể gọi thu gom tận nhà miễn phí (1599-0903)."
+  },
+  {
+   "name": "Cục sạc, tai nghe",
+   "steps": [
+    "Bỏ vào thùng thu gom đồ điện tử nhỏ (소형 전자제품 수거함)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Đồ điện nhỏ như máy sấy tóc, máy uốn tóc",
+   "steps": [
+    "Bỏ vào thùng thu gom đồ điện tử nhỏ (소형 전자제품 수거함)",
+    "Không có thùng thu gom thì hỏi trung tâm phường"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Thuốc lá điện tử",
+   "steps": [
+    "Bỏ vào thùng thu gom đồ điện tử nhỏ (소형 전자제품 수거함)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Chảo, nồi",
+   "steps": [
+    "Bỏ vào thùng thu gom sắt vụn (고철)"
+   ],
+   "warn": "Dính nhiều chất liệu khác thì bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Gương lớn",
+   "steps": [
+    "Khai báo là rác cồng kềnh (대형폐기물)",
+    "Dán tem rồi mang ra"
+   ],
+   "warn": "Không bỏ vào thùng thu gom chai thủy tinh."
+  },
+  {
+   "name": "Ly thủy tinh, ly rượu vang",
+   "steps": [
+    "Gói lại để không bị vỡ",
+    "Bỏ vào bao chuyên dụng cho rác không cháy được (불연성 마대)"
+   ],
+   "warn": "Không bỏ vào thùng thu gom chai thủy tinh. 1–2 cái thì gói kỹ và bỏ vào túi rác trả phí theo lượng cũng được."
+  },
+  {
+   "name": "Bình xịt",
+   "steps": [
+    "Ở nơi thoáng gió, ấn vòi xịt cho hết gas",
+    "Bỏ vào thùng thu gom lon kim loại"
+   ],
+   "warn": "Còn gas có thể gây cháy."
+  },
+  {
+   "name": "Bình gas mini (gas butan)",
+   "steps": [
+    "Ở nơi thoáng gió, ấn vòi cho hết gas",
+    "Bỏ vào thùng thu gom lon kim loại"
+   ],
+   "warn": "Có khu vực hướng dẫn đục lỗ bình. Hãy xem hướng dẫn nơi bạn sống."
+  },
+  {
+   "name": "Sơn thừa",
+   "steps": [
+    "Đóng chặt nắp cho kín",
+    "Bỏ vào thùng thu gom rác thải độc hại"
+   ],
+   "warn": "Không có thùng thu gom thì đóng kín và bỏ theo hướng dẫn của chính quyền địa phương (thường là túi rác trả phí theo lượng)."
+  },
+  {
+   "name": "Thuốc viên dùng dở",
+   "steps": [
+    "Tháo hộp giấy bên ngoài và bỏ riêng",
+    "Chỉ gom thuốc viên vào một túi",
+    "Bỏ vào thùng thu gom thuốc cũ (폐의약품 수거함) ở nhà thuốc, trạm y tế hoặc trung tâm phường"
+   ],
+   "warn": "Một số khu vực cũng cho bỏ vào hòm thư bưu điện."
+  },
+  {
+   "name": "Thuốc nước, thuốc mỡ",
+   "steps": [
+    "Đậy nắp, để nguyên cả lọ",
+    "Bỏ vào thùng thu gom thuốc cũ (폐의약품 수거함) ở nhà thuốc, trạm y tế hoặc trung tâm phường"
+   ],
+   "warn": "Không bỏ thuốc nước vào hòm thư bưu điện."
+  },
+  {
+   "name": "Túi trà, lá trà xanh",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Không phải rác thực phẩm."
+  },
+  {
+   "name": "Vỏ các loại hạt",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Vỏ óc chó, đậu phộng, hạt dẻ không phải rác thực phẩm."
+  },
+  {
+   "name": "Hạt trái cây cứng",
+   "steps": [
+    "Hạt đào, bơ, hồng bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Không phải rác thực phẩm."
+  },
+  {
+   "name": "Vỏ hành, vỏ tỏi",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Không phải rác thực phẩm."
+  },
+  {
+   "name": "Vỏ và lõi ngô",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Không phải rác thực phẩm."
+  },
+  {
+   "name": "Xương cá",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Có nơi nhận một lượng rất ít như rác thực phẩm."
+  },
+  {
+   "name": "Kim chi, món có nước canh",
+   "steps": [
+    "Lọc bỏ nước, vắt thật ráo",
+    "Bỏ nilon, tăm ra",
+    "Bỏ chung với rác thực phẩm"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Đồ ăn quá hạn sử dụng",
+   "steps": [
+    "Bóc bỏ bao bì (nilon, hộp)",
+    "Bỏ chung với rác thực phẩm",
+    "Phân loại bao bì theo chất liệu"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Dầu ăn đã qua sử dụng",
+   "steps": [
+    "Gom lại, không để lẫn đồ ăn",
+    "Bỏ vào thùng thu gom dầu ăn cũ (폐식용유 수거함)"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Găng tay cao su",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Tã bỉm",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Băng vệ sinh",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Khăn ướt",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng",
+    "Vỏ nilon bỏ chung với đồ nilon, nắp nhựa bỏ chung với đồ nhựa"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Khẩu trang dùng một lần",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Chai sữa dưỡng, chai dầu gội",
+   "steps": [
+    "Đổ hết và tráng sạch",
+    "Tháo vòi bơm và bóc nhãn nilon",
+    "Bỏ chai vào thùng thu gom nhựa"
+   ],
+   "warn": "Vòi bơm không tái chế được. Bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Chai nước hoa",
+   "steps": [
+    "Tháo nắp",
+    "Nước hoa còn thừa thì thấm vào giấy vệ sinh rồi bỏ vào túi rác trả phí theo lượng",
+    "Bỏ chai vào thùng thu gom chai thủy tinh"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Phiếu giao hàng",
+   "steps": [
+    "Bóc ra khỏi thùng",
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Trông giống giấy nhưng không tái chế được."
+  },
+  {
+   "name": "Băng keo dán thùng",
+   "steps": [
+    "Bóc ra khỏi thùng",
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Không bóc ra được thì dùng dao cắt bỏ phần băng keo."
+  },
+  {
+   "name": "Tờ rơi",
+   "steps": [
+    "Tờ rơi không tráng phủ thì bỏ chung với đồ giấy",
+    "Tờ rơi tráng phủ bóng thì bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Sách, vở",
+   "steps": [
+    "Tháo lò xo và bìa nilon",
+    "Buộc lại và bỏ chung với đồ giấy"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Giấy báo",
+   "steps": [
+    "Trải phẳng và xếp chồng, không để ướt",
+    "Buộc bằng dây và bỏ chung với đồ giấy"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Khay đựng trứng",
+   "steps": [
+    "Khay giấy bỏ chung với đồ giấy",
+    "Khay nhựa bỏ chung với đồ nhựa"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Hộp pizza, hộp gà rán",
+   "steps": [
+    "Bỏ hết đồ ăn thừa",
+    "Hộp sạch bỏ chung với đồ giấy",
+    "Phần dính dầu mỡ bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Túi mua sắm bằng giấy",
+   "steps": [
+    "Tháo quai dây",
+    "Bỏ chung với đồ giấy"
+   ],
+   "warn": "Túi mua sắm tráng nilon thì bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Hộp giữ lạnh bằng giấy",
+   "steps": [
+    "Bóc lớp màng giấy bạc bên trong",
+    "Bỏ chung với đồ giấy"
+   ],
+   "warn": "Không bóc được giấy bạc thì bỏ vào túi rác trả phí theo lượng."
+  },
+  {
+   "name": "Giấy bạc nhôm",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Không bỏ chung với lon hay sắt vụn."
+  },
+  {
+   "name": "Giấy nến nướng bánh",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Không phải đồ giấy."
+  },
+  {
+   "name": "Đũa gỗ dùng một lần",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Không bỏ vào rác thực phẩm."
+  },
+  {
+   "name": "Bút bi",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Bật lửa dùng một lần",
+   "steps": [
+    "Dùng hết gas trước",
+    "Gói bằng giấy để không bị nắng chiếu, rồi bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Dao cạo dùng một lần",
+   "steps": [
+    "Bọc lưỡi dao bằng giấy hoặc băng keo",
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Túi sưởi ấm dùng một lần",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Dù có bột sắt bên trong cũng không phải sắt vụn."
+  },
+  {
+   "name": "Vỏ bao thuốc lá",
+   "steps": [
+    "Bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Nếu bóc nilon và giấy bạc ra, có thể bỏ nilon chung với đồ nilon, giấy chung với đồ giấy."
+  },
+  {
+   "name": "Bao gạo",
+   "steps": [
+    "Bao gạo dùng trong nhà thì bỏ vào túi rác trả phí theo lượng"
+   ],
+   "warn": "Có khu vực nhận bao gạo bằng giấy như đồ giấy."
+  },
+  {
+   "name": "Đất chậu cây",
+   "steps": [
+    "Cho vào bao chuyên dụng cho rác không cháy được (불연성 마대) rồi mang ra"
+   ],
+   "warn": ""
+  },
+  {
+   "name": "Chai rượu vang",
+   "steps": [
+    "Đổ hết và tráng sạch",
+    "Bỏ vào thùng thu gom chai thủy tinh"
+   ],
+   "warn": "Màu chai không quan trọng."
+  },
+  {
+   "name": "Móc áo tiệm giặt ủi",
+   "steps": [
+    "Bỏ vào thùng thu gom sắt vụn (고철)"
+   ],
+   "warn": "Có tiệm giặt ủi nhận lại móc áo."
+  },
+  {
+   "name": "Hộp hút ẩm",
+   "steps": [
+    "Đổ nước bên trong vào cống",
+    "Nắp giấy bạc bỏ vào túi rác trả phí theo lượng",
+    "Hộp nhựa bỏ vào thùng thu gom nhựa"
+   ],
+   "warn": ""
   }
  ],
  "help": {

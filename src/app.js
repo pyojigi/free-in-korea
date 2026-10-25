@@ -77,12 +77,14 @@ for (const m of Object.keys(NAV)) $("m-" + m).onclick = () => go(m);
 
 // 물건 목록: 고른 언어와 한국어 이름 둘 다로 찾기
 function renderChips(){
-  const q = $("itemSearch").value.trim().toLowerCase();
+  const raw = $("itemSearch").value.trim().toLowerCase();
+  // 영어 등 복수형도 찾히게 끝의 -s/-es/-ies/-y를 떼고 비교 (battery → batteries)
+  const q = raw.length > 3 ? raw.replace(/(ies|es|s|y)$/, "") : raw;
   const chips = $("chips"); chips.innerHTML = "";
   let shown = 0;
   D.items.forEach(it => {
     const name = textOf(it, lang).name || "", ko = (it.t.ko && it.t.ko.name) || "";
-    if (q && !(name.toLowerCase().includes(q) || ko.includes(q))) return;
+    if (q && !(name.toLowerCase().includes(q) || ko.includes(raw))) return;
     const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.cat = it.cat;
     const d = document.createElement("span"); d.className = "dot"; b.append(d, name);
     b.onclick = () => openItem(it);
