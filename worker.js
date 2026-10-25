@@ -16,6 +16,27 @@ async function bump(env, kind, src, lang) {
   } catch (e) { console.log("hit error", String(e)); }
 }
 
+// 사람들이 실제로 물어본 물건(AI가 붙인 한국어 이름과 분류)만 셈. 사진·입력 글은 저장하지 않음.
+async function bumpItems(env, items) {
+  if (!env.DB || !Array.isArray(items)) return;
+  const day = kstDay();
+  const stmts = items.slice(0, 6).map(it => {
+    const name = String(it.koName || "").replace(/\s+/g, " ").trim().slice(0, 40);
+    return name && ["bag", "food", "rec", "spec"].includes(it.cat)
+      ? env.DB.prepare("INSERT INTO asked (day, cat, name, n) VALUES (?, ?, ?, 1) ON CONFLICT(day, cat, name) DO UPDATE SET n = n + 1").bind(day, it.cat, name)
+      : null;
+  }).filter(Boolean);
+  try { if (stmts.length) await env.DB.batch(stmts); } catch (e) { console.log("asked error", String(e)); }
+}
+
+async function askedTop(env, days = 30, limit = 200) {
+  const since = new Date(Date.now() + 9 * 3600e3 - days * 864e5).toISOString().slice(0, 10);
+  const { results } = await env.DB.prepare(
+    "SELECT cat, name, SUM(n) AS n, MIN(day) AS first, MAX(day) AS last FROM asked WHERE day >= ? GROUP BY cat, name ORDER BY n DESC LIMIT ?"
+  ).bind(since, limit).all();
+  return { since, items: results };
+}
+
 async function stats(env, asHtml) {
   const since = new Date(Date.now() + 9 * 3600e3 - 30 * 864e5).toISOString().slice(0, 10);
   const { results } = await env.DB.prepare(
@@ -33,7 +54,8 @@ async function stats(env, asHtml) {
 <p style="color:#888">방문 = 브라우저 탭을 열 때 1번(새로고침은 안 셈). 개인 정보는 저장하지 않고 숫자만 셉니다.</p>
 ${table("어디서 왔나 (src)", sum(r => r.kind === "visit" && r.src))}
 ${table("날짜별 방문", sum(r => r.kind === "visit" && r.day))}
-${table("언어별 방문", sum(r => r.kind === "visit" && r.lang))}`;
+${table("언어별 방문", sum(r => r.kind === "visit" && r.lang))}
+${table("사람들이 물어본 물건 (AI 판단 결과)", (await askedTop(env, 30, 40)).items.map(r => [r.name + " → " + ({bag:"종량제",food:"음식물",rec:"재활용",spec:"따로"}[r.cat] || r.cat), r.n]))}`;
   return new Response(html, { headers: { "content-type": "text/html; charset=utf-8", "cache-control": "no-store" } });
 }
 
@@ -51,6 +73,10 @@ export default {
       ctx.waitUntil(bump(env, "visit", src, lang));
       return new Response(null, { status: 204 });
     }
+    if (url.pathname === "/api/asked") {
+      if (!env.DB) return new Response("DB not connected", { status: 500 });
+      return Response.json(await askedTop(env, 30, 200), { headers: { "cache-control": "no-store" } });
+    }
     if (url.pathname === "/stats" || url.pathname === "/api/stats") {
       if (!env.DB) return new Response("DB not connected", { status: 500 });
       return stats(env, url.pathname === "/stats");
@@ -58,7 +84,10 @@ export default {
     if (url.pathname === "/api/classify") {
       if (request.method !== "POST") return new Response("Method Not Allowed", { status: 405 });
       const res = await onRequestPost({ request, env });
-      if (res.ok) ctx.waitUntil(bump(env, "ask", "-", "-"));
+      if (res.ok) {
+        ctx.waitUntil(bump(env, "ask", "-", "-"));
+        ctx.waitUntil(res.clone().json().then(b => bumpItems(env, b.items)).catch(() => {}));
+      }
       return res;
     }
     return env.ASSETS.fetch(request);
