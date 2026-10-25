@@ -51,11 +51,12 @@ function render(){
   if (aiItems) renderAi();
   renderHelp();
   renderArea();
+  renderBag();
 }
 
 // ---- 화면 이동: 대분류(main) > 소분류(sub) ----
-const NAV = {trash:["photo","area","list","rules"], help:["call","report"]};
-const SUBKEY = {photo:"subPhoto", area:"subArea", list:"subList", rules:"subRules", call:"subCall", report:"subReport"};
+const NAV = {trash:["photo","area","bag","list","rules"], help:["call","report"]};
+const SUBKEY = {photo:"subPhoto", area:"subArea", bag:"subBag", list:"subList", rules:"subRules", call:"subCall", report:"subReport"};
 let main = location.hash === "#help" ? "help" : "trash";
 const lastSub = {trash:"photo", help:"call"};
 let openedItem = null, aiItems = null, lastByText = false;
@@ -134,17 +135,18 @@ function koVoice(synth){
     synth.addEventListener("voiceschanged", done); setTimeout(done, 1500);
   });
 }
-$("speak").onclick = async () => {
+async function speakKo(text, status){
   const synth = window.speechSynthesis;
-  $("voiceStatus").textContent = "";
-  if (!synth || typeof SpeechSynthesisUtterance === "undefined") { $("voiceStatus").textContent = t("noVoice"); return; }
+  status.textContent = "";
+  if (!synth || typeof SpeechSynthesisUtterance === "undefined") { status.textContent = t("noVoice"); return; }
   synth.cancel();
   const v = await koVoice(synth);
-  if (!v) { $("voiceStatus").textContent = t("noVoice"); return; }
-  const u = new SpeechSynthesisUtterance(sentence().ko);
+  if (!v) { status.textContent = t("noVoice"); return; }
+  const u = new SpeechSynthesisUtterance(text);
   u.lang = "ko-KR"; u.rate = 0.85; u.voice = v;
   synth.speak(u);
-};
+}
+$("speak").onclick = () => speakKo(sentence().ko, $("voiceStatus"));
 
 // 사진 결과: 물건이 여러 개면 카드를 여러 장
 function renderAi(){
@@ -304,6 +306,46 @@ function renderArea(){
   const foot = document.createElement("div"); foot.className = "foot"; foot.textContent = t("checkedL").replace("{d}", a.checked); card.append(foot);
   box.append(card);
 }
+
+// ---- 봉투 사기: 편의점에서 보여주거나 들려줄 한국어 문장 ----
+const NUM_KO = ["", "한", "두", "세", "네", "다섯", "여섯", "일곱", "여덟", "아홉", "열"];
+const NUM_ROM = ["", "han", "du", "se", "ne", "daseot", "yeoseot", "ilgop", "yeodeol", "ahop", "yeol"];
+const L_ROM = {1:"il", 2:"i", 3:"sam", 5:"o", 10:"sip", 20:"isip", 30:"samsip", 50:"osip", 75:"chilsibo", 100:"baek"};
+const BAGS = {
+  gen: {label:"bagGen", sizes:[5,10,20,50,75,100], def:10, ko:"일반 종량제 봉투 {L}리터짜리 {N} 장 주세요.", rom:"Ilban jongnyangje bongtu {LR}-riteo-jjari {NR} jang juseyo.", mean:"mGen"},
+  food:{label:"bagFood", sizes:[1,2,3,5,10], def:3, ko:"음식물 쓰레기 봉투 {L}리터짜리 {N} 장 주세요.", rom:"Eumsingmul sseuregi bongtu {LR}-riteo-jjari {NR} jang juseyo.", mean:"mFood"},
+  sack:{label:"bagSack", sizes:[], def:0, ko:"불연성 쓰레기 마대 {N} 장 주세요.", rom:"Bullyeonseong sseuregi madae {NR} jang juseyo.", mean:"mSack"},
+};
+const bagType = $("bagType"), bagSize = $("bagSize"), bagCount = $("bagCount");
+let bag = {type:"gen", size:10, n:5};
+function fillSel(sel, items, val){ sel.innerHTML = ""; items.forEach(([v, txt]) => { const o = document.createElement("option"); o.value = v; o.textContent = txt; sel.append(o); }); sel.value = String(val); }
+function bagSentence(){
+  const b = BAGS[bag.type], n = bag.n, L = bag.size;
+  const fill = s => s.replace("{L}", L).replace("{LR}", L_ROM[L] || L).replace("{N}", NUM_KO[n]).replace("{NR}", NUM_ROM[n]);
+  return {ko: fill(b.ko), rom: fill(b.rom), mean: t(b.mean).replace("{L}", L).replace("{N}", n)};
+}
+function renderBag(){
+  fillSel(bagType, Object.keys(BAGS).map(k => [k, t(BAGS[k].label)]), bag.type);
+  const b = BAGS[bag.type];
+  $("bagSizeF").hidden = !b.sizes.length;
+  if (b.sizes.length) fillSel(bagSize, b.sizes.map(x => [x, x + " L"]), bag.size);
+  fillSel(bagCount, [1,2,3,4,5,6,7,8,9,10].map(x => [x, String(x)]), bag.n);
+  const s = bagSentence(), box = $("bagSay"); box.innerHTML = "";
+  const ko = document.createElement("div"); ko.className = "ko"; ko.textContent = s.ko;
+  const rom = document.createElement("div"); rom.className = "rom"; rom.lang = "en"; rom.textContent = s.rom;
+  box.append(ko, rom);
+  if (lang !== "ko") { const m = document.createElement("div"); m.className = "mean"; m.lang = HTML_LANG[lang] || lang; m.textContent = t("meaning") + ": " + s.mean; box.append(m); }
+  const c = $("bagCheck"); c.innerHTML = "";
+  const h = document.createElement("div"); h.className = "rom"; h.lang = HTML_LANG[lang] || lang; h.textContent = t("bagCheckL");
+  const ck = document.createElement("div"); ck.className = "ko"; ck.textContent = "이 동네 봉투 맞아요?";
+  const cr = document.createElement("div"); cr.className = "rom"; cr.lang = "en"; cr.textContent = "I dongne bongtu majayo?";
+  c.append(h, ck, cr);
+  if (lang !== "ko") { const m = document.createElement("div"); m.className = "mean"; m.textContent = t("meaning") + ": " + t("mCheck"); c.append(m); }
+}
+bagType.onchange = () => { bag.type = bagType.value; bag.size = BAGS[bag.type].def; renderBag(); };
+bagSize.onchange = () => { bag.size = Number(bagSize.value); renderBag(); };
+bagCount.onchange = () => { bag.n = Number(bagCount.value); renderBag(); };
+$("bagSpeak").onclick = () => speakKo(bagSentence().ko, $("bagVoice"));
 
 // 방문 기록: 어디서 왔는지(?src=qr 같은 표시나 이전 사이트 주소)와 언어만 숫자로 셈. 탭을 열 때 1번만.
 (function(){

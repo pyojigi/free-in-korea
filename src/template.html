@@ -74,6 +74,8 @@ section h2{font-family:var(--f-display);font-weight:400;font-size:21px;margin:0 
 .rule .k{font-family:var(--f-mono);font-size:12px;color:var(--muted);padding-top:2px}
 .rule .v{min-width:0}
 .note{font-size:13px;color:var(--muted)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.say.small .ko{font-size:18px}
 .hero h1{font-family:var(--f-display);font-weight:400;font-size:26px;line-height:1.2;margin:4px 0 2px}
 .hero p{margin:0 0 12px;color:var(--muted);font-size:15px}
 .notice{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--sticker);border-radius:12px;padding:14px 16px;font-size:15px}
@@ -208,6 +210,26 @@ __MOTIF_CSS__
     <p class="note" data-t="areaHint"></p>
     <label class="field"><select id="areaSel" aria-label="Area"></select></label>
     <div id="areaCard"></div>
+  </section>
+
+  <!-- 쓰레기 > 봉투 사기 -->
+  <section class="view" data-view="trash/bag" hidden>
+    <h2 data-t="bagTitle"></h2>
+    <p class="note" data-t="bagHint"></p>
+    <div class="builder">
+      <label class="field"><span data-t="bagType"></span><select id="bagType"></select></label>
+      <div class="row2">
+        <label class="field" id="bagSizeF"><span data-t="bagSize"></span><select id="bagSize"></select></label>
+        <label class="field"><span data-t="bagCount"></span><select id="bagCount"></select></label>
+      </div>
+      <div class="say" id="bagSay" lang="ko"></div>
+      <div class="row">
+        <button class="btn" id="bagSpeak" type="button" data-t="playBtn"></button>
+      </div>
+      <div class="status" id="bagVoice" aria-live="polite"></div>
+      <div class="say small" id="bagCheck" lang="ko"></div>
+      <p class="note" data-t="bagNote"></p>
+    </div>
   </section>
 
   <!-- 쓰레기 > 규칙 -->

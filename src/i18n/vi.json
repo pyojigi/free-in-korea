@@ -62,7 +62,22 @@
   "notesL": "Quy định riêng",
   "officialL": "Trang chính thức",
   "checkedL": "Đã kiểm tra trên trang chính thức ngày {d}. Quy định có thể thay đổi, hãy ưu tiên hướng dẫn của ban quản lý.",
-  "koOrig": "Bản gốc tiếng Hàn"
+  "koOrig": "Bản gốc tiếng Hàn",
+  "subBag": "Mua túi",
+  "bagTitle": "Mua túi rác ở cửa hàng tiện lợi",
+  "bagHint": "Chọn loại và cỡ, rồi đưa màn hình này cho nhân viên hoặc bấm Đọc to.",
+  "bagType": "Loại",
+  "bagSize": "Cỡ",
+  "bagCount": "Số lượng",
+  "bagGen": "Túi rác thường (trả phí)",
+  "bagFood": "Túi rác thức ăn",
+  "bagSack": "Bao đựng kính vỡ, đồ sứ",
+  "bagCheckL": "Hỏi thêm",
+  "bagNote": "Túi bán ở cửa hàng tiện lợi và siêu thị. Mua ở thành phố/quận bạn sống; cỡ và giá khác nhau theo khu. Không có cỡ này thì chọn cỡ khác.",
+  "mGen": "Cho tôi {N} túi rác thường {L} lít.",
+  "mFood": "Cho tôi {N} túi rác thức ăn {L} lít.",
+  "mSack": "Cho tôi {N} bao rác không cháy.",
+  "mCheck": "Túi này có đúng của khu này không?"
  },
  "cat": {
   "bag": "Túi rác trả phí theo lượng (종량제 봉투) – rác thường",
