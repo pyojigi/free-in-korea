@@ -83,8 +83,9 @@ export default {
     }
     if (url.pathname === "/api/classify") {
       if (request.method !== "POST") return new Response("Method Not Allowed", { status: 405 });
+      const peek = await request.clone().json().catch(() => ({}));
       const res = await onRequestPost({ request, env });
-      if (res.ok) {
+      if (res.ok && !Array.isArray(peek.translate)) {  // 언어 바꿔 번역만 한 건 새 질문으로 세지 않음
         ctx.waitUntil(bump(env, "ask", "-", "-"));
         ctx.waitUntil(res.clone().json().then(b => bumpItems(env, b.items)).catch(() => {}));
       }
