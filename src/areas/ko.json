@@ -945,21 +945,6 @@
   "checked": "2026-10-25"
  },
  {
-  "sido": "전남광주통합특별시",
-  "sigungu": "광산구",
-  "hours": "음식물: 저녁 8시 ~ 다음날 아침 6시 (낮에는 금지)",
-  "days": "음식물 수거 월~토. 일반·재활용 요일은 구청에 확인",
-  "noPickupDay": "음식물: 토요일과 공휴일 전날 배출 금지",
-  "place": "내 집·상가 앞, 수거 전날 저녁에",
-  "food": "집 앞에, 요일별로 나눠서 (일요일에 몰아서 내놓지 않기)",
-  "bags": null,
-  "bulky": "구청 홈페이지 대형폐기물 메뉴",
-  "recyclingNotes": null,
-  "officialUrl": "https://www.gwangsan.go.kr/co/contentsView.php?pageID=gwangsan0406020300",
-  "checked": "2026-10-24",
-  "id": "gwangju-gwangsan"
- },
- {
   "id": "jn-mokpo",
   "sido": "전남광주통합특별시",
   "sigungu": "목포시",

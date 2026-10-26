@@ -207,19 +207,6 @@
   "bulky": null,
   "recyclingNotes": "Sampah daur ulang dicuci, masukkan ke kantong plastik bening"
  },
- "gwangju-gwangsan": {
-  "name": "Gwangsan-gu",
-  "sido": "Jeonnam-Gwangju (Kota Khusus Terpadu)",
-  "sigungu": "Gwangsan-gu",
-  "hours": "Sampah makanan: jam 8 malam ~ jam 6 pagi hari berikutnya (dilarang siang hari)",
-  "days": "Sampah makanan diangkut Senin~Sabtu. Hari sampah umum dan daur ulang: tanyakan ke kantor gu (구청)",
-  "noPickupDay": "Sampah makanan: dilarang dibuang hari Sabtu dan sehari sebelum hari libur",
-  "place": "Di depan rumah, toko Anda, pada malam sebelum hari angkut",
-  "food": "Di depan rumah, dibagi per hari (jangan dikumpulkan lalu dibuang semua hari Minggu)",
-  "bags": null,
-  "bulky": "Menu sampah besar (대형폐기물) di situs kantor gu (구청)",
-  "recyclingNotes": null
- },
  "seoul-gwangjin": {
   "name": "Gwangjin-gu",
   "sido": "Seoul",

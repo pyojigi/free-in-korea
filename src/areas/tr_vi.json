@@ -207,19 +207,6 @@
   "bulky": null,
   "recyclingNotes": "Rác tái chế rửa sạch, cho vào túi ni lông trong suốt"
  },
- "gwangju-gwangsan": {
-  "name": "Gwangsan-gu",
-  "sido": "Jeonnam-Gwangju (전남광주통합특별시)",
-  "sigungu": "Gwangsan-gu",
-  "hours": "Rác thức ăn: 8 giờ tối ~ 6 giờ sáng hôm sau (cấm ban ngày)",
-  "days": "Thu gom rác thức ăn Thứ 2~Thứ 7. Ngày bỏ rác thường và rác tái chế: hỏi quận (구청)",
-  "noPickupDay": "Rác thức ăn: cấm bỏ vào Thứ 7 và ngày trước ngày lễ",
-  "place": "Trước nhà, cửa hàng của bạn, vào tối hôm trước ngày thu gom",
-  "food": "Để trước nhà, chia ra theo từng ngày (đừng dồn lại để ra hết vào Chủ nhật)",
-  "bags": null,
-  "bulky": "Mục rác cồng kềnh (대형폐기물) trên trang web của quận (구청)",
-  "recyclingNotes": null
- },
  "seoul-gwangjin": {
   "name": "Quận Gwangjin (Gwangjin-gu)",
   "sido": "Seoul",

@@ -75,7 +75,8 @@ function go(m, sub){
 }
 for (const m of Object.keys(NAV)) $("m-" + m).onclick = () => go(m);
 
-// 물건 목록: 고른 언어와 한국어 이름 둘 다로 찾기
+// 물건 목록: 고른 언어와 한국어 이름 둘 다로 찾기 (흔한 다른 이름도)
+const ALIAS = {"달걀":"계란","호두":"견과류","땅콩":"견과류","아몬드":"견과류","생수병":"페트병","플라스틱병":"페트병","음료수병":"페트병","택배상자":"택배 박스","상자":"박스","침대":"매트리스","휴대전화":"휴대폰","핸드폰":"휴대폰","배터리":"건전지","귤":"껍질","컵라면":"컵라면","라면봉지":"봉지","과자봉지":"봉지"};
 function renderChips(){
   const raw = $("itemSearch").value.trim().toLowerCase();
   // 영어 등 복수형도 찾히게 끝의 -s/-es/-ies/-y를 떼고 비교 (battery → batteries)
@@ -84,7 +85,8 @@ function renderChips(){
   let shown = 0;
   D.items.forEach(it => {
     const name = textOf(it, lang).name || "", ko = (it.t.ko && it.t.ko.name) || "";
-    if (q && !(name.toLowerCase().includes(q) || ko.includes(raw))) return;
+    const alias = Object.keys(ALIAS).find(k => raw.includes(k));
+    if (q && !(name.toLowerCase().includes(q) || ko.includes(raw) || (alias && ko.includes(ALIAS[alias])))) return;
     const b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.cat = it.cat;
     const d = document.createElement("span"); d.className = "dot"; b.append(d, name);
     b.onclick = () => openItem(it);
@@ -282,7 +284,23 @@ async function run(byText, again){
   } finally { busy = false; $("pick").disabled = false; $("askText").disabled = false; $("ask").disabled = !photo; }
 }
 // 결과가 나온 뒤 언어를 바꾸면, 같은 사진·글로 그 언어 답을 다시 받아옴 (한국어 답이 그대로 남지 않게)
-function reaskInNewLang(){ if (aiItems && aiItems.length && lastAsk && aiLang !== lang && !busy) run(lastAsk.byText, true); }
+async function reaskInNewLang(){
+  if (!(aiItems && aiItems.length && aiLang !== lang && !busy)) return;
+  const sampler = await samplerReady;
+  if (sampler) { if (lastAsk) run(lastAsk.byText, true); return; }
+  // 배포 사이트: 이미 받은 결과를 새 언어로 번역만 받아옴 (결과가 바뀌지 않음)
+  const want = lang; busy = true; $("status").textContent = t("thinking");
+  try {
+    const res = await fetch("/api/classify", {method:"POST", headers:{"content-type":"application/json"},
+      body: JSON.stringify({lang: want, translate: aiItems.map(it => ({cat: it.cat, koName: it.t.ko.name, koSteps: it.t.ko.steps}))})});
+    const r = await res.json().catch(() => ({}));
+    if (!res.ok || !Array.isArray(r.items) || r.items.length !== aiItems.length) throw r.error || "err";
+    r.items.forEach((x, i) => { aiItems[i].t[want] = {name: x.name, steps: x.steps, warn: x.warn}; });
+    aiLang = want; $("status").textContent = ""; renderAi();
+  } catch (e) { $("status").textContent = t("err"); }
+  finally { busy = false; }
+  if (lang !== want) reaskInNewLang();
+}
 
 // ---- 내 지역: 시·군·구별 배출 요일·시간 (공식 홈페이지에서 확인한 곳만) ----
 const AREAS = D.areas || [];
@@ -314,7 +332,8 @@ function renderArea(){
     const r = document.createElement("div"); r.className = "r";
     const k = document.createElement("div"); k.className = "k"; k.textContent = t(label);
     const v = document.createElement("div"); v.className = "v"; v.textContent = val[lang] || val.en || val.ko;
-    if (lang !== "ko") { const ko = document.createElement("span"); ko.className = "ko"; ko.lang = "ko"; ko.textContent = val.ko; v.append(ko); }
+    const same = (a, b) => String(a).replace(/[〜~\s]/g, "") === String(b).replace(/[〜~\s]/g, "");
+    if (lang !== "ko" && !same(v.textContent, val.ko)) { const ko = document.createElement("span"); ko.className = "ko"; ko.lang = "ko"; ko.textContent = val.ko; v.append(ko); }
     r.append(k, v); card.append(r);
   });
   if (a.url) {

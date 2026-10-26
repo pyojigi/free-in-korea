@@ -207,19 +207,6 @@
   "bulky": null,
   "recyclingNotes": "Wash recycling and put it in clear plastic bags"
  },
- "gwangju-gwangsan": {
-  "name": "Gwangsan-gu",
-  "sido": "Jeonnam-Gwangju Integrated Special City",
-  "sigungu": "Gwangsan-gu",
-  "hours": "Food waste: 20:00 – 06:00 the next morning (not in the daytime)",
-  "days": "Food waste pickup: Mon–Sat. For general waste and recycling days, check with the district office (구청)",
-  "noPickupDay": "Food waste: no disposal on Saturday or the day before a public holiday",
-  "place": "In front of your own home or shop, on the evening before pickup",
-  "food": "In front of your home, spread over the days (do not put it all out at once on Sunday)",
-  "bags": null,
-  "bulky": "'Large waste' (대형폐기물) menu on the district office website",
-  "recyclingNotes": null
- },
  "seoul-gwangjin": {
   "name": "Gwangjin-gu",
   "sido": "Seoul",

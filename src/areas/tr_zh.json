@@ -207,19 +207,6 @@
   "bulky": null,
   "recyclingNotes": "可回收物洗干净后装入透明塑料袋"
  },
- "gwangju-gwangsan": {
-  "name": "光山区",
-  "sido": "全南光州统合特别市",
-  "sigungu": "光山区",
-  "hours": "厨余：20:00 – 次日早上06:00（白天禁止）",
-  "days": "厨余收运周一至周六。一般垃圾·可回收物的日期请向区厅（구청）确认",
-  "noPickupDay": "厨余：周六和公休日前一天禁止排放",
-  "place": "自家或商铺门前，收运前一天晚上",
-  "food": "放在家门前，按日期分开放（不要在周日一次全部放出）",
-  "bags": null,
-  "bulky": "区厅网站的大型垃圾（대형폐기물）菜单",
-  "recyclingNotes": null
- },
  "seoul-gwangjin": {
   "name": "广津区",
   "sido": "首尔特别市",
