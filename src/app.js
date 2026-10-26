@@ -268,7 +268,8 @@ async function run(byText, again){
     lastAsk = {byText, typed, image}; aiLang = askedLang;
     aiItems = r.items.map(x => {
       const item = {cat:x.cat, confident:r.confident, t:{ko:{name:x.koName, steps:x.koSteps}}};
-      item.t[askedLang] = {name:x.name, steps:x.steps, warn:x.warn};
+      // 한국어로 물었으면 해요체로 쓴 koName/koSteps를 보여줌
+      item.t[askedLang] = askedLang === "ko" ? {name:x.koName || x.name, steps:(x.koSteps && x.koSteps.length) ? x.koSteps : x.steps, warn:x.warn} : {name:x.name, steps:x.steps, warn:x.warn};
       if (!item.t.en) item.t.en = item.t[askedLang];
       return item;
     });
